@@ -32,9 +32,6 @@ for (const day of feed.days || []) {
         errors.push(`${day.date}: ${item.title} has invalid diets`);
       }
     }
-    if (item.serviceOption && typeof item.serviceOption !== "string") {
-      errors.push(`${day.date}: ${item.title} serviceOption must be a string`);
-    }
     if (!Array.isArray(item.allergens)) errors.push(`${day.date}: ${item.title} allergens must be an array`);
     validateOpeningHours(item.openingHours, `${day.date}: ${item.title}`);
   }

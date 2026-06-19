@@ -55,11 +55,6 @@ const translations = {
       "Food truck": "Food truck",
       "Add-on": "Add-on",
     },
-    serviceOptions: {
-      "Lunch Box 1": "Lunch Box 1",
-      "Lunch Box 2": "Lunch Box 2",
-      "Lunch Box 3": "Lunch Box 3",
-    },
     allergens: {
       "Wheat / gluten": "Wheat / gluten",
       "Oats / gluten": "Oats / gluten",
@@ -98,11 +93,6 @@ const translations = {
       "Vegan/Veggie": "Vegan/Vegetarisch",
       "Food truck": "Foodtruck",
       "Add-on": "Extra",
-    },
-    serviceOptions: {
-      "Lunch Box 1": "Lunch Box 1",
-      "Lunch Box 2": "Lunch Box 2",
-      "Lunch Box 3": "Lunch Box 3",
     },
     allergens: {
       "Wheat / gluten": "Weizen / Gluten",
@@ -147,11 +137,6 @@ const translations = {
       "Quick & Easy": "Schnell ond oifach",
       "Food truck": "Foodtruck",
       "Add-on": "Extra",
-    },
-    serviceOptions: {
-      "Lunch Box 1": "Lunch Box 1",
-      "Lunch Box 2": "Lunch Box 2",
-      "Lunch Box 3": "Lunch Box 3",
     },
     allergens: {
       "Wheat / gluten": "Weiza / Gluten",
@@ -692,8 +677,7 @@ function renderItem(item) {
   const watermark = element.querySelector(".source-watermark");
 
   const text = itemText(item);
-  const option = serviceOptionLabel(item);
-  element.querySelector("h2").textContent = option ? `${option}: ${text.title}` : text.title;
+  element.querySelector("h2").textContent = text.title;
   element.querySelector(".description").textContent = text.description || "";
   renderAvailability(element, item, source);
 
@@ -783,11 +767,6 @@ function categoryLabel(category) {
 
 function allergenLabel(label) {
   return t("allergens")[label] || label;
-}
-
-function serviceOptionLabel(item) {
-  if (!item.serviceOption) return "";
-  return t("serviceOptions")?.[item.serviceOption] || item.serviceOption;
 }
 
 function itemText(item) {

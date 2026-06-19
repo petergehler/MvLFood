@@ -174,8 +174,7 @@
           "allergens": [
             "AH",
             "B"
-          ],
-          "serviceOption": "Lunch Box 1"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -189,8 +188,7 @@
             "B",
             "F",
             "G"
-          ],
-          "serviceOption": "Lunch Box 2"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -202,8 +200,7 @@
           "allergens": [
             "AW",
             "H"
-          ],
-          "serviceOption": "Lunch Box 3"
+          ]
         },
         {
           "source": "mph",
@@ -307,8 +304,7 @@
           "allergens": [
             "AR",
             "F"
-          ],
-          "serviceOption": "Lunch Box 1"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -322,8 +318,7 @@
             "B",
             "F",
             "G"
-          ],
-          "serviceOption": "Lunch Box 2"
+          ]
         },
         {
           "source": "mph",
@@ -432,8 +427,7 @@
             "B",
             "F",
             "KW"
-          ],
-          "serviceOption": "Lunch Box 1"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -446,8 +440,7 @@
             "AW",
             "B",
             "F"
-          ],
-          "serviceOption": "Lunch Box 2"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -462,8 +455,7 @@
             "G",
             "H",
             "I"
-          ],
-          "serviceOption": "Lunch Box 3"
+          ]
         },
         {
           "source": "mph",
@@ -597,8 +589,7 @@
             "AW",
             "F",
             "G"
-          ],
-          "serviceOption": "Lunch Box 1"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -610,8 +601,7 @@
           "allergens": [
             "AW",
             "B"
-          ],
-          "serviceOption": "Lunch Box 2"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -624,8 +614,7 @@
             "AW",
             "B",
             "F"
-          ],
-          "serviceOption": "Lunch Box 3"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -785,8 +774,7 @@
             "AW",
             "B",
             "F"
-          ],
-          "serviceOption": "Lunch Box 1"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -800,8 +788,7 @@
             "B",
             "F",
             "G"
-          ],
-          "serviceOption": "Lunch Box 2"
+          ]
         },
         {
           "source": "hungry-elk",
@@ -810,8 +797,7 @@
           "title": "Daily dish",
           "description": "Details posted in the restaurant.",
           "price": "",
-          "allergens": [],
-          "serviceOption": "Lunch Box 3"
+          "allergens": []
         },
         {
           "source": "mph",
