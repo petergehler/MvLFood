@@ -1,0 +1,844 @@
+const state = {
+  feed: null,
+  todayDate: localDateString(new Date()),
+  selectedDiets: new Set(),
+  selectedSources: null,
+  language: "en",
+  hiddenAllergens: new Set(),
+};
+
+const nodes = {
+  appTitle: document.querySelector("#appTitle"),
+  dateLabel: document.querySelector("#dateLabel"),
+  menuList: document.querySelector("#menuList"),
+  settingsButton: document.querySelector("#settingsButton"),
+  settingsPanel: document.querySelector("#settingsPanel"),
+  languageLabel: document.querySelector("#languageLabel"),
+  languageGrid: document.querySelector("#languageGrid"),
+  locationLabel: document.querySelector("#locationLabel"),
+  locationGrid: document.querySelector("#locationGrid"),
+  dietLabel: document.querySelector("#dietLabel"),
+  dietGrid: document.querySelector("#dietGrid"),
+  allergyLabel: document.querySelector("#allergyLabel"),
+  allergyGrid: document.querySelector("#allergyGrid"),
+  template: document.querySelector("#menuItemTemplate"),
+};
+
+const storageKey = "mvl-food-settings";
+const languageOptions = [
+  { value: "en", label: "English" },
+  { value: "de", label: "Deutsch" },
+  { value: "sw", label: "Schwäbisch" },
+];
+const dietOptions = ["vegan", "vegetarian", "fish", "meat"];
+const translations = {
+  en: {
+    appTitle: "MvLFood",
+    settings: "Settings",
+    language: "Language",
+    locations: "Locations",
+    diet: "Diet",
+    hideContaining: "Hide items containing",
+    loading: "Loading...",
+    loadError: "Could not load the menu feed.",
+    noMatches: "No matching food options for today.",
+    noMenu: "No menu listed for today.",
+    closedNow: "Closed",
+    diets: {
+      vegan: "vegan",
+      vegetarian: "vegetarian",
+      meat: "meat",
+      fish: "fish",
+    },
+    categories: {
+      "Vegan/Veggie": "Vegan/Veggie",
+      "Food truck": "Food truck",
+      "Add-on": "Add-on",
+    },
+    allergens: {
+      "Wheat / gluten": "Wheat / gluten",
+      "Oats / gluten": "Oats / gluten",
+      "Rye / gluten": "Rye / gluten",
+      "Milk / lactose": "Milk / lactose",
+      Egg: "Egg",
+      Mustard: "Mustard",
+      Sesame: "Sesame",
+      Soy: "Soy",
+      Walnut: "Walnut",
+      Hazelnut: "Hazelnut",
+      Peanut: "Peanut",
+      Fish: "Fish",
+      "Milk / yogurt": "Milk / yogurt",
+    },
+  },
+  de: {
+    appTitle: "MvLFood",
+    settings: "Einstellungen",
+    language: "Sprache",
+    locations: "Orte",
+    diet: "Ernährung",
+    hideContaining: "Ausblenden bei",
+    loading: "Laden...",
+    loadError: "Speiseplan konnte nicht geladen werden.",
+    noMatches: "Heute keine passenden Angebote.",
+    noMenu: "Für heute ist kein Menü eingetragen.",
+    closedNow: "Geschlossen",
+    diets: {
+      vegan: "vegan",
+      vegetarian: "vegetarisch",
+      meat: "Fleisch",
+      fish: "Fisch",
+    },
+    categories: {
+      "Vegan/Veggie": "Vegan/Vegetarisch",
+      "Food truck": "Foodtruck",
+      "Add-on": "Extra",
+    },
+    allergens: {
+      "Wheat / gluten": "Weizen / Gluten",
+      "Oats / gluten": "Hafer / Gluten",
+      "Rye / gluten": "Roggen / Gluten",
+      "Milk / lactose": "Milch / Laktose",
+      Egg: "Ei",
+      Mustard: "Senf",
+      Sesame: "Sesam",
+      Soy: "Soja",
+      Walnut: "Walnuss",
+      Hazelnut: "Haselnuss",
+      Peanut: "Erdnuss",
+      Fish: "Fisch",
+      "Milk / yogurt": "Milch / Joghurt",
+    },
+  },
+  sw: {
+    appTitle: "MvLEssa",
+    settings: "Eischdellonga",
+    language: "Sproch",
+    locations: "Orte",
+    diet: "Essa",
+    hideContaining: "Ausblenda bei",
+    loading: "Lädt...",
+    loadError: "S' Menü hot sich et lada lassa.",
+    noMatches: "Heit gibt's nix Passends.",
+    noMenu: "Für heit isch koi Menü drin.",
+    closedNow: "Zua",
+    diets: {
+      vegan: "vegan",
+      vegetarian: "vegetarisch",
+      meat: "Fleisch",
+      fish: "Fisch",
+    },
+    categories: {
+      Salatbowl: "Salatschissl",
+      "Pizza & Pasta": "Pizza & Nudla",
+      Region: "Vo do",
+      Main: "Hauptsach",
+      "Vegan/Veggie": "Vegan/Vegetarisch",
+      "Quick & Easy": "Schnell ond oifach",
+      "Food truck": "Foodtruck",
+      "Add-on": "Extra",
+    },
+    allergens: {
+      "Wheat / gluten": "Weiza / Gluten",
+      "Oats / gluten": "Hafer / Gluten",
+      "Rye / gluten": "Rogga / Gluten",
+      "Milk / lactose": "Milch / Laktose",
+      Egg: "Ei",
+      Mustard: "Senf",
+      Sesame: "Sesam",
+      Soy: "Soja",
+      Walnut: "Walnuss",
+      Hazelnut: "Haselnuss",
+      Peanut: "Erdnuss",
+      Fish: "Fisch",
+      "Milk / yogurt": "Milch / Joghurt",
+    },
+  },
+};
+const germanDishes = {
+  "Italy Bowl": {
+    title: "Italy Bowl",
+    description:
+      "Nudelsalat mit gegrilltem Gemüse, Mozzarella, Croutons, Hähnchenbrust, Rucola und italienischem Dressing.",
+  },
+  "Pasta Primavera": {
+    title: "Pasta Primavera",
+    description:
+      "Frische Pasta mit Paprikapesto, Zucchini, Aubergine, Fenchel, getrockneten Tomaten und Panko-Crunch.",
+  },
+  "Green Thai Curry": {
+    title: "Grünes Thai-Curry",
+    description: "Wokgemüse in grüner Curry-Kokos-Soße mit Sesamreis und gerösteten Erdnüssen.",
+  },
+  "Putensteak with herb butter": {
+    title: "Putensteak mit Kräuterbutter",
+    description: "Gebratenes Putensteak mit Kräuterbutter.",
+  },
+  "Spinat-Dinkel Knuspermedaillon": {
+    title: "Spinat-Dinkel-Knuspermedaillon",
+    description: "Mit Gorgonzolasoße.",
+  },
+  Tagesessen: {
+    title: "Tagesessen",
+    description: "Tagesangebot, Details an der Ausgabe.",
+  },
+  "Spaghetti Aglio e Olio": {
+    title: "Spaghetti Aglio e Olio",
+    description: "Spaghetti in Kräuter-Knoblauch-Öl mit Grana Padano.",
+  },
+  "Bayrischer Biergarten Burger": {
+    title: "Bayrischer Biergarten-Burger",
+    description:
+      "Fleischkäse im Laugenbrötchen mit Schmelzzwiebeln, süßer Senf-Mayonnaise und Bratkartoffeln.",
+  },
+  "Hackfleisch Bologneser Art": {
+    title: "Hackfleisch Bologneser Art",
+    description: "Mit Gemüsewürfeln, Tomatensoße und Grana Padano.",
+  },
+  "Couscous vegetable patty": {
+    title: "Couscous-Gemüsebratling",
+    description: "Hausgemachter Bratling mit Baba Ganoush.",
+  },
+  "Quinoa Thai Bowl": {
+    title: "Quinoa-Thai-Bowl",
+    description: "Quinoa, Gemüse, Edamame, Tofu und scharfes Limetten-Soja-Dressing.",
+  },
+  "Pasta Gorgonzola and pear": {
+    title: "Pasta mit Gorgonzola und Birne",
+    description: "Frische Pasta in cremiger Soße mit Gorgonzola, marinierter Birne und Walnüssen.",
+  },
+  "Spaghetti Bolognese": {
+    title: "Spaghetti Bolognese",
+    description: "Gemischtes Hackfleisch mit Tomatensugo, Gemüse und geriebenem Parmesan.",
+  },
+  "Japanese turkey schnitzel Tonkatsu": {
+    title: "Japanisches Putenschnitzel Tonkatsu",
+    description: "Mit Soja-Honig-Glasur, Sesam, Mie-Nudeln und asiatischem Krautsalat.",
+  },
+  "Pork medallions": {
+    title: "Schweinemedaillons",
+    description: "Schweinemedaillons in feiner Pfefferrahmsoße.",
+  },
+  "Vegan pasta with red lentils": {
+    title: "Vegane Pasta mit roten Linsen",
+    description: "Mit Kirschtomaten und Bärlauchpesto.",
+  },
+  "Schwaebische Bowl": {
+    title: "Schwäbische Bowl",
+    description:
+      "Maultaschen auf hausgemachtem Kartoffelsalat mit Tomaten, Gurken und Röstzwiebeln.",
+  },
+  "Pizza Hawaii": {
+    title: "Pizza Hawaii",
+    description: "Pizzabrot mit San-Marzano-Tomatensoße, Fior di Latte, gekochtem Schinken und Ananas.",
+  },
+  "Baked Camembert": {
+    title: "Gebackener Camembert",
+    description: "Mit Wildpreiselbeeren, buntem Blattsalat und Baguettescheiben.",
+  },
+  "Braised chicken breast": {
+    title: "Geschmorte Hähnchenbrust",
+    description: "Geschmorte Hähnchenbrust in Orangensoße.",
+  },
+  "Cannelloni with spinach and ricotta": {
+    title: "Cannelloni mit Spinat und Ricotta",
+    description: "In Tomatensoße, mit Käse überbacken.",
+  },
+  "Pulled gyros wrap": {
+    title: "Pulled-Gyros-Wrap",
+    description: "Schweine-Wrap mit Eisbergsalat, Krautsalat und Zaziki, dazu Kartoffelwedges.",
+  },
+  "Ricotta and spinach tortellini": {
+    title: "Tortellini mit Ricotta und Spinat",
+    description: "In Tomaten-Sahne-Soße, mit Mozzarella überbacken, dazu ein kleiner gemischter Salat.",
+  },
+  "Pollock filet in egg-parmesan crust": {
+    title: "Seelachsfilet in Ei-Parmesan-Hülle",
+    description: "Mit Steakhouse Fries, eingelegtem Gemüse, Tartarsoße und Zitrone.",
+  },
+  "Daily dish": {
+    title: "Tagesgericht",
+    description: "Details hängen im Restaurant aus.",
+  },
+  "Rabas empanadas": {
+    title: "Rabas Empanadas",
+    description: "Tintenfischstreifen im Backteig mit Aioli.",
+  },
+  "Alu Goobi": {
+    title: "Alu Goobi",
+    description: "Indisches Kartoffel-Blumenkohl-Curry.",
+  },
+  "Kadala Curry": {
+    title: "Kadala Curry",
+    description:
+      "Traditionelles Kerala-Curry mit schwarzen Kichererbsen, hausgemachter Gewürzmischung, Zwiebeln, Mais, Ingwer, Knoblauch, Tomaten und Kokosmilch. Serviert mit Reis, Papadams, Kokos-Chutney, Rote-Bete-Joghurt-Salat und frittiertem Chili.",
+  },
+  "Chicken Masala": {
+    title: "Chicken Masala",
+    description:
+      "Mariniertes Hähnchen mit hausgemachter Gewürzmischung, Zwiebeln, Tomaten, Ingwer, Knoblauch, Koriander und Kokosmilch. Serviert mit Reis, Papadams, Kokos-Chutney, Rote-Bete-Joghurt-Salat und frittiertem Chili.",
+  },
+  "Halloumi plate": {
+    title: "Halloumi-Teller",
+    description: "Griechischer Teller mit gegrilltem Halloumi, Salat, Pita und Dips.",
+  },
+  "Falafel pita": {
+    title: "Falafel-Pita",
+    description: "Falafel in Pita mit Salat, Kräutern und Tahini-Soße.",
+  },
+  "Gyros plate": {
+    title: "Gyros-Teller",
+    description: "Platzhalter bis das Yellow-Donkey-Menüfoto verfügbar ist.",
+  },
+};
+const swabianDishes = {
+  "Italy Bowl": {
+    title: "Italienische Schissl",
+    description:
+      "Nudlsalat mit Grillgmias, Mozzarella, Croutons, Hähnabruscht, Rucola ond italienischem Dressing.",
+  },
+  "Pasta Primavera": {
+    title: "Pasta Primavera",
+    description:
+      "Frische Nudla mit Paprikapesto, Zucchini, Aubergine, Fenchel, trocknade Tomata ond knusprigem Panko.",
+  },
+  "Green Thai Curry": {
+    title: "Grüas Thai-Curry",
+    description: "Wokgmias in Curry-Kokos-Soß mit Sesamreis ond gröschtete Erdnüss.",
+  },
+  "Putensteak with herb butter": {
+    title: "Puta-Schteak mit Kräuterbutter",
+    description: "Gbratens Puta-Schteak mit Kräuterbutter.",
+  },
+  "Spinat-Dinkel Knuspermedaillon": {
+    title: "Schbinaat-Dinkel-Knuspermedaillon",
+    description: "Mit Gorgonzola-Soß.",
+  },
+  Tagesessen: {
+    title: "Dagesessa",
+    description: "Dagesangebot, Details am Tresen.",
+  },
+  "Spaghetti Aglio e Olio": {
+    title: "Spaghetti Aglio e Olio",
+    description: "Spaghetti in Kräuter-Knoblauch-Öl mit Grana Padano.",
+  },
+  "Bayrischer Biergarten Burger": {
+    title: "Bayerischer Biergarta-Burger",
+    description:
+      "Fleischkäs im Laugabweggla mit gschmälzte Zwiebla, süßer Senf-Mayo ond Bratkartoffla.",
+  },
+  "Hackfleisch Bologneser Art": {
+    title: "Hackfleisch Bologneser Art",
+    description: "Mit Gmiaswürfla, Tomatensoß ond Grana Padano.",
+  },
+  "Couscous vegetable patty": {
+    title: "Couscous-Gmiasbratling",
+    description: "Hausgmachter Bratling mit Baba Ganoush.",
+  },
+  "Quinoa Thai Bowl": {
+    title: "Quinoa-Thai-Schissl",
+    description: "Quinoa, Gmias, Edamame, Tofu ond scharfes Limetta-Soja-Dressing.",
+  },
+  "Pasta Gorgonzola and pear": {
+    title: "Pasta mit Gorgonzola ond Bira",
+    description: "Frische Nudla in cremiger Soß mit Gorgonzola, Bira ond Walnüss.",
+  },
+  "Spaghetti Bolognese": {
+    title: "Spaghetti Bolognese",
+    description: "Hackfleisch mit Tomatasugo, Gmias ond Parmesan.",
+  },
+  "Japanese turkey schnitzel Tonkatsu": {
+    title: "Japanisches Puta-Schnitzel Tonkatsu",
+    description: "Mit Soja-Honig-Glasur, Sesam, Mie-Nudla ond asiatischem Krautsalat.",
+  },
+  "Pork medallions": {
+    title: "Schweinemedaillons",
+    description: "Schweinemedaillons in feiner Pfefferrahmsoß.",
+  },
+  "Vegan pasta with red lentils": {
+    title: "Vegane Pasta mit rote Lensa",
+    description: "Mit Kirschtomata ond Bärlauchpesto.",
+  },
+  "Schwaebische Bowl": {
+    title: "Schwäbische Schissl",
+    description:
+      "Maultascha auf hausgmachtem Kartoffelsalat mit Tomata, Gurka ond Röstzwiebla.",
+  },
+  "Pizza Hawaii": {
+    title: "Pizza Hawaii",
+    description: "Pizzabrot mit Tomatasoß, Fior di Latte, Schinka ond Ananas.",
+  },
+  "Baked Camembert": {
+    title: "Baggener Camembert",
+    description: "Mit Wildpreiselbeera, buntem Blattsalat ond Baguettescheiba.",
+  },
+  "Braised chicken breast": {
+    title: "Gschmorte Hähnabruscht",
+    description: "Gschmorte Hähnabruscht in Orangasoß.",
+  },
+  "Cannelloni with spinach and ricotta": {
+    title: "Cannelloni mit Schbinaat ond Ricotta",
+    description: "In Tomatasoß, mit Käs überbacka.",
+  },
+  "Pulled gyros wrap": {
+    title: "Pulled-Gyros-Wickel",
+    description: "Schweine-Wrap mit Eisbergsalat, Krautsalat ond Zaziki, drzua Kartoffelwedges.",
+  },
+  "Ricotta and spinach tortellini": {
+    title: "Tortellini mit Ricotta ond Schbinaat",
+    description: "In Tomata-Sahne-Soß, mit Mozzarella überbacka, drzua a kloiner Salat.",
+  },
+  "Pollock filet in egg-parmesan crust": {
+    title: "Seelachsfilet in Ei-Parmesan-Hüll",
+    description: "Mit Steakhouse Fries, aiglegtem Gmias, Tartarsoß ond Zitrone.",
+  },
+  "Daily dish": {
+    title: "Dagesgricht",
+    description: "Details hänget im Restaurant aus.",
+  },
+  "Rabas empanadas": {
+    title: "Rabas Empanadas",
+    description: "Tintenfischstreifa im Backdaig mit Aioli.",
+  },
+  "Alu Goobi": {
+    title: "Alu Goobi",
+    description: "Indisches Kartoffel-Blumakohl-Curry.",
+  },
+  "Kadala Curry": {
+    title: "Kadala Curry",
+    description:
+      "Kerala-Curry mit schwarze Kichererbsen, hausgmachter Gwürzmischung, Zwiebla, Mais, Ingwer, Knoblauch, Tomata ond Kokosmilch. Drzua Reis, Papadams, Kokos-Chutney, Rote-Bete-Joghurt-Salat ond frittierter Chili.",
+  },
+  "Chicken Masala": {
+    title: "Hähna Masala",
+    description:
+      "Marinierts Hähna mit hausgmachter Gwürzmischung, Zwiebla, Tomata, Ingwer, Knoblauch, Koriander ond Kokosmilch. Drzua Reis, Papadams, Kokos-Chutney, Rote-Bete-Joghurt-Salat ond frittierter Chili.",
+  },
+};
+const icons = {
+  restaurant:
+    '<svg class="badge-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 3v7a3 3 0 0 0 3 3h1v8"></path><path d="M4 7h8"></path><path d="M8 3v18"></path><path d="M18 3a4 4 0 0 0-4 4v6h4v8"></path></svg>',
+  truck:
+    '<svg class="badge-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4v14"></path><path d="M14 9h4l3 4v5h-7"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>',
+  pin:
+    '<svg class="badge-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>',
+};
+
+init();
+
+async function init() {
+  loadSettings();
+  bindEvents();
+  await loadFeed();
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+}
+
+function bindEvents() {
+  nodes.settingsButton.addEventListener("click", () => {
+    const isOpen = !nodes.settingsPanel.hidden;
+    nodes.settingsPanel.hidden = isOpen;
+    nodes.settingsButton.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+}
+
+async function loadFeed() {
+  try {
+    const response = await fetch("data/menu.json", { cache: "no-cache" });
+
+    if (!response.ok) {
+      throw new Error(`Menu feed returned ${response.status}`);
+    }
+
+    state.feed = await response.json();
+    ensureSelectedSources();
+    render();
+  } catch (error) {
+    nodes.menuList.innerHTML = `<div class="empty-state">${t("loadError")} ${error.message}</div>`;
+  }
+}
+
+function render() {
+  renderChrome();
+  renderSettings();
+  renderMenu();
+}
+
+function renderChrome() {
+  document.documentElement.lang = state.language;
+  nodes.appTitle.textContent = t("appTitle");
+  document.title = t("appTitle");
+  nodes.dateLabel.textContent = formatDate(state.todayDate);
+  nodes.settingsButton.ariaLabel = t("settings");
+  nodes.settingsButton.title = t("settings");
+}
+
+function renderSettings() {
+  nodes.languageLabel.textContent = t("language");
+  nodes.locationLabel.textContent = t("locations");
+  nodes.dietLabel.textContent = t("diet");
+  nodes.allergyLabel.textContent = t("hideContaining");
+  renderLanguageChoices();
+  renderLocationChoices();
+  renderDietChoices();
+  renderAllergyChoices();
+}
+
+function renderLanguageChoices() {
+  nodes.languageGrid.innerHTML = "";
+
+  for (const option of languageOptions) {
+    const button = document.createElement("button");
+    const selected = state.language === option.value;
+    button.className = "choice-chip";
+    button.type = "button";
+    button.setAttribute("aria-pressed", String(selected));
+    button.textContent = option.label;
+    button.addEventListener("click", () => {
+      if (state.language === option.value) return;
+
+      state.language = option.value;
+      saveSettings();
+      render();
+    });
+
+    nodes.languageGrid.append(button);
+  }
+}
+
+function renderLocationChoices() {
+  ensureSelectedSources();
+  nodes.locationGrid.innerHTML = "";
+
+  for (const [sourceId, source] of Object.entries(state.feed.sources)) {
+    const button = document.createElement("button");
+    const selected = state.selectedSources.has(sourceId);
+    button.className = "choice-chip";
+    button.classList.add("location-choice", sourceId);
+    button.type = "button";
+    button.ariaLabel = source.name || sourceId;
+    button.setAttribute("aria-pressed", String(selected));
+    button.append(sourceMark(source));
+    button.addEventListener("click", () => {
+      if (state.selectedSources.has(sourceId)) {
+        state.selectedSources.delete(sourceId);
+      } else {
+        state.selectedSources.add(sourceId);
+      }
+      saveSettings();
+      renderSettings();
+      renderMenu();
+    });
+
+    nodes.locationGrid.append(button);
+  }
+}
+
+function renderDietChoices() {
+  nodes.dietGrid.innerHTML = "";
+
+  for (const diet of dietOptions) {
+    const button = document.createElement("button");
+    const selected = state.selectedDiets.has(diet);
+    button.className = "choice-chip";
+    button.type = "button";
+    button.setAttribute("aria-pressed", String(selected));
+    button.textContent = dietLabel(diet);
+    button.addEventListener("click", () => {
+      if (state.selectedDiets.has(diet)) {
+        state.selectedDiets.delete(diet);
+      } else {
+        state.selectedDiets.add(diet);
+      }
+      saveSettings();
+      renderSettings();
+      renderMenu();
+    });
+
+    nodes.dietGrid.append(button);
+  }
+}
+
+function renderAllergyChoices() {
+  nodes.allergyGrid.innerHTML = "";
+
+  for (const allergen of allergenGroups()) {
+    const button = document.createElement("button");
+    const selected = allergen.codes.some((code) => state.hiddenAllergens.has(code));
+    const label = allergenLabel(allergen.label);
+    button.className = "choice-chip";
+    button.classList.add("allergy-choice");
+    button.type = "button";
+    button.title = `${label} (${allergen.codes.join(", ")})`;
+    button.ariaLabel = label;
+    button.setAttribute("aria-pressed", String(selected));
+    button.textContent = label;
+    button.addEventListener("click", () => {
+      if (allergen.codes.some((code) => state.hiddenAllergens.has(code))) {
+        allergen.codes.forEach((code) => state.hiddenAllergens.delete(code));
+      } else {
+        allergen.codes.forEach((code) => state.hiddenAllergens.add(code));
+      }
+      saveSettings();
+      renderSettings();
+      renderMenu();
+    });
+
+    nodes.allergyGrid.append(button);
+  }
+}
+
+function allergenGroups() {
+  const groups = new Map();
+
+  for (const allergen of state.feed.allergens) {
+    const key = allergen.label.toLowerCase();
+    const group = groups.get(key) || { label: allergen.label, codes: [] };
+    if (!group.codes.includes(allergen.code)) {
+      group.codes.push(allergen.code);
+    }
+    groups.set(key, group);
+  }
+
+  return [...groups.values()];
+}
+
+function renderMenu() {
+  const selectedDay = state.feed.days.find((day) => day.date === state.todayDate);
+  const items = selectedDay ? selectedDay.items.filter(keepItem) : [];
+  nodes.menuList.innerHTML = "";
+
+  if (!items.length) {
+    nodes.menuList.innerHTML = selectedDay
+      ? `<div class="empty-state">${t("noMatches")}</div>`
+      : `<div class="empty-state">${t("noMenu")}</div>`;
+    return;
+  }
+
+  for (const item of items) {
+    nodes.menuList.append(renderItem(item));
+  }
+}
+
+function keepItem(item) {
+  ensureSelectedSources();
+
+  if (!state.selectedSources.has(item.source)) {
+    return false;
+  }
+
+  if (state.selectedDiets.size && !dietMatches(item.diet)) {
+    return false;
+  }
+
+  return !item.allergens.some((code) => state.hiddenAllergens.has(code));
+}
+
+function dietMatches(diet) {
+  if (state.selectedDiets.has(diet)) return true;
+  return diet === "vegan" && state.selectedDiets.has("vegetarian");
+}
+
+function renderItem(item) {
+  const source = state.feed.sources[item.source] || {};
+  const element = nodes.template.content.firstElementChild.cloneNode(true);
+  const watermark = element.querySelector(".source-watermark");
+
+  const text = itemText(item);
+  element.querySelector("h2").textContent = text.title;
+  element.querySelector(".description").textContent = text.description || "";
+  renderAvailability(element, item, source);
+
+  if (source.logo) {
+    watermark.src = source.logo;
+    watermark.alt = "";
+    watermark.classList.add(item.source);
+  } else {
+    watermark.remove();
+  }
+
+  return element;
+}
+
+function renderAvailability(element, item, source) {
+  const availability = element.querySelector(".availability");
+  const status = availabilityStatus(item, source);
+
+  if (status !== "closed") {
+    availability.hidden = true;
+    return;
+  }
+
+  element.classList.add("is-closed");
+  availability.hidden = false;
+  availability.textContent = t("closedNow");
+}
+
+function availabilityStatus(item, source) {
+  if (new URLSearchParams(window.location.search).has("mockClosed")) {
+    return "closed";
+  }
+
+  const now = new Date();
+  const today = localDateString(now);
+
+  if (today !== state.todayDate) {
+    return "unknown";
+  }
+
+  const intervals = openingIntervalsFor(item, source, today);
+  if (!intervals.length) {
+    return "unknown";
+  }
+
+  const minutesNow = now.getHours() * 60 + now.getMinutes();
+  const isOpen = intervals.some((interval) => {
+    const start = timeToMinutes(interval.start);
+    const end = timeToMinutes(interval.end);
+    return start !== null && end !== null && minutesNow >= start && minutesNow < end;
+  });
+
+  return isOpen ? "open" : "closed";
+}
+
+function openingIntervalsFor(item, source, dateString) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const weekday = new Date(year, month - 1, day).getDay();
+  const itemHours = item.openingHours;
+
+  if (itemHours?.date === dateString) {
+    return itemHours.intervals || [];
+  }
+
+  const sourceHours = source.openingHours;
+  if (sourceHours?.days?.includes(weekday)) {
+    return sourceHours.intervals || [];
+  }
+
+  return [];
+}
+
+function timeToMinutes(time) {
+  if (!time) return null;
+  const [hours, minutes] = time.split(":").map(Number);
+  if (!Number.isFinite(hours) || !Number.isFinite(minutes)) return null;
+  return hours * 60 + minutes;
+}
+
+function dietLabel(diet) {
+  return t("diets")[diet] || diet;
+}
+
+function categoryLabel(category) {
+  return t("categories")[category] || category;
+}
+
+function allergenLabel(label) {
+  return t("allergens")[label] || label;
+}
+
+function itemText(item) {
+  if (state.language === "de" && germanDishes[item.title]) {
+    return germanDishes[item.title];
+  }
+
+  if (state.language === "sw" && swabianDishes[item.title]) {
+    return swabianDishes[item.title];
+  }
+
+  return {
+    title: item.title,
+    description: item.description,
+  };
+}
+
+function iconForSource(source) {
+  if (source.kind === "truck") return icons.truck;
+  if (source.kind === "restaurant") return icons.restaurant;
+  return icons.pin;
+}
+
+function sourceMark(source) {
+  if (source.logo) {
+    const image = document.createElement("img");
+    image.className = "source-logo";
+    image.src = source.logo;
+    image.alt = "";
+    image.loading = "lazy";
+    return image;
+  }
+
+  const wrapper = document.createElement("span");
+  wrapper.innerHTML = iconForSource(source);
+  return wrapper.firstElementChild;
+}
+
+function localDateString(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function loadSettings() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+    state.language = saved.language || detectLanguage();
+    state.selectedDiets = new Set((saved.selectedDiets || []).filter((diet) => dietOptions.includes(diet)));
+    state.selectedSources = Array.isArray(saved.selectedSources) ? new Set(saved.selectedSources) : null;
+    if (saved.veggieOnly && !saved.selectedDiets) {
+      state.selectedDiets = new Set(["vegan", "vegetarian"]);
+    }
+    state.hiddenAllergens = new Set(saved.hiddenAllergens || []);
+  } catch {
+    state.language = detectLanguage();
+    state.selectedDiets = new Set();
+    state.selectedSources = null;
+    state.hiddenAllergens = new Set();
+  }
+}
+
+function saveSettings() {
+  localStorage.setItem(
+    storageKey,
+    JSON.stringify({
+      language: state.language,
+      selectedDiets: [...state.selectedDiets],
+      selectedSources: state.selectedSources ? [...state.selectedSources] : null,
+      hiddenAllergens: [...state.hiddenAllergens],
+    }),
+  );
+}
+
+function ensureSelectedSources() {
+  if (!state.feed) return;
+
+  const allSources = Object.keys(state.feed.sources);
+  if (!state.selectedSources) {
+    state.selectedSources = new Set(allSources);
+    return;
+  }
+
+  state.selectedSources = new Set([...state.selectedSources].filter((sourceId) => allSources.includes(sourceId)));
+}
+
+function formatDate(dateString) {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const locale = ["de", "sw"].includes(state.language) ? "de-DE" : "en-US";
+  return new Intl.DateTimeFormat(locale, {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  }).format(new Date(year, month - 1, day));
+}
+
+function t(key) {
+  return translations[state.language]?.[key] || translations.en[key];
+}
+
+function detectLanguage() {
+  return navigator.language?.toLowerCase().startsWith("de") ? "de" : "en";
+}

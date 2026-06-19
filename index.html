@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#184c3b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MvLFood">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>MvLFood</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="stylesheet" href="styles.css?v=closed-tab-2">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow" id="dateLabel"></p>
+        <h1 id="appTitle">MvLFood</h1>
+      </div>
+      <button class="settings-button" id="settingsButton" type="button" aria-controls="settingsPanel" aria-expanded="false" aria-label="Settings" title="Settings">
+        <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M9.7 3.4 9.2 5.5a7.6 7.6 0 0 0-1.4.8L5.7 5.6 3.4 9.4l1.6 1.5a7.2 7.2 0 0 0 0 1.8l-1.6 1.5 2.3 3.8 2.1-.7a7.6 7.6 0 0 0 1.4.8l.5 2.1h4.6l.5-2.1a7.6 7.6 0 0 0 1.4-.8l2.1.7 2.3-3.8-1.6-1.5a7.2 7.2 0 0 0 0-1.8l1.6-1.5-2.3-3.8-2.1.7a7.6 7.6 0 0 0-1.4-.8l-.5-2.1Z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="settings-panel" id="settingsPanel" aria-label="Settings" hidden>
+        <div class="settings-body">
+          <div>
+            <p class="settings-label" id="languageLabel">Language</p>
+            <div class="choice-grid" id="languageGrid" role="group" aria-labelledby="languageLabel"></div>
+          </div>
+          <div>
+            <p class="settings-label" id="locationLabel">Locations</p>
+            <div class="choice-grid" id="locationGrid"></div>
+          </div>
+          <div>
+            <p class="settings-label" id="dietLabel">Diet</p>
+            <div class="choice-grid" id="dietGrid"></div>
+          </div>
+          <div>
+            <p class="settings-label" id="allergyLabel">Hide items containing</p>
+            <div class="choice-grid" id="allergyGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-list" id="menuList" aria-label="Food options"></section>
+    </main>
+
+    <template id="menuItemTemplate">
+      <article class="menu-item">
+        <img class="source-watermark" alt="">
+        <h2></h2>
+        <p class="availability" hidden></p>
+        <p class="description"></p>
+      </article>
+    </template>
+
+    <script type="module" src="app.js?v=closed-tab-2"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "mvlfood",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 5173",
+    "validate": "node scripts/validate-menu.mjs",
+    "parse:mph": "node scripts/parse-mph-speiseplan.mjs",
+    "parse:spicetripping": "node scripts/parse-spicetripping-email.mjs",
+    "update:source-text": "node scripts/update-source-text.mjs"
+  }
+}

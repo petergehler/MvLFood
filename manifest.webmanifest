@@ -1,0 +1,18 @@
+{
+  "name": "MvLFood",
+  "short_name": "MvLFood",
+  "description": "Fast lunch overview for Maria-von-Linden-Strasse.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f7f7f2",
+  "theme_color": "#184c3b",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
