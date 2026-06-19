@@ -1,4 +1,4 @@
-const cacheName = "mvlfood-v38";
+const cacheName = "mvlfood-v40";
 const appShell = [
   "./",
   "index.html",
@@ -9,6 +9,8 @@ const appShell = [
   "icons/apple-touch-icon.png",
   "icons/icon-192.png",
   "icons/icon-512.png",
+  "icons/icon-maskable-192.png",
+  "icons/icon-maskable-512.png",
   "data/menu.json",
   "data/images/logos/hungry-elk-logo.png",
   "data/images/logos/max-planck-haus-logo.jpg",
