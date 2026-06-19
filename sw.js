@@ -1,4 +1,4 @@
-const cacheName = "mvlfood-v36";
+const cacheName = "mvlfood-v37";
 const appShell = [
   "./",
   "index.html",
@@ -14,6 +14,7 @@ const appShell = [
   "data/images/logos/max-planck-haus-logo.jpg",
   "data/images/logos/spicetripping-logo.jpg",
   "data/images/logos/yellow-donkey-logo.jpg",
+  "data/images/logos/apoteka-logo.png",
 ];
 
 self.addEventListener("install", (event) => {

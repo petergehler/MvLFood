@@ -175,6 +175,15 @@ main {
   width: 38px;
 }
 
+.location-choice.apoteka {
+  background: #1b1b18;
+}
+
+.location-choice.apoteka .source-logo {
+  height: 38px;
+  width: 38px;
+}
+
 .location-choice.mph .source-logo {
   border-radius: 6px;
   height: 38px;
@@ -188,6 +197,10 @@ main {
   border-color: var(--green);
   box-shadow: inset 0 0 0 2px var(--green), 0 4px 12px rgba(24, 76, 59, 0.14);
   color: var(--green);
+}
+
+.location-choice.apoteka[aria-pressed="true"] {
+  background: #1b1b18;
 }
 
 .location-choice[aria-pressed="true"] .source-logo,

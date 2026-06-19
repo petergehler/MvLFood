@@ -78,6 +78,26 @@
           }
         ]
       }
+    },
+    "apoteka": {
+      "name": "Apoteka",
+      "shortName": "AP",
+      "kind": "restaurant",
+      "url": "https://dieapoteka.de/",
+      "menuUrl": "https://dieapoteka.de/wp-content/uploads/2025/11/Spring-2026-Brunch.pdf",
+      "logo": "data/images/logos/apoteka-logo.png",
+      "openingHours": {
+        "days": [
+          0,
+          6
+        ],
+        "intervals": [
+          {
+            "start": "10:00",
+            "end": "13:30"
+          }
+        ]
+      }
     }
   },
   "allergens": [
