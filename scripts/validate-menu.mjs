@@ -25,6 +25,16 @@ for (const day of feed.days || []) {
     if (!["vegan", "vegetarian", "meat", "fish", "unknown"].includes(item.diet)) {
       errors.push(`${day.date}: ${item.title} has invalid diet ${item.diet}`);
     }
+    if (item.diets) {
+      if (!Array.isArray(item.diets)) {
+        errors.push(`${day.date}: ${item.title} diets must be an array`);
+      } else if (!item.diets.every((diet) => ["vegan", "vegetarian", "meat", "fish", "unknown"].includes(diet))) {
+        errors.push(`${day.date}: ${item.title} has invalid diets`);
+      }
+    }
+    if (item.serviceOption && typeof item.serviceOption !== "string") {
+      errors.push(`${day.date}: ${item.title} serviceOption must be a string`);
+    }
     if (!Array.isArray(item.allergens)) errors.push(`${day.date}: ${item.title} allergens must be an array`);
     validateOpeningHours(item.openingHours, `${day.date}: ${item.title}`);
   }

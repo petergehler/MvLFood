@@ -55,6 +55,11 @@ const translations = {
       "Food truck": "Food truck",
       "Add-on": "Add-on",
     },
+    serviceOptions: {
+      "Lunch Box 1": "Lunch Box 1",
+      "Lunch Box 2": "Lunch Box 2",
+      "Lunch Box 3": "Lunch Box 3",
+    },
     allergens: {
       "Wheat / gluten": "Wheat / gluten",
       "Oats / gluten": "Oats / gluten",
@@ -93,6 +98,11 @@ const translations = {
       "Vegan/Veggie": "Vegan/Vegetarisch",
       "Food truck": "Foodtruck",
       "Add-on": "Extra",
+    },
+    serviceOptions: {
+      "Lunch Box 1": "Lunch Box 1",
+      "Lunch Box 2": "Lunch Box 2",
+      "Lunch Box 3": "Lunch Box 3",
     },
     allergens: {
       "Wheat / gluten": "Weizen / Gluten",
@@ -137,6 +147,11 @@ const translations = {
       "Quick & Easy": "Schnell ond oifach",
       "Food truck": "Foodtruck",
       "Add-on": "Extra",
+    },
+    serviceOptions: {
+      "Lunch Box 1": "Lunch Box 1",
+      "Lunch Box 2": "Lunch Box 2",
+      "Lunch Box 3": "Lunch Box 3",
     },
     allergens: {
       "Wheat / gluten": "Weiza / Gluten",
@@ -290,6 +305,20 @@ const germanDishes = {
     title: "Gyros-Teller",
     description: "Platzhalter bis das Yellow-Donkey-Menüfoto verfügbar ist.",
   },
+  "Pita Gyros/Veggie/Halloumi/...": {
+    title: "Pita Gyros/Veggie/Halloumi/...",
+    description:
+      "Pita-Sandwiches mit Gyros, Souvlaki, Bifteki, Calamari, Veggie, Halloumi oder meatless Souvlaki.",
+  },
+  "Lunch Box Meat/Veggie/Fish": {
+    title: "Lunch Box Fleisch/Veggie/Fisch",
+    description:
+      "Basis nach Wahl: Reis, Couscous, Salat, Gemüse oder Pitabrot. Dazu Add-ons wie Souvlaki, Gyros, Bifteki, Halloumi, Grillgemüse oder Calamari.",
+  },
+  Choriatiki: {
+    title: "Choriatiki",
+    description: "Griechischer Bauernsalat.",
+  },
 };
 const swabianDishes = {
   "Italy Bowl": {
@@ -413,6 +442,20 @@ const swabianDishes = {
     title: "Hähna Masala",
     description:
       "Marinierts Hähna mit hausgmachter Gwürzmischung, Zwiebla, Tomata, Ingwer, Knoblauch, Koriander ond Kokosmilch. Drzua Reis, Papadams, Kokos-Chutney, Rote-Bete-Joghurt-Salat ond frittierter Chili.",
+  },
+  "Pita Gyros/Veggie/Halloumi/...": {
+    title: "Pita Gyros/Veggie/Halloumi/...",
+    description:
+      "Pita-Weckla mit Gyros, Souvlaki, Bifteki, Calamari, Veggie, Halloumi oder meatless Souvlaki.",
+  },
+  "Lunch Box Meat/Veggie/Fish": {
+    title: "Lunch Box Fleisch/Veggie/Fisch",
+    description:
+      "Basis zom Aussuacha: Reis, Couscous, Salat, Gmias oder Pitabrot. Drzua Add-ons wie Souvlaki, Gyros, Bifteki, Halloumi, Grillgmias oder Calamari.",
+  },
+  Choriatiki: {
+    title: "Choriatiki",
+    description: "Griechischer Bauresalat.",
   },
 };
 const icons = {
@@ -630,16 +673,17 @@ function keepItem(item) {
     return false;
   }
 
-  if (state.selectedDiets.size && !dietMatches(item.diet)) {
+  if (state.selectedDiets.size && !dietMatches(item)) {
     return false;
   }
 
   return !item.allergens.some((code) => state.hiddenAllergens.has(code));
 }
 
-function dietMatches(diet) {
-  if (state.selectedDiets.has(diet)) return true;
-  return diet === "vegan" && state.selectedDiets.has("vegetarian");
+function dietMatches(item) {
+  const diets = Array.isArray(item.diets) ? item.diets : [item.diet];
+  if (diets.some((diet) => state.selectedDiets.has(diet))) return true;
+  return diets.includes("vegan") && state.selectedDiets.has("vegetarian");
 }
 
 function renderItem(item) {
@@ -648,7 +692,8 @@ function renderItem(item) {
   const watermark = element.querySelector(".source-watermark");
 
   const text = itemText(item);
-  element.querySelector("h2").textContent = text.title;
+  const option = serviceOptionLabel(item);
+  element.querySelector("h2").textContent = option ? `${option}: ${text.title}` : text.title;
   element.querySelector(".description").textContent = text.description || "";
   renderAvailability(element, item, source);
 
@@ -738,6 +783,11 @@ function categoryLabel(category) {
 
 function allergenLabel(label) {
   return t("allergens")[label] || label;
+}
+
+function serviceOptionLabel(item) {
+  if (!item.serviceOption) return "";
+  return t("serviceOptions")?.[item.serviceOption] || item.serviceOption;
 }
 
 function itemText(item) {

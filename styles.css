@@ -229,7 +229,7 @@ main {
   mask-image: linear-gradient(to left, #000 0%, #000 42%, transparent 100%);
   -webkit-mask-image: linear-gradient(to left, #000 0%, #000 42%, transparent 100%);
   object-fit: contain;
-  opacity: 0.2;
+  opacity: 0.3;
   pointer-events: none;
   position: absolute;
   right: -12px;
@@ -238,14 +238,14 @@ main {
 }
 
 .source-watermark.mph {
-  opacity: 0.14;
+  opacity: 0.22;
   right: -28px;
   width: 180px;
 }
 
 .source-watermark.spicetripping {
   border-radius: 50%;
-  opacity: 0.18;
+  opacity: 0.28;
 }
 
 .source-logo {
