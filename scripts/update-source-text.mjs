@@ -30,7 +30,9 @@ async function findHungryElkPdf() {
   if (!response.ok) throw new Error(`Hungry Elk REST request failed: ${response.status}`);
   const page = await response.json();
   const content = page.content?.rendered || "";
-  const match = content.match(/https:\\\/\\\/stollsteimer\.de\\\/easy-pdf-restaurant-menu\\\/menu-files\\\/menu-thehungryelk\.pdf\?cb=\d+/);
+  const match = content.match(
+    /https?:\\?\/\\?\/stollsteimer\.de\\?\/easy-pdf-restaurant-menu\\?\/menu-files\\?\/menu-thehungryelk\.pdf\?cb=\d+/,
+  );
   if (!match) throw new Error("Could not find Hungry Elk PDF URL");
   return match[0].replaceAll("\\/", "/");
 }

@@ -47,18 +47,38 @@ npm run parse:mph
 
 ## Update mechanism
 
-The recommended simple workflow is:
+The feed is refreshed by `.github/workflows/update-menu.yml`:
 
-1. A scheduled GitHub Action runs `scripts/update-source-text.mjs`.
-2. It downloads the Hungry Elk PDF URL from the Stollsteimer WordPress REST API.
-3. It downloads the MPH PDF URL supplied through the workflow input or environment.
-4. It extracts text into `data/source-text/`.
-5. A human or a later parser updates `data/menu.json`.
+- It runs every weekday at 07:15 UTC and can also be started manually from GitHub Actions.
+- It runs `npm run update:menu`, then `npm run validate`.
+- If `data/menu.json` changed, the workflow commits the new feed back to the repository.
 
-This is intentionally conservative because both current sources are PDF/table based, and food allergy filtering should not depend on fragile phone-side parsing.
+The updater currently owns the sources with stable public menu pages:
+
+- Hungry Elk: discovers the current PDF through the Stollsteimer WordPress REST API and parses the positioned PDF text.
+- Max-Planck-Haus: parses the public HTML Speiseplan table.
+
+If `OPENAI_API_KEY` is available, `npm run update:menu` also sends the generated Hungry Elk and MPH items through an LLM normalization pass. The LLM only rewrites app-facing `title`, `description`, and `diet`; dates, sources, categories, prices, allergens, and opening hours stay under deterministic code and validation.
+
+For GitHub Actions, add an `OPENAI_API_KEY` repository secret. You can optionally set an `OPENAI_MODEL` repository variable; otherwise the workflow uses `gpt-5-mini`. To force a deterministic-only local run:
+
+```sh
+MENU_LLM_NORMALIZE=0 npm run update:menu
+```
+
+Recurring non-dated entries such as Yellow Donkey are carried forward from the existing JSON for matching weekdays. Manually entered dated truck visits, such as Spicetripping emails, are preserved only when their `openingHours.date` falls inside the generated week.
+
+For local testing:
+
+```sh
+npm run update:menu
+npm run validate
+```
+
+`npm run update:source-text` is still available as a debugging helper when you want to inspect raw PDF text.
 
 ## Open questions
 
 - Which food trucks should be included, and where is their most reliable schedule/menu source?
 - Should allergy filtering hide unknown items, or keep them visible with an `ask` badge?
-- Do you want a fully automatic parser that commits `data/menu.json`, or a safer weekly review step before publishing?
+- Which additional food-truck feeds have reliable public sources that can be parsed automatically?

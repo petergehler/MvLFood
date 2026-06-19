@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T14:45:00+02:00",
+  "updatedAt": "2026-06-19T13:21:19.067Z",
   "week": "2026-W25",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=7017",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=50196",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -30,7 +30,7 @@
       "shortName": "MPH",
       "kind": "restaurant",
       "url": "https://www.mph.tuebingen.mpg.de/speiseplan",
-      "menuUrl": "https://www.mph.tuebingen.mpg.de/52017/KW25.pdf",
+      "menuUrl": "https://www.mph.tuebingen.mpg.de/speiseplan",
       "logo": "data/images/logos/max-planck-haus-logo.jpg",
       "openingHours": {
         "days": [
@@ -182,14 +182,14 @@
     {
       "date": "2026-06-15",
       "label": "Mon",
-      "fullLabel": "Monday, 15 June",
+      "fullLabel": "Monday, June 15",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
           "diet": "meat",
           "title": "Italy Bowl",
-          "description": "Nudelsalat with grilled vegetables, mozzarella, croutons, chicken breast, rocket and Italian dressing.",
+          "description": "hausgemachter Nudelsalat mit Grillgemüse, Mozzarella, Croutons, Hähnchenbrust, Rucola und einem italienischem Dressing",
           "price": "Int 6.90 / Ext 8.90",
           "allergens": [
             "AH",
@@ -201,7 +201,7 @@
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
           "title": "Pasta Primavera",
-          "description": "Fresh pasta with paprika pesto, zucchini, aubergine, fennel, dried tomatoes and panko crunch.",
+          "description": "frische Pasta an Paprikapesto, gebratene Zuchini, Aubergine und Fenchel, getrocknete Tomatenwürfel und geröstetes Panko-Crunch-Topping",
           "price": "Int 5.50 / Ext 7.50",
           "allergens": [
             "AW",
@@ -212,10 +212,23 @@
         },
         {
           "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Ofenfrisches Schweinefilet",
+          "description": "rosa gebraten an Pfefferrahmsoße dazu Kartoffelgratin und Speckbohnen",
+          "price": "Int 9.30 / Ext 11.30",
+          "allergens": [
+            "AW",
+            "B",
+            "G"
+          ]
+        },
+        {
+          "source": "hungry-elk",
           "category": "Street Food",
           "diet": "vegan",
-          "title": "Green Thai Curry",
-          "description": "Wok vegetables in green curry coconut sauce with sesame rice and roasted peanuts.",
+          "title": "Veganes grünes Thai-Curry",
+          "description": "Wokgemüse in grüner Curry-Kokos-Soße dazu Sesamreis und geröstete Erdnüsse",
           "price": "Int 5.50 / Ext 7.50",
           "allergens": [
             "AW",
@@ -224,11 +237,20 @@
         },
         {
           "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Tagesessen",
+          "description": "",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Putensteak with herb butter",
-          "description": "Gebratenes Putensteak mit Kraeuterbutter.",
-          "price": "1.56 / 100g",
+          "title": "Gebratenes Putensteak",
+          "description": "mit Kräuterbutter",
+          "price": "1.56€/100g",
           "allergens": [
             "g"
           ]
@@ -237,24 +259,15 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Spinat-Dinkel Knuspermedaillon",
-          "description": "With Gorgonzola sauce.",
-          "price": "1.49 / 100g",
+          "title": "Spinat-Dinkel",
+          "description": "Knuspermedailllon mit Gorgonzolasoße",
+          "price": "1.49€/100g",
           "allergens": [
             "a1",
             "c",
             "i",
             "g"
           ]
-        },
-        {
-          "source": "mph",
-          "category": "Quick & Easy",
-          "diet": "unknown",
-          "title": "Tagesessen",
-          "description": "Daily quick option, details at the counter.",
-          "price": "",
-          "allergens": []
         },
         {
           "source": "yellow-donkey",
@@ -331,14 +344,26 @@
     {
       "date": "2026-06-16",
       "label": "Tue",
-      "fullLabel": "Tuesday, 16 June",
+      "fullLabel": "Tuesday, June 16",
       "items": [
+        {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "meat",
+          "title": "Italy Bowl",
+          "description": "hausgemachter Nudelsalat mit Grillgemüse, Mozzarella, Croutons, Hähnchenbrust, Rucola und einem italienischem Dressing",
+          "price": "Int 6.90 / Ext 8.90",
+          "allergens": [
+            "AR",
+            "B"
+          ]
+        },
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
           "title": "Spaghetti Aglio e Olio",
-          "description": "Spaghetti in herb-garlic emulsion with Grana Padano.",
+          "description": "Spaghetti in einer Kräuter-Knoblauch-Emulsion mit Grana Padano",
           "price": "Int 5.90 / Ext 7.90",
           "allergens": [
             "AR",
@@ -347,10 +372,23 @@
         },
         {
           "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Ofenfrisches Schweinefilet",
+          "description": "rosa gebraten an Pfefferrahmsoße dazu Kartoffelgratin und Speckbohnen",
+          "price": "Int 9.30 / Ext 11.30",
+          "allergens": [
+            "AW",
+            "B",
+            "G"
+          ]
+        },
+        {
+          "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
           "title": "Bayrischer Biergarten Burger",
-          "description": "Fleischkaese in a pretzel bun with onions, sweet mustard mayonnaise and fried potatoes.",
+          "description": "gebratener Fleischkäse im Laugen-Bun an geschmorten Zwiebeln mit süßer Senf-Mayonnaise und knusprigen Bratkartoffeln",
           "price": "Int 7.50 / Ext 9.50",
           "allergens": [
             "AW",
@@ -361,11 +399,23 @@
         },
         {
           "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "vegan",
+          "title": "Quinoa Thai Bowl",
+          "description": "Quinoa, Karotte, Rote Paprika, Edamame, Gurken, Rotkaut, Koriander, Frühlingzwiebel Frittierter Tofu an Spicy Limetten-Sojadressing",
+          "price": "7.50€",
+          "allergens": [
+            "f",
+            "k"
+          ]
+        },
+        {
+          "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Hackfleisch Bologneser Art",
-          "description": "With vegetables, tomato sauce and Grana Padano.",
-          "price": "1.49 / 100g",
+          "title": "Hackfleisch nach",
+          "description": "Bologneser Art mit Gemüsewürfeln in fruchtiger Tomatensoße und Grana Padano",
+          "price": "1.49€/100g",
           "allergens": [
             "i",
             "g"
@@ -375,25 +425,13 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Couscous vegetable patty",
-          "description": "Homemade patty with baba ganoush.",
-          "price": "1.43 / 100g",
+          "title": "Hausgemachte",
+          "description": "Couscous- Gemüsebratling mit Baba Ganoush",
+          "price": "1.43€/100g",
           "allergens": [
             "a1",
             "c",
             "g"
-          ]
-        },
-        {
-          "source": "mph",
-          "category": "Quick & Easy",
-          "diet": "vegan",
-          "title": "Quinoa Thai Bowl",
-          "description": "Quinoa, vegetables, edamame, tofu and spicy lime-soy dressing.",
-          "price": "7.50",
-          "allergens": [
-            "f",
-            "k"
           ]
         },
         {
@@ -471,14 +509,27 @@
     {
       "date": "2026-06-17",
       "label": "Wed",
-      "fullLabel": "Wednesday, 17 June",
+      "fullLabel": "Wednesday, June 17",
       "items": [
+        {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "meat",
+          "title": "Schwäbische Bowl",
+          "description": "Maultaschen auf einem hausgemachten Kartoffelsalat dazu Tomatenecken, Gurkenscheiben und Röstzwiebeln",
+          "price": "Int 5.90 / Ext 7.90",
+          "allergens": [
+            "AW",
+            "F",
+            "G"
+          ]
+        },
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
-          "title": "Pasta Gorgonzola and pear",
-          "description": "Fresh pasta in creamy sauce with Gorgonzola, marinated pear and walnuts.",
+          "title": "Pasta Gorgonzola und Birne",
+          "description": "frische Pasta in cremiger Sahnesoße, Gorgonzolastückchen, marinierte Birnenwürfel und Walnüsse",
           "price": "Int 5.80 / Ext 7.80",
           "allergens": [
             "AW",
@@ -492,7 +543,7 @@
           "category": "Region",
           "diet": "meat",
           "title": "Spaghetti Bolognese",
-          "description": "Mixed minced meat with tomato sugo, vegetables and grated parmesan.",
+          "description": "gemischtes Hackfleisch an Tomatensugo mit Gemüsestreifen dazu geriebener Parmesan",
           "price": "Int 7.50 / Ext 9.50",
           "allergens": [
             "AW",
@@ -504,8 +555,8 @@
           "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
-          "title": "Japanese turkey schnitzel Tonkatsu",
-          "description": "With soy-honey glaze, sesame, mie noodles and Asian coleslaw.",
+          "title": "Japanisches Putenschnitzel \"Tonkatsu\"",
+          "description": "an Soja-Honig-Glasur mit schwarzem und weißem Sesam dazu Mie-Nudeln und einen asiatischen Krautsalat",
           "price": "Int 9.80 / Ext 11.80",
           "allergens": [
             "AW",
@@ -517,11 +568,20 @@
         },
         {
           "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Tagesessen",
+          "description": "",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Pork medallions",
-          "description": "Schweine Medaillons in fine pepper cream sauce.",
-          "price": "1.49 / 100g",
+          "title": "Schweine Medaillons in",
+          "description": "feiner Pfefferrahmsoße",
+          "price": "1.49€/100g",
           "allergens": [
             "i",
             "g"
@@ -531,9 +591,9 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Vegan pasta with red lentils",
-          "description": "With cherry tomatoes and wild garlic pesto.",
-          "price": "1.38 / 100g",
+          "title": "Vegane Pasta mit roten",
+          "description": "Linsen, Kirschtomaten und Bärlauch Pesto",
+          "price": "1.38€/100g",
           "allergens": [
             "a1"
           ]
@@ -653,14 +713,14 @@
     {
       "date": "2026-06-18",
       "label": "Thu",
-      "fullLabel": "Thursday, 18 June",
+      "fullLabel": "Thursday, June 18",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
           "diet": "meat",
-          "title": "Schwaebische Bowl",
-          "description": "Maultaschen on homemade potato salad with tomatoes, cucumber and fried onions.",
+          "title": "Schwäbische Bowl",
+          "description": "Maultaschen auf einem hausgemachten Kartoffelsalat dazu Tomatenecken, Gurkenscheiben und Röstzwiebeln",
           "price": "Int 5.90 / Ext 7.90",
           "allergens": [
             "AW",
@@ -673,7 +733,7 @@
           "category": "Pizza & Pasta",
           "diet": "meat",
           "title": "Pizza Hawaii",
-          "description": "Pizza bread with San Marzano tomato sauce, Fior di Latte, cooked ham and pineapple.",
+          "description": "ofenfrisches Pizzabrot an San Marzano Tomatensoße belegt mit Fior di Latte, Kochschinken und Ananasstückchen",
           "price": "Int 7.50 / Ext 9.50",
           "allergens": [
             "AW",
@@ -685,7 +745,7 @@
           "category": "Region",
           "diet": "meat",
           "title": "Spaghetti Bolognese",
-          "description": "Mixed minced meat with tomato sugo, vegetables and grated parmesan.",
+          "description": "gemischtes Hackfleisch an Tomatensugo mit Gemüsestreifen dazu geriebener Parmesan",
           "price": "Int 7.50 / Ext 9.50",
           "allergens": [
             "AW",
@@ -697,8 +757,8 @@
           "source": "hungry-elk",
           "category": "Street Food",
           "diet": "vegetarian",
-          "title": "Baked Camembert",
-          "description": "With wild cranberries, mixed leaf salad and baguette slices.",
+          "title": "Gebackener Camembert",
+          "description": "an Wildpreiselbeeren mit buntem Pflücksalat und Baguettescheiben",
           "price": "Int 5.90 / Ext 7.90",
           "allergens": [
             "AW",
@@ -708,11 +768,23 @@
         },
         {
           "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "meat",
+          "title": "Pulled Gyros Wrap vom",
+          "description": "Street Food Special: Schwein mit Eisbergsalat, Krautsalat & Zatziki dazu Kartoffel Wedges",
+          "price": "8.50€",
+          "allergens": [
+            "a1",
+            "g"
+          ]
+        },
+        {
+          "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Braised chicken breast",
-          "description": "Geschmorte Haehnchenbrust in orange sauce.",
-          "price": "1.56 / 100g",
+          "title": "Geschmorte",
+          "description": "Hähnchenbrust in Orangensoße",
+          "price": "1.56€/100g",
           "allergens": [
             "i"
           ]
@@ -721,25 +793,13 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Cannelloni with spinach and ricotta",
-          "description": "In tomato sauce, baked with cheese.",
-          "price": "1.43 / 100g",
+          "title": "Cannelloni mit Spinat und",
+          "description": "Ricotta in Tomatensoße und Käse überbacken",
+          "price": "1.43€/100g",
           "allergens": [
             "a1",
             "g",
             "c"
-          ]
-        },
-        {
-          "source": "mph",
-          "category": "Quick & Easy",
-          "diet": "meat",
-          "title": "Pulled gyros wrap",
-          "description": "Pork wrap with iceberg lettuce, coleslaw and tzatziki, served with potato wedges.",
-          "price": "8.50",
-          "allergens": [
-            "a1",
-            "g"
           ]
         },
         {
@@ -857,14 +917,14 @@
     {
       "date": "2026-06-19",
       "label": "Fri",
-      "fullLabel": "Friday, 19 June",
+      "fullLabel": "Friday, June 19",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
-          "title": "Ricotta and spinach tortellini",
-          "description": "In tomato cream sauce, baked with mozzarella, plus a small mixed salad.",
+          "title": "Tortellini gefüllt mit Ricotta und Spinat",
+          "description": "in einer kräftigen Tomaten-Sahne-Soße überbacken mit Mozzarella dazu ein kleiner, bunter Salat",
           "price": "Int 5.90 / Ext 7.90",
           "allergens": [
             "AW",
@@ -876,8 +936,8 @@
           "source": "hungry-elk",
           "category": "Region",
           "diet": "fish",
-          "title": "Pollock filet in egg-parmesan crust",
-          "description": "With steakhouse fries, pickled vegetables, tartar sauce and lemon.",
+          "title": "Seelachsfilet in einer Ei-Parmesanhülle",
+          "description": "dazu Steakhouse Fries, eingelegtes Gemüse, Tartarsoße und frische Zitronenecke",
           "price": "Int 6.90 / Ext 8.90",
           "allergens": [
             "AW",
@@ -890,8 +950,17 @@
           "source": "hungry-elk",
           "category": "Street Food",
           "diet": "unknown",
-          "title": "Daily dish",
-          "description": "Details posted in the restaurant.",
+          "title": "Tagesgericht siehe Aushang",
+          "description": "",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Tagesessen",
+          "description": "",
           "price": "",
           "allergens": []
         },
@@ -899,9 +968,9 @@
           "source": "mph",
           "category": "Main",
           "diet": "fish",
-          "title": "Rabas empanadas",
-          "description": "Squid strips in batter with aioli sauce.",
-          "price": "1.56 / 100g",
+          "title": "Rabas Empanadas",
+          "description": "Tintenfisch Streifen in Backteig mit Aioli Soße",
+          "price": "1.56€/100g",
           "allergens": [
             "a1",
             "g",
@@ -912,23 +981,14 @@
         {
           "source": "mph",
           "category": "Vegan/Veggie",
-          "diet": "vegan",
-          "title": "Alu Goobi",
-          "description": "Indian potato and cauliflower curry.",
-          "price": "1.32 / 100g",
+          "diet": "vegetarian",
+          "title": "Alu Goobi: Indisches",
+          "description": "Kartoffel-Blumenkohl- Curry",
+          "price": "1.32€/100g",
           "allergens": [
             "k",
             "f"
           ]
-        },
-        {
-          "source": "mph",
-          "category": "Quick & Easy",
-          "diet": "unknown",
-          "title": "Tagesessen",
-          "description": "Daily quick option, details at the counter.",
-          "price": "",
-          "allergens": []
         },
         {
           "source": "yellow-donkey",

@@ -1,0 +1,7 @@
+tmp/
+node_modules/
+data/source-text/
+
+.env
+.env.*
+.DS_Store

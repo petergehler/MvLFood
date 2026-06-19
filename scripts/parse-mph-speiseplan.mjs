@@ -7,11 +7,13 @@ const args = Object.fromEntries(
   }),
 );
 
-const source = args.html
-  ? await readFile(args.html, "utf8")
-  : await fetchText(args.url || "https://www.mph.tuebingen.mpg.de/speiseplan");
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const source = args.html
+    ? await readFile(args.html, "utf8")
+    : await fetchText(args.url || "https://www.mph.tuebingen.mpg.de/speiseplan");
 
-console.log(JSON.stringify(parseMphSpeiseplan(source), null, 2));
+  console.log(JSON.stringify(parseMphSpeiseplan(source), null, 2));
+}
 
 async function fetchText(url) {
   const response = await fetch(url);
@@ -19,7 +21,7 @@ async function fetchText(url) {
   return response.text();
 }
 
-function parseMphSpeiseplan(html) {
+export function parseMphSpeiseplan(html) {
   const weekStart = parseWeekStart(html);
   const table = firstMenuTable(html);
   const headers = cells(table.match(/<thead[\s\S]*?<\/thead>/i)?.[0] || "", "th").map(cellText);
