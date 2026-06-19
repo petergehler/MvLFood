@@ -295,10 +295,18 @@ const germanDishes = {
     description:
       "Pita-Sandwiches mit Gyros, Souvlaki, Bifteki, Calamari, Veggie, Halloumi oder meatless Souvlaki.",
   },
-  "Lunch Box Meat/Veggie/Fish": {
-    title: "Lunch Box Fleisch/Veggie/Fisch",
+  "Lunch Box Meat": {
+    title: "Lunch Box Fleisch",
     description:
-      "Basis nach Wahl: Reis, Couscous, Salat, Gemüse oder Pitabrot. Dazu Add-ons wie Souvlaki, Gyros, Bifteki, Halloumi, Grillgemüse oder Calamari.",
+      "Basis nach Wahl: Reis, Couscous, Salat, Gemüse oder Pitabrot mit Souvlaki Chicken, Souvlaki Pork, Gyros oder Bifteki.",
+  },
+  "Lunch Box Veggie": {
+    title: "Lunch Box Veggie",
+    description: "Basis nach Wahl: Reis, Couscous, Salat, Gemüse oder Pitabrot mit Halloumi oder Grillgemüse.",
+  },
+  "Lunch Box Fish": {
+    title: "Lunch Box Fisch",
+    description: "Basis nach Wahl: Reis, Couscous, Salat, Gemüse oder Pitabrot mit Calamari.",
   },
   Choriatiki: {
     title: "Choriatiki",
@@ -433,10 +441,18 @@ const swabianDishes = {
     description:
       "Pita-Weckla mit Gyros, Souvlaki, Bifteki, Calamari, Veggie, Halloumi oder meatless Souvlaki.",
   },
-  "Lunch Box Meat/Veggie/Fish": {
-    title: "Lunch Box Fleisch/Veggie/Fisch",
+  "Lunch Box Meat": {
+    title: "Lunch Box Fleisch",
     description:
-      "Basis zom Aussuacha: Reis, Couscous, Salat, Gmias oder Pitabrot. Drzua Add-ons wie Souvlaki, Gyros, Bifteki, Halloumi, Grillgmias oder Calamari.",
+      "Basis zom Aussuacha: Reis, Couscous, Salat, Gmias oder Pitabrot mit Souvlaki Chicken, Souvlaki Pork, Gyros oder Bifteki.",
+  },
+  "Lunch Box Veggie": {
+    title: "Lunch Box Veggie",
+    description: "Basis zom Aussuacha: Reis, Couscous, Salat, Gmias oder Pitabrot mit Halloumi oder Grillgmias.",
+  },
+  "Lunch Box Fish": {
+    title: "Lunch Box Fisch",
+    description: "Basis zom Aussuacha: Reis, Couscous, Salat, Gmias oder Pitabrot mit Calamari.",
   },
   Choriatiki: {
     title: "Choriatiki",

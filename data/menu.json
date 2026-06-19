@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T14:20:00+02:00",
+  "updatedAt": "2026-06-19T14:45:00+02:00",
   "week": "2026-W25",
   "sources": {
     "hungry-elk": {
@@ -279,20 +279,39 @@
         {
           "source": "yellow-donkey",
           "category": "Lunch Box",
-          "diet": "unknown",
-          "diets": [
-            "meat",
-            "fish",
-            "vegetarian"
-          ],
-          "title": "Lunch Box Meat/Veggie/Fish",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread, plus add-ons such as souvlaki, gyros, bifteki, halloumi, grilled veggies or calamari.",
+          "diet": "meat",
+          "title": "Lunch Box Meat",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
           "price": "9.90 / Deluxe 11.90",
           "allergens": [
             "AW",
             "B",
             "F",
-            "G",
+            "G"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "vegetarian",
+          "title": "Lunch Box Veggie",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "fish",
+          "title": "Lunch Box Fish",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "F",
             "d"
           ]
         },
@@ -400,20 +419,39 @@
         {
           "source": "yellow-donkey",
           "category": "Lunch Box",
-          "diet": "unknown",
-          "diets": [
-            "meat",
-            "fish",
-            "vegetarian"
-          ],
-          "title": "Lunch Box Meat/Veggie/Fish",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread, plus add-ons such as souvlaki, gyros, bifteki, halloumi, grilled veggies or calamari.",
+          "diet": "meat",
+          "title": "Lunch Box Meat",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
           "price": "9.90 / Deluxe 11.90",
           "allergens": [
             "AW",
             "B",
             "F",
-            "G",
+            "G"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "vegetarian",
+          "title": "Lunch Box Veggie",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "fish",
+          "title": "Lunch Box Fish",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "F",
             "d"
           ]
         },
@@ -563,20 +601,39 @@
         {
           "source": "yellow-donkey",
           "category": "Lunch Box",
-          "diet": "unknown",
-          "diets": [
-            "meat",
-            "fish",
-            "vegetarian"
-          ],
-          "title": "Lunch Box Meat/Veggie/Fish",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread, plus add-ons such as souvlaki, gyros, bifteki, halloumi, grilled veggies or calamari.",
+          "diet": "meat",
+          "title": "Lunch Box Meat",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
           "price": "9.90 / Deluxe 11.90",
           "allergens": [
             "AW",
             "B",
             "F",
-            "G",
+            "G"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "vegetarian",
+          "title": "Lunch Box Veggie",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "fish",
+          "title": "Lunch Box Fish",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "F",
             "d"
           ]
         },
@@ -748,20 +805,39 @@
         {
           "source": "yellow-donkey",
           "category": "Lunch Box",
-          "diet": "unknown",
-          "diets": [
-            "meat",
-            "fish",
-            "vegetarian"
-          ],
-          "title": "Lunch Box Meat/Veggie/Fish",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread, plus add-ons such as souvlaki, gyros, bifteki, halloumi, grilled veggies or calamari.",
+          "diet": "meat",
+          "title": "Lunch Box Meat",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
           "price": "9.90 / Deluxe 11.90",
           "allergens": [
             "AW",
             "B",
             "F",
-            "G",
+            "G"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "vegetarian",
+          "title": "Lunch Box Veggie",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "fish",
+          "title": "Lunch Box Fish",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "F",
             "d"
           ]
         },
@@ -877,20 +953,39 @@
         {
           "source": "yellow-donkey",
           "category": "Lunch Box",
-          "diet": "unknown",
-          "diets": [
-            "meat",
-            "fish",
-            "vegetarian"
-          ],
-          "title": "Lunch Box Meat/Veggie/Fish",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread, plus add-ons such as souvlaki, gyros, bifteki, halloumi, grilled veggies or calamari.",
+          "diet": "meat",
+          "title": "Lunch Box Meat",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
           "price": "9.90 / Deluxe 11.90",
           "allergens": [
             "AW",
             "B",
             "F",
-            "G",
+            "G"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "vegetarian",
+          "title": "Lunch Box Veggie",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "fish",
+          "title": "Lunch Box Fish",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "F",
             "d"
           ]
         },
