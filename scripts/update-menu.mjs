@@ -446,9 +446,11 @@ function addRecurringTemplates(currentFeed, daysByDate) {
     const weekday = weekdayNumber(day.date);
     for (const [sourceId, templates] of templatesBySource) {
       const source = currentFeed.sources[sourceId];
-      if (opensOnWeekday(source, weekday)) {
-        day.items.push(...templates.map((template) => structuredClone(template)));
-      }
+      day.items.push(
+        ...templates
+          .filter((template) => itemOpensOnWeekday(template, source, weekday))
+          .map((template) => structuredClone(template)),
+      );
     }
   }
 }
@@ -457,21 +459,27 @@ function recurringServiceDates(currentFeed, weekStart) {
   if (!weekStart) return [];
 
   const dates = new Set();
-  const recurringSources = new Set();
+  const recurringTemplates = [];
   const generatedSourceIds = new Set(["hungry-elk", "mph"]);
 
   for (const day of currentFeed.days || []) {
     for (const item of day.items || []) {
       if (generatedSourceIds.has(item.source) || item.openingHours?.date) continue;
-      if (hasRecurringOpeningHours(currentFeed.sources[item.source])) recurringSources.add(item.source);
+      const source = currentFeed.sources[item.source];
+      if (hasRecurringOpeningHours(source) || item.openingHours?.days) {
+        recurringTemplates.push({ item, source });
+      }
     }
   }
 
   for (let offset = 0; offset < 7; offset += 1) {
     const date = addDays(weekStart, offset);
     const weekday = weekdayNumber(date);
-    for (const sourceId of recurringSources) {
-      if (opensOnWeekday(currentFeed.sources[sourceId], weekday)) dates.add(date);
+    for (const template of recurringTemplates) {
+      if (itemOpensOnWeekday(template.item, template.source, weekday)) {
+        dates.add(date);
+        break;
+      }
     }
   }
 
@@ -480,6 +488,11 @@ function recurringServiceDates(currentFeed, weekStart) {
 
 function hasRecurringOpeningHours(source) {
   return Boolean(source?.openingHours?.days || source?.openingHours?.rules?.length);
+}
+
+function itemOpensOnWeekday(item, source, weekday) {
+  if (item.openingHours?.days) return item.openingHours.days.includes(weekday);
+  return opensOnWeekday(source, weekday);
 }
 
 function opensOnWeekday(source, weekday) {
