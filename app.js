@@ -165,6 +165,32 @@ const translations = {
     },
   },
 };
+const englishDishes = {
+  "Tortellini gefüllt mit Ricotta und Spinat": {
+    title: "Ricotta and spinach tortellini",
+    description: "Baked in tomato cream sauce with mozzarella, served with a small mixed salad.",
+  },
+  "Seelachsfilet in einer Ei-Parmesanhülle": {
+    title: "Pollock filet in egg-parmesan crust",
+    description: "With steakhouse fries, pickled vegetables, tartar sauce and fresh lemon.",
+  },
+  "Tagesgericht siehe Aushang": {
+    title: "Daily dish",
+    description: "Details are posted at the restaurant.",
+  },
+  Tagesessen: {
+    title: "Daily dish",
+    description: "Daily offer, details at the counter.",
+  },
+  "Rabas Empanadas": {
+    title: "Rabas empanadas",
+    description: "Squid strips in batter with aioli.",
+  },
+  "Alu Goobi: Indisches": {
+    title: "Alu Goobi",
+    description: "Indian potato and cauliflower curry.",
+  },
+};
 const germanDishes = {
   "Italy Bowl": {
     title: "Italy Bowl",
@@ -262,7 +288,15 @@ const germanDishes = {
     title: "Tortellini mit Ricotta und Spinat",
     description: "In Tomaten-Sahne-Soße, mit Mozzarella überbacken, dazu ein kleiner gemischter Salat.",
   },
+  "Tortellini gefüllt mit Ricotta und Spinat": {
+    title: "Tortellini mit Ricotta und Spinat",
+    description: "In Tomaten-Sahne-Soße, mit Mozzarella überbacken, dazu ein kleiner gemischter Salat.",
+  },
   "Pollock filet in egg-parmesan crust": {
+    title: "Seelachsfilet in Ei-Parmesan-Hülle",
+    description: "Mit Steakhouse Fries, eingelegtem Gemüse, Tartarsoße und Zitrone.",
+  },
+  "Seelachsfilet in einer Ei-Parmesanhülle": {
     title: "Seelachsfilet in Ei-Parmesan-Hülle",
     description: "Mit Steakhouse Fries, eingelegtem Gemüse, Tartarsoße und Zitrone.",
   },
@@ -270,11 +304,23 @@ const germanDishes = {
     title: "Tagesgericht",
     description: "Details hängen im Restaurant aus.",
   },
+  "Tagesgericht siehe Aushang": {
+    title: "Tagesgericht",
+    description: "Details hängen im Restaurant aus.",
+  },
   "Rabas empanadas": {
     title: "Rabas Empanadas",
     description: "Tintenfischstreifen im Backteig mit Aioli.",
   },
+  "Rabas Empanadas": {
+    title: "Rabas Empanadas",
+    description: "Tintenfischstreifen im Backteig mit Aioli.",
+  },
   "Alu Goobi": {
+    title: "Alu Goobi",
+    description: "Indisches Kartoffel-Blumenkohl-Curry.",
+  },
+  "Alu Goobi: Indisches": {
     title: "Alu Goobi",
     description: "Indisches Kartoffel-Blumenkohl-Curry.",
   },
@@ -340,6 +386,58 @@ const germanDishes = {
   "Cardamom Porridge": {
     title: "Kardamom-Porridge",
     description: "Kardamom-Porridge mit Rhabarber-Erdbeer-Kompott und knusprigem glutenfreiem Granola.",
+  },
+  "Cakes and Sweets": {
+    title: "Kuchen und Süßes",
+    description: "Wechselnde Auswahl an Kuchen und süßen Kleinigkeiten aus der Apoteka.",
+  },
+  "Thuringian bratwurst spiral": {
+    title: "Thüringer Rostbratwurstschnecke",
+    description: "Mit Bratenjus.",
+  },
+  "Vegan crispy patty": {
+    title: "Vegane Knusperfrikadelle",
+    description: "Mit Karotten-Orangen-Soße.",
+  },
+  "Summer bowl": {
+    title: "Summer Bowl",
+    description: "Bulgur, Wildkräuter, Wassermelone, Gurke, Avocado, veganer Hirtenkäse, Minze und Zitronendressing.",
+  },
+  "Oven-baked chicken thighs": {
+    title: "Ofenfrische Hähnchenschenkel",
+    description: "Mit BBQ-Dip.",
+  },
+  "Spicy chili sin carne": {
+    title: "Feuriges Chili sin Carne",
+    description: "Mit Kidneybohnen, Paprika und Mais.",
+  },
+  "Lasagna Bolognese": {
+    title: "Lasagne Bolognese",
+    description: "Vom Rind in Tomaten-Béchamelsoße, mit Mozzarella überbacken.",
+  },
+  "Sweet potato curry": {
+    title: "Süßkartoffelcurry",
+    description: "Mit frischem Mangold.",
+  },
+  "Street food: oven-fresh spare ribs": {
+    title: "Streetfood: Ofenfrische Spare Ribs",
+    description: "Vom Schwein mit BBQ-Soße, Coleslaw und Kartoffelwedges.",
+  },
+  "Turkey goulash": {
+    title: "Putengulasch",
+    description: "In feiner Paprikarahmsoße.",
+  },
+  "Roesti patties with tomato": {
+    title: "Röstitaler mit Tomaten",
+    description: "Mit Zucchini und Bergkäse überbacken.",
+  },
+  "Mediterranean pollock filet": {
+    title: "Seelachsfilet mediterrane Art",
+    description: "Mit getrockneten Tomaten, Oliven und Tomatensoße.",
+  },
+  "Scrambled eggs with creamed spinach": {
+    title: "Rührei mit Rahmspinat",
+    description: "Rührei mit Rahmspinat.",
   },
 };
 const swabianDishes = {
@@ -439,7 +537,15 @@ const swabianDishes = {
     title: "Tortellini mit Ricotta ond Schbinaat",
     description: "In Tomata-Sahne-Soß, mit Mozzarella überbacka, drzua a kloiner Salat.",
   },
+  "Tortellini gefüllt mit Ricotta und Spinat": {
+    title: "Tortellini mit Ricotta ond Schbinaat",
+    description: "In Tomata-Sahne-Soß, mit Mozzarella überbacka, drzua a kloiner Salat.",
+  },
   "Pollock filet in egg-parmesan crust": {
+    title: "Seelachsfilet in Ei-Parmesan-Hüll",
+    description: "Mit Steakhouse Fries, aiglegtem Gmias, Tartarsoß ond Zitrone.",
+  },
+  "Seelachsfilet in einer Ei-Parmesanhülle": {
     title: "Seelachsfilet in Ei-Parmesan-Hüll",
     description: "Mit Steakhouse Fries, aiglegtem Gmias, Tartarsoß ond Zitrone.",
   },
@@ -447,11 +553,23 @@ const swabianDishes = {
     title: "Dagesgricht",
     description: "Details hänget im Restaurant aus.",
   },
+  "Tagesgericht siehe Aushang": {
+    title: "Dagesgricht",
+    description: "Details hänget im Restaurant aus.",
+  },
   "Rabas empanadas": {
     title: "Rabas Empanadas",
     description: "Tintenfischstreifa im Backdaig mit Aioli.",
   },
+  "Rabas Empanadas": {
+    title: "Rabas Empanadas",
+    description: "Tintenfischstreifa im Backdaig mit Aioli.",
+  },
   "Alu Goobi": {
+    title: "Alu Goobi",
+    description: "Indisches Kartoffel-Blumakohl-Curry.",
+  },
+  "Alu Goobi: Indisches": {
     title: "Alu Goobi",
     description: "Indisches Kartoffel-Blumakohl-Curry.",
   },
@@ -505,6 +623,58 @@ const swabianDishes = {
   "Cardamom Porridge": {
     title: "Kardamom-Porridge",
     description: "Kardamom-Porridge mit Rhabarber-Erdbeer-Kompott ond knusprigem glutenfreiem Granola.",
+  },
+  "Cakes and Sweets": {
+    title: "Kucha ond Süßes",
+    description: "Wechselnde Auswahl an Kucha ond süße Kleinigkeita aus dr Apoteka.",
+  },
+  "Thuringian bratwurst spiral": {
+    title: "Thüringer Brotwurschtschneck",
+    description: "Mit Bratejus.",
+  },
+  "Vegan crispy patty": {
+    title: "Vegane Knusperfrikadell",
+    description: "Mit Karotta-Oranga-Soß.",
+  },
+  "Summer bowl": {
+    title: "Summer Bowl",
+    description: "Bulgur, Wildkräuter, Wassermelone, Gurke, Avocado, veganer Hirtenkäs, Minze ond Zitronadressing.",
+  },
+  "Oven-baked chicken thighs": {
+    title: "Ofenfrische Hähnaschenkel",
+    description: "Mit BBQ-Dip.",
+  },
+  "Spicy chili sin carne": {
+    title: "Feurigs Chili sin Carne",
+    description: "Mit Kidneybohna, Paprika ond Mais.",
+  },
+  "Lasagna Bolognese": {
+    title: "Lasagne Bolognese",
+    description: "Vom Rind in Tomata-Béchamelsoß, mit Mozzarella überbacka.",
+  },
+  "Sweet potato curry": {
+    title: "Süßkartoffelcurry",
+    description: "Mit frischem Mangold.",
+  },
+  "Street food: oven-fresh spare ribs": {
+    title: "Streetfood: Ofenfrische Spare Ribs",
+    description: "Vom Schwein mit BBQ-Soß, Coleslaw ond Kartoffelwedges.",
+  },
+  "Turkey goulash": {
+    title: "Putagulasch",
+    description: "In feiner Paprikarahmsoß.",
+  },
+  "Roesti patties with tomato": {
+    title: "Röstitaler mit Tomata",
+    description: "Mit Zucchini ond Bergkäs überbacka.",
+  },
+  "Mediterranean pollock filet": {
+    title: "Seelachsfilet mediterrane Art",
+    description: "Mit trocknete Tomata, Oliva ond Tomatasoß.",
+  },
+  "Scrambled eggs with creamed spinach": {
+    title: "Rührei mit Rahmspinat",
+    description: "Rührei mit Rahmspinat.",
   },
 };
 const icons = {
@@ -858,6 +1028,10 @@ function allergenLabel(label) {
 }
 
 function itemText(item) {
+  if (state.language === "en" && englishDishes[item.title]) {
+    return englishDishes[item.title];
+  }
+
   if (state.language === "de" && germanDishes[item.title]) {
     return germanDishes[item.title];
   }

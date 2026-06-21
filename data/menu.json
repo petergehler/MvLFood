@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T13:05:17.674Z",
+  "updatedAt": "2026-06-21T13:25:00.000Z",
   "week": "2026-W26",
   "sources": {
     "hungry-elk": {
@@ -204,8 +204,8 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Tagesessen",
-          "description": "",
+          "title": "Daily dish",
+          "description": "Daily offer, details at the counter.",
           "price": "",
           "allergens": []
         },
@@ -213,8 +213,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "unknown",
-          "title": "Thüringer",
-          "description": "Rostbratwurstschnecke mit Bratenjus (20,8,i)",
+          "title": "Thuringian bratwurst spiral",
+          "description": "With roast gravy.",
           "price": "1.49€/100g",
           "allergens": []
         },
@@ -222,8 +222,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Vegane",
-          "description": "Knusperfrikadelle an Karotten-Orangensoße (f,i,a1)",
+          "title": "Vegan crispy patty",
+          "description": "With carrot-orange sauce.",
           "price": "1.43€/100g",
           "allergens": []
         },
@@ -308,8 +308,8 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "vegan",
-          "title": "Summer Bowl: Bulgur, Wildkräuter",
-          "description": ", Wassermelone, Gurke, Avocado, veganer Hirtenkäse, Minze, Zitronendressing (a1,g)",
+          "title": "Summer bowl",
+          "description": "Bulgur, wild herbs, watermelon, cucumber, avocado, vegan feta, mint and lemon dressing.",
           "price": "7.50€",
           "allergens": []
         },
@@ -317,8 +317,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Ofenfrische",
-          "description": "Hähnchenschenkel mit BBQ Dip (f,2)",
+          "title": "Oven-baked chicken thighs",
+          "description": "With BBQ dip.",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -326,8 +326,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Feuriges Chili sin Carne",
-          "description": "mit Kidneybohnen, Paprika und Mais (g,a1,i)",
+          "title": "Spicy chili sin carne",
+          "description": "With kidney beans, peppers and corn.",
           "price": "1.38€/100g",
           "allergens": []
         },
@@ -412,8 +412,8 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Tagesessen",
-          "description": "",
+          "title": "Daily dish",
+          "description": "Daily offer, details at the counter.",
           "price": "",
           "allergens": []
         },
@@ -421,8 +421,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "unknown",
-          "title": "Lasagne Bolognese",
-          "description": "vom Rind in Tomaten-Béchamelsoße mit Mozzarella überbacken (g,a,i)",
+          "title": "Lasagna Bolognese",
+          "description": "Beef lasagna in tomato bechamel sauce, baked with mozzarella.",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -430,8 +430,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Süßkartoffelcurry mit",
-          "description": "frischem Mangold (i,f)",
+          "title": "Sweet potato curry",
+          "description": "With fresh chard.",
           "price": "1.43€/100g",
           "allergens": []
         },
@@ -516,8 +516,8 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "meat",
-          "title": "Streetfood: Ofenfrische Spare- Rips",
-          "description": "vom Schwein mit BBQ-Soße, Coleslaw und Kartoffelwedges",
+          "title": "Street food: oven-fresh spare ribs",
+          "description": "Pork spare ribs with BBQ sauce, coleslaw and potato wedges.",
           "price": "8.50€",
           "allergens": [
             "g"
@@ -527,8 +527,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Putengulasch in feiner",
-          "description": "Paprikarahmsoße (g,i)",
+          "title": "Turkey goulash",
+          "description": "In a fine paprika cream sauce.",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -536,8 +536,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Röstitaler mit Tomaten",
-          "description": ", Zucchini & Bergkäse überbacken",
+          "title": "Roesti patties with tomato",
+          "description": "Baked with zucchini and mountain cheese.",
           "price": "1.43€/100g",
           "allergens": [
             "g"
@@ -633,8 +633,8 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Tagesessen",
-          "description": "",
+          "title": "Daily dish",
+          "description": "Daily offer, details at the counter.",
           "price": "",
           "allergens": []
         },
@@ -642,8 +642,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "unknown",
-          "title": "Seelachsfilet",
-          "description": "nach mediterraner Art mit getrockneten Tomaten, Oliven und Tomatensoße (d,6,i)",
+          "title": "Mediterranean pollock filet",
+          "description": "With dried tomatoes, olives and tomato sauce.",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -651,8 +651,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Rührei mit Rahmspinat",
-          "description": "(g,c,i)",
+          "title": "Scrambled eggs with creamed spinach",
+          "description": "Scrambled eggs with creamed spinach.",
           "price": "1.38€/100g",
           "allergens": []
         },
