@@ -51,22 +51,38 @@ function validateOpeningHours(openingHours, label) {
     errors.push(`${label} openingHours.date must be YYYY-MM-DD`);
   }
 
-  if (openingHours.days) {
-    if (!Array.isArray(openingHours.days)) {
-      errors.push(`${label} openingHours.days must be an array`);
-    } else if (!openingHours.days.every((day) => validWeekdays.has(day))) {
-      errors.push(`${label} openingHours.days must contain weekdays 0-6`);
+  if (openingHours.rules) {
+    if (!Array.isArray(openingHours.rules) || openingHours.rules.length === 0) {
+      errors.push(`${label} openingHours.rules must be a non-empty array`);
+      return;
     }
-  }
 
-  if (!Array.isArray(openingHours.intervals) || openingHours.intervals.length === 0) {
-    errors.push(`${label} openingHours.intervals must be a non-empty array`);
+    for (const [index, rule] of openingHours.rules.entries()) {
+      validateOpeningHourRule(rule, `${label} openingHours.rules[${index}]`);
+    }
     return;
   }
 
-  for (const interval of openingHours.intervals) {
+  validateOpeningHourRule(openingHours, `${label} openingHours`);
+}
+
+function validateOpeningHourRule(rule, label) {
+  if (rule.days) {
+    if (!Array.isArray(rule.days)) {
+      errors.push(`${label}.days must be an array`);
+    } else if (!rule.days.every((day) => validWeekdays.has(day))) {
+      errors.push(`${label}.days must contain weekdays 0-6`);
+    }
+  }
+
+  if (!Array.isArray(rule.intervals) || rule.intervals.length === 0) {
+    errors.push(`${label}.intervals must be a non-empty array`);
+    return;
+  }
+
+  for (const interval of rule.intervals) {
     if (!isTime(interval.start) || !isTime(interval.end)) {
-      errors.push(`${label} openingHours intervals need HH:MM start and end`);
+      errors.push(`${label} intervals need HH:MM start and end`);
     }
   }
 }

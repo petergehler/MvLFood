@@ -1,15 +1,19 @@
 const state = {
   feed: null,
-  todayDate: localDateString(new Date()),
+  todayDate: selectedDateFromUrl(),
   selectedDiets: new Set(),
   selectedSources: null,
   language: "en",
   hiddenAllergens: new Set(),
+  debugMode: debugModeFromUrl(),
 };
 
 const nodes = {
   appTitle: document.querySelector("#appTitle"),
   dateLabel: document.querySelector("#dateLabel"),
+  debugPanel: document.querySelector("#debugPanel"),
+  debugTitle: document.querySelector("#debugTitle"),
+  debugMeta: document.querySelector("#debugMeta"),
   menuList: document.querySelector("#menuList"),
   settingsButton: document.querySelector("#settingsButton"),
   settingsPanel: document.querySelector("#settingsPanel"),
@@ -42,7 +46,9 @@ const translations = {
     loading: "Loading...",
     loadError: "Could not load the menu feed.",
     noMatches: "No matching food options for today.",
+    noMatchesForDate: "No matching food options for this date.",
     noMenu: "No menu listed for today.",
+    noMenuForDate: "No menu listed for this date.",
     closedNow: "Closed",
     diets: {
       vegan: "vegan",
@@ -81,7 +87,9 @@ const translations = {
     loading: "Laden...",
     loadError: "Speiseplan konnte nicht geladen werden.",
     noMatches: "Heute keine passenden Angebote.",
+    noMatchesForDate: "Keine passenden Angebote für dieses Datum.",
     noMenu: "Für heute ist kein Menü eingetragen.",
+    noMenuForDate: "Für dieses Datum ist kein Menü eingetragen.",
     closedNow: "Geschlossen",
     diets: {
       vegan: "vegan",
@@ -120,7 +128,9 @@ const translations = {
     loading: "Lädt...",
     loadError: "S' Menü hot sich et lada lassa.",
     noMatches: "Heit gibt's nix Passends.",
+    noMatchesForDate: "Für des Datum gibt's nix Passends.",
     noMenu: "Für heit isch koi Menü drin.",
+    noMenuForDate: "Für des Datum isch koi Menü drin.",
     closedNow: "Zua",
     diets: {
       vegan: "vegan",
@@ -312,6 +322,25 @@ const germanDishes = {
     title: "Choriatiki",
     description: "Griechischer Bauernsalat.",
   },
+  "Lemon Poppy Pancakes": {
+    title: "Zitronen-Mohn-Pancakes",
+    description:
+      "Zitronen-Mohn-Pancakes mit hausgemachtem Lemon Curd, Balsamico-Erdbeeren, Ahornsirup und Lavendel.",
+  },
+  "Chickpea Pancakes (gf)": {
+    title: "Kichererbsen-Pancakes (glutenfrei)",
+    description:
+      "Kichererbsen-Pancakes mit Zitronen-Kräuter-Hummus, gegrilltem Spargel, frischen Erdbeeren, Microgreens und gerösteten Mandelblättchen.",
+  },
+  "Crispy Miso-Lemon Polenta": {
+    title: "Knusprige Miso-Zitronen-Polenta",
+    description:
+      "Knusprige Miso-Zitronen-Polenta mit geröstetem Spitzkohl, eingelegten Radieschen, Granatapfel und Chili-Öl.",
+  },
+  "Cardamom Porridge": {
+    title: "Kardamom-Porridge",
+    description: "Kardamom-Porridge mit Rhabarber-Erdbeer-Kompott und knusprigem glutenfreiem Granola.",
+  },
 };
 const swabianDishes = {
   "Italy Bowl": {
@@ -458,6 +487,25 @@ const swabianDishes = {
     title: "Choriatiki",
     description: "Griechischer Bauresalat.",
   },
+  "Lemon Poppy Pancakes": {
+    title: "Zitrone-Mohn-Pancakes",
+    description:
+      "Zitrone-Mohn-Pancakes mit hausgmachtem Lemon Curd, Balsamico-Erdbeera, Ahornsirup ond Lavendel.",
+  },
+  "Chickpea Pancakes (gf)": {
+    title: "Kichererbsen-Pancakes (glutenfrei)",
+    description:
+      "Kichererbsen-Pancakes mit Zitrone-Kräuter-Hummus, grilltem Schpargl, frische Erdbeera, Microgreens ond gröschtete Mandelblättla.",
+  },
+  "Crispy Miso-Lemon Polenta": {
+    title: "Knusprige Miso-Zitrone-Polenta",
+    description:
+      "Knusprige Miso-Zitrone-Polenta mit gröschtetem Spitzkohl, aiglegte Radiesle, Granatapfel ond Chili-Öl.",
+  },
+  "Cardamom Porridge": {
+    title: "Kardamom-Porridge",
+    description: "Kardamom-Porridge mit Rhabarber-Erdbeer-Kompott ond knusprigem glutenfreiem Granola.",
+  },
 };
 const icons = {
   restaurant:
@@ -507,6 +555,7 @@ async function loadFeed() {
 
 function render() {
   renderChrome();
+  renderDebugPanel();
   renderSettings();
   renderMenu();
 }
@@ -518,6 +567,20 @@ function renderChrome() {
   nodes.dateLabel.textContent = formatDate(state.todayDate);
   nodes.settingsButton.ariaLabel = t("settings");
   nodes.settingsButton.title = t("settings");
+}
+
+function renderDebugPanel() {
+  if (!nodes.debugPanel) return;
+
+  nodes.debugPanel.hidden = !state.debugMode;
+  if (!state.debugMode) return;
+
+  const selectedDay = state.feed?.days.find((day) => day.date === state.todayDate);
+  const itemCount = selectedDay?.items.length || 0;
+  const feedUpdated = state.feed?.updatedAt ? new Date(state.feed.updatedAt).toLocaleString() : "unknown";
+
+  nodes.debugTitle.textContent = `${formatDate(state.todayDate)} (${state.todayDate})`;
+  nodes.debugMeta.textContent = `Feed updated: ${feedUpdated} · Items before filters: ${itemCount}`;
 }
 
 function renderSettings() {
@@ -657,8 +720,8 @@ function renderMenu() {
 
   if (!items.length) {
     nodes.menuList.innerHTML = selectedDay
-      ? `<div class="empty-state">${t("noMatches")}</div>`
-      : `<div class="empty-state">${t("noMenu")}</div>`;
+      ? `<div class="empty-state">${t(state.debugMode ? "noMatchesForDate" : "noMatches")}</div>`
+      : `<div class="empty-state">${t(state.debugMode ? "noMenuForDate" : "noMenu")}</div>`;
     return;
   }
 
@@ -763,6 +826,11 @@ function openingIntervalsFor(item, source, dateString) {
     return sourceHours.intervals || [];
   }
 
+  const sourceRule = sourceHours?.rules?.find((rule) => rule.days?.includes(weekday));
+  if (sourceRule) {
+    return sourceRule.intervals || [];
+  }
+
   return [];
 }
 
@@ -826,6 +894,25 @@ function localDateString(date) {
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
+}
+
+function selectedDateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const explicitDate = params.get("date");
+  if (/^\d{4}-\d{2}-\d{2}$/.test(explicitDate || "")) return explicitDate;
+
+  if (params.get("debug") === "tomorrow" || params.get("date") === "tomorrow") {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return localDateString(tomorrow);
+  }
+
+  return localDateString(new Date());
+}
+
+function debugModeFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.has("debug") || params.has("date");
 }
 
 function loadSettings() {

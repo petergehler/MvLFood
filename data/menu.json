@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T13:21:19.067Z",
+  "updatedAt": "2026-06-21T00:00:00.000Z",
   "week": "2026-W25",
   "sources": {
     "hungry-elk": {
@@ -87,14 +87,30 @@
       "menuUrl": "https://dieapoteka.de/wp-content/uploads/2025/11/Spring-2026-Brunch.pdf",
       "logo": "data/images/logos/apoteka-logo.png",
       "openingHours": {
-        "days": [
-          0,
-          6
-        ],
-        "intervals": [
+        "rules": [
           {
-            "start": "10:00",
-            "end": "13:30"
+            "days": [
+              4,
+              5
+            ],
+            "intervals": [
+              {
+                "start": "12:00",
+                "end": "18:00"
+              }
+            ]
+          },
+          {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "17:00"
+              }
+            ]
           }
         ]
       }
@@ -1059,6 +1075,188 @@
           "allergens": [
             "B"
           ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "label": "Sat",
+      "fullLabel": "Saturday, June 20",
+      "items": [
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegetarian",
+          "title": "Lemon Poppy Pancakes",
+          "description": "Lemon poppy seed pancakes with homemade lemon curd, balsamic strawberries, maple syrup and lavender.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        },
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegetarian",
+          "title": "Chickpea Pancakes (gf)",
+          "description": "Chickpea pancakes with lemon-herb hummus, grilled asparagus, fresh strawberries, microgreens and toasted almond flakes.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        },
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegan",
+          "title": "Crispy Miso-Lemon Polenta",
+          "description": "Crispy miso-lemon polenta with roasted pointed cabbage, pickled radishes, pomegranate and chili oil.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        },
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegetarian",
+          "title": "Cardamom Porridge",
+          "description": "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-21",
+      "label": "Sun",
+      "fullLabel": "Sunday, June 21",
+      "items": [
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegetarian",
+          "title": "Lemon Poppy Pancakes",
+          "description": "Lemon poppy seed pancakes with homemade lemon curd, balsamic strawberries, maple syrup and lavender.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        },
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegetarian",
+          "title": "Chickpea Pancakes (gf)",
+          "description": "Chickpea pancakes with lemon-herb hummus, grilled asparagus, fresh strawberries, microgreens and toasted almond flakes.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        },
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegan",
+          "title": "Crispy Miso-Lemon Polenta",
+          "description": "Crispy miso-lemon polenta with roasted pointed cabbage, pickled radishes, pomegranate and chili oil.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
+        },
+        {
+          "source": "apoteka",
+          "category": "Brunch",
+          "diet": "vegetarian",
+          "title": "Cardamom Porridge",
+          "description": "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
+          "price": "",
+          "allergens": [],
+          "openingHours": {
+            "days": [
+              0,
+              6
+            ],
+            "intervals": [
+              {
+                "start": "10:00",
+                "end": "13:30"
+              }
+            ]
+          }
         }
       ]
     }

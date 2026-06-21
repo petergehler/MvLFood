@@ -18,6 +18,7 @@ const hungryDays = parseHungryElkTsv(hungryText);
 const mphDays = parseMphSpeiseplan(mphHtml);
 const generatedDates = new Set([...hungryDays, ...mphDays].map((day) => day.date).filter(Boolean));
 const weekStart = [...generatedDates].sort()[0];
+for (const date of recurringServiceDates(currentFeed, weekStart)) generatedDates.add(date);
 let updatedFeed = buildFeed({
   currentFeed,
   hungryPdf,
@@ -431,7 +432,7 @@ function addRecurringTemplates(currentFeed, daysByDate) {
     for (const item of day.items || []) {
       if (generatedSourceIds.has(item.source) || item.openingHours?.date || templatesBySource.has(item.source)) continue;
       const source = currentFeed.sources[item.source];
-      if (!source?.openingHours?.days) continue;
+      if (!hasRecurringOpeningHours(source)) continue;
       templatesBySource.set(
         item.source,
         day.items
@@ -445,11 +446,46 @@ function addRecurringTemplates(currentFeed, daysByDate) {
     const weekday = weekdayNumber(day.date);
     for (const [sourceId, templates] of templatesBySource) {
       const source = currentFeed.sources[sourceId];
-      if (source.openingHours.days.includes(weekday)) {
+      if (opensOnWeekday(source, weekday)) {
         day.items.push(...templates.map((template) => structuredClone(template)));
       }
     }
   }
+}
+
+function recurringServiceDates(currentFeed, weekStart) {
+  if (!weekStart) return [];
+
+  const dates = new Set();
+  const recurringSources = new Set();
+  const generatedSourceIds = new Set(["hungry-elk", "mph"]);
+
+  for (const day of currentFeed.days || []) {
+    for (const item of day.items || []) {
+      if (generatedSourceIds.has(item.source) || item.openingHours?.date) continue;
+      if (hasRecurringOpeningHours(currentFeed.sources[item.source])) recurringSources.add(item.source);
+    }
+  }
+
+  for (let offset = 0; offset < 7; offset += 1) {
+    const date = addDays(weekStart, offset);
+    const weekday = weekdayNumber(date);
+    for (const sourceId of recurringSources) {
+      if (opensOnWeekday(currentFeed.sources[sourceId], weekday)) dates.add(date);
+    }
+  }
+
+  return [...dates];
+}
+
+function hasRecurringOpeningHours(source) {
+  return Boolean(source?.openingHours?.days || source?.openingHours?.rules?.length);
+}
+
+function opensOnWeekday(source, weekday) {
+  const openingHours = source?.openingHours;
+  if (openingHours?.days?.includes(weekday)) return true;
+  return Boolean(openingHours?.rules?.some((rule) => rule.days?.includes(weekday)));
 }
 
 function normalizeFoodText(value) {

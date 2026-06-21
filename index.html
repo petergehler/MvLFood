@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=yellow-donkey-split-boxes-v39">
+    <link rel="stylesheet" href="styles.css?v=apoteka-watermark-v41">
   </head>
   <body>
     <header class="app-header">
@@ -28,6 +28,14 @@
     </header>
 
     <main>
+      <section class="debug-panel" id="debugPanel" hidden>
+        <div>
+          <p class="debug-label">Debug view</p>
+          <p class="debug-title" id="debugTitle"></p>
+        </div>
+        <p class="debug-meta" id="debugMeta"></p>
+      </section>
+
       <section class="settings-panel" id="settingsPanel" aria-label="Settings" hidden>
         <div class="settings-body">
           <div>
@@ -61,6 +69,6 @@
       </article>
     </template>
 
-    <script type="module" src="app.js?v=yellow-donkey-split-boxes-v39"></script>
+    <script type="module" src="app.js?v=apoteka-watermark-v41"></script>
   </body>
 </html>
