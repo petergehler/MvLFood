@@ -821,14 +821,18 @@ function openingIntervalsFor(item, source, dateString) {
     return itemHours.intervals || [];
   }
 
-  const sourceHours = source.openingHours;
-  if (sourceHours?.days?.includes(weekday)) {
-    return sourceHours.intervals || [];
+  if (itemHours?.days?.includes(weekday)) {
+    return itemHours.intervals || [];
   }
 
+  const sourceHours = source.openingHours;
   const sourceRule = sourceHours?.rules?.find((rule) => rule.days?.includes(weekday));
   if (sourceRule) {
     return sourceRule.intervals || [];
+  }
+
+  if (sourceHours?.days?.includes(weekday)) {
+    return sourceHours.intervals || [];
   }
 
   return [];
