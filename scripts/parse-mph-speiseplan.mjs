@@ -42,12 +42,119 @@ export function parseMphSpeiseplan(html) {
   });
 }
 
+export function parseMphSpeiseplanPdfText(text) {
+  const words = pdfWords(text);
+  const weekStart = parsePdfWeekStart(words);
+  const rows = pdfDayRows(words);
+
+  return rows.map(({ dayName, columns }) => ({
+    date: dateForDay(weekStart, dayName),
+    dayName,
+    items: [
+      itemFromCell(columns.quick, "Quick & Easy"),
+      itemFromCell(columns.meat, "Hauptgericht Fleisch/Fisch"),
+      itemFromCell(columns.veggie, "Hauptgericht vegan / veggie"),
+    ].filter(Boolean),
+  }));
+}
+
 function parseWeekStart(html) {
   const match = html.match(/<h2>\s*<strong>\s*(\d{2})\.(\d{2})\.-(\d{2})\.(\d{2})\.(\d{4})\s*<\/strong>\s*<\/h2>/i);
   if (!match) throw new Error("Could not find MPH week date range");
 
   const [, startDay, startMonth, , , year] = match;
   return new Date(Number(year), Number(startMonth) - 1, Number(startDay));
+}
+
+function parsePdfWeekStart(words) {
+  const dateWord = words
+    .filter((word) => word.left < 110 && /^\d{2}\.\d{2}\.\d{2}$/.test(word.text))
+    .sort((a, b) => a.top - b.top)[0];
+  if (!dateWord) throw new Error("Could not find MPH PDF week date range");
+
+  const [startDay, startMonth, startYear] = dateWord.text.split(".");
+  return new Date(Number(`20${startYear}`), Number(startMonth) - 1, Number(startDay));
+}
+
+function pdfDayRows(words) {
+  const dayLabels = words
+    .map((word) => ({ ...word, dayName: pdfDayName(word.text) }))
+    .filter((word) => word.dayName)
+    .sort((a, b) => a.top - b.top);
+  const columnRanges = {
+    meat: [100, 240],
+    veggie: [245, 380],
+    quick: [640, 830],
+  };
+
+  return dayLabels.map((day, index) => {
+    const nextDay = dayLabels[index + 1];
+    const top = day.top - 32;
+    const bottom = nextDay ? nextDay.top - 32 : 520;
+    const columns = {};
+
+    for (const [column, [left, right]] of Object.entries(columnRanges)) {
+      columns[column] = wordsInBox(words, { left, right, top, bottom });
+    }
+
+    return { dayName: day.dayName, columns };
+  });
+}
+
+function pdfWords(tsv) {
+  return tsv
+    .trim()
+    .split("\n")
+    .slice(1)
+    .map((line) => line.split("\t"))
+    .filter((cols) => cols[0] === "5" && cols[11] && !cols[11].startsWith("###"))
+    .map((cols) => ({
+      left: Number(cols[6]),
+      top: Number(cols[7]),
+      text: cols.slice(11).join("\t"),
+    }));
+}
+
+function wordsInBox(words, { left, right, top, bottom }) {
+  const selected = words
+    .filter((word) => word.left >= left && word.left < right && word.top >= top && word.top < bottom)
+    .filter((word) => !pdfNoise(word.text));
+  return clusterPdfLines(selected)
+    .map((line) => line.map((word) => word.text).join(" "))
+    .join("\n");
+}
+
+function clusterPdfLines(words) {
+  const lines = [];
+  for (const word of [...words].sort((a, b) => a.top - b.top || a.left - b.left)) {
+    const line = lines.find((candidate) => Math.abs(candidate.top - word.top) <= 4);
+    if (line) {
+      line.words.push(word);
+      line.top = Math.min(line.top, word.top);
+    } else {
+      lines.push({ top: word.top, words: [word] });
+    }
+  }
+
+  return lines
+    .sort((a, b) => a.top - b.top)
+    .map((line) => line.words.sort((a, b) => a.left - b.left));
+}
+
+function pdfDayName(value) {
+  const label = normalizeText(value).toLowerCase();
+  if (label.includes("montag")) return "Montag";
+  if (label.includes("dienstag")) return "Dienstag";
+  if (label.includes("mittwoch")) return "Mittwoch";
+  if (label.includes("donners")) return "Donnerstag";
+  if (label.includes("freitag")) return "Freitag";
+  return "";
+}
+
+function pdfNoise(value) {
+  return /^(fleisch\/fisch|vegan\/veggie|hauptgericht|quick\s*&\s*easy|oder special|dessert|gemüse|inkl\.?|1,45€|5,-€|6,50€)$/i.test(
+    normalizeText(value),
+  );
 }
 
 function firstMenuTable(html) {

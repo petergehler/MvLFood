@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { promisify } from "node:util";
-import { parseMphSpeiseplan } from "./parse-mph-speiseplan.mjs";
+import { parseMphSpeiseplan, parseMphSpeiseplanPdfText } from "./parse-mph-speiseplan.mjs";
 
 const execFileAsync = promisify(execFile);
 const root = new URL("..", import.meta.url);
@@ -12,17 +12,21 @@ const currentFeed = JSON.parse(await readFile(menuUrl, "utf8"));
 
 const hungryPdf = await findHungryElkPdf();
 const hungryText = await pdfText(hungryPdf, ["-tsv"]);
-const mphHtml = await fetchText(process.env.MPH_CURRENT_HTML_URL || "https://www.mph.tuebingen.mpg.de/speiseplan");
+const mphSource = await fetchMphSource();
 
-const hungryDays = parseHungryElkTsv(hungryText);
-const mphDays = parseMphSpeiseplan(mphHtml);
+const sourceDays = {
+  "hungry-elk": parseHungryElkTsv(hungryText),
+  mph: mphSource.kind === "pdf" ? parseMphSpeiseplanPdfText(mphSource.text) : parseMphSpeiseplan(mphSource.text),
+};
+const weekStart = latestSourceWeekStart(sourceDays);
+const hungryDays = daysInWeek(sourceDays["hungry-elk"], weekStart);
+const mphDays = daysInWeek(sourceDays.mph, weekStart);
 const generatedDates = new Set([...hungryDays, ...mphDays].map((day) => day.date).filter(Boolean));
-const weekStart = [...generatedDates].sort()[0];
 for (const date of recurringServiceDates(currentFeed, weekStart)) generatedDates.add(date);
 let updatedFeed = buildFeed({
   currentFeed,
   hungryPdf,
-  mphUrl: process.env.MPH_CURRENT_HTML_URL || "https://www.mph.tuebingen.mpg.de/speiseplan",
+  mphUrl: mphSource.url,
   hungryDays,
   mphDays,
   generatedDates,
@@ -60,6 +64,33 @@ async function fetchText(url) {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Request failed for ${url}: ${response.status}`);
   return response.text();
+}
+
+async function fetchMphSource() {
+  const pageUrl = process.env.MPH_CURRENT_HTML_URL || "https://www.mph.tuebingen.mpg.de/speiseplan";
+  const html = await fetchText(pageUrl);
+  const upcomingPdf = findMphUpcomingPdf(html, pageUrl);
+
+  if (!upcomingPdf || process.env.MPH_USE_UPCOMING_PDF === "0") {
+    return { kind: "html", text: html, url: pageUrl };
+  }
+
+  return {
+    kind: "pdf",
+    text: await pdfText(upcomingPdf, ["-tsv"]),
+    url: upcomingPdf,
+  };
+}
+
+function findMphUpcomingPdf(html, baseUrl) {
+  const links = [...html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
+  const match = links.find(([, href, label]) => /kommenden\s+woche/i.test(stripHtml(label)) && /\.pdf(?:$|\?)/i.test(href));
+  if (!match) return "";
+  return new URL(match[1], baseUrl).href;
+}
+
+function stripHtml(value) {
+  return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
 async function pdfText(url, args = ["-layout"]) {
@@ -116,6 +147,19 @@ function parseHungryElkTsv(tsv) {
   }
 
   return [...days.values()].filter((day) => day.items.length);
+}
+
+function latestSourceWeekStart(sourceDays) {
+  const weekStarts = Object.values(sourceDays)
+    .map((days) => days.map((day) => day.date).filter(Boolean).sort()[0])
+    .filter(Boolean);
+  if (!weekStarts.length) throw new Error("No source menu dates found");
+  return weekStarts.sort().at(-1);
+}
+
+function daysInWeek(days, weekStart) {
+  const weekEnd = addDays(weekStart, 7);
+  return days.filter((day) => day.date >= weekStart && day.date < weekEnd);
 }
 
 function parseHungryHeader(rows) {
@@ -427,18 +471,20 @@ function addPreservedManualItems(currentFeed, daysByDate) {
 function addRecurringTemplates(currentFeed, daysByDate) {
   const generatedSourceIds = new Set(["hungry-elk", "mph"]);
   const templatesBySource = new Map();
+  const templateKeys = new Set();
 
   for (const day of currentFeed.days || []) {
     for (const item of day.items || []) {
-      if (generatedSourceIds.has(item.source) || item.openingHours?.date || templatesBySource.has(item.source)) continue;
+      if (generatedSourceIds.has(item.source) || item.openingHours?.date) continue;
       const source = currentFeed.sources[item.source];
       if (!hasRecurringOpeningHours(source)) continue;
-      templatesBySource.set(
-        item.source,
-        day.items
-          .filter((candidate) => candidate.source === item.source && !candidate.openingHours?.date)
-          .map((candidate) => structuredClone(candidate)),
-      );
+
+      const key = `${item.source}\u0000${item.category}\u0000${item.title}`;
+      if (templateKeys.has(key)) continue;
+      templateKeys.add(key);
+
+      if (!templatesBySource.has(item.source)) templatesBySource.set(item.source, []);
+      templatesBySource.get(item.source).push(structuredClone(item));
     }
   }
 
