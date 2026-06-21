@@ -1,4 +1,4 @@
-const cacheName = "mvlfood-v41";
+const cacheName = "mvlfood-v42";
 const appShell = [
   "./",
   "index.html",
