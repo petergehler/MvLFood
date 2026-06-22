@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T13:25:00.000Z",
+  "updatedAt": "2026-06-22T08:19:24.834Z",
   "week": "2026-W26",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=5038",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=53252",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -201,11 +201,47 @@
       "fullLabel": "Monday, June 22",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "meat",
+          "title": "High Protein Bowl",
+          "description": "Mariniertes Hähnchenbrustfilet l Bulgur l Gemüsebrunoise l Skyrdip l geröstete Edamame l Kräutercroutons l Kirschtomaten l",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "vegetarian",
+          "title": "Pasta al Arrabiata",
+          "description": "an schafer Tomatensoße mit Gemüsebrunoise ,Parmesan und",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Sheperds Pie",
+          "description": "würziges Rinderhackfleisch mit Kartoffelpüree-Haube überbacken an kräftiger",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "vegan",
+          "title": "Vegane Paella",
+          "description": "Gelber Reis mit Erbsen , Karotten Zwiebeln , Paprika ,Brokkoli veganem Sour Cream Dip",
+          "price": "",
+          "allergens": []
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Daily dish",
-          "description": "Daily offer, details at the counter.",
+          "title": "Tagesessen",
+          "description": "",
           "price": "",
           "allergens": []
         },
@@ -213,8 +249,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "unknown",
-          "title": "Thuringian bratwurst spiral",
-          "description": "With roast gravy.",
+          "title": "Thüringer",
+          "description": "Rostbratwurstschnecke mit Bratenjus (20,8,i)",
           "price": "1.49€/100g",
           "allergens": []
         },
@@ -222,8 +258,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Vegan crispy patty",
-          "description": "With carrot-orange sauce.",
+          "title": "Vegane",
+          "description": "Knusperfrikadelle an Karotten-Orangensoße (f,i,a1)",
           "price": "1.43€/100g",
           "allergens": []
         },
@@ -305,11 +341,47 @@
       "fullLabel": "Tuesday, June 23",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "meat",
+          "title": "High Protein Bowl",
+          "description": "Mariniertes Hähnchenbrustfilet l Bulgur l Gemüsebrunoise l Skyrdip l geröstete Edamame l Kräutercroutons l Kirschtomaten l",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "unknown",
+          "title": "Pizza Nduja",
+          "description": "an San MarzanoTomatensugo l Fior di Latte l italienische Bratwurst l Peperoncino Öl l",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Sheperds Pie",
+          "description": "würziges Rinderhackfleisch mit Kartoffelpüree-Haube überbacken an kräftiger",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "unknown",
+          "title": "Asiatisches Blumenkohlcurry",
+          "description": "mit Kichererbsen ,Kokosmilch , Brokkoli, Karotten und",
+          "price": "",
+          "allergens": []
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "vegan",
-          "title": "Summer bowl",
-          "description": "Bulgur, wild herbs, watermelon, cucumber, avocado, vegan feta, mint and lemon dressing.",
+          "title": "Summer Bowl: Bulgur, Wildkräuter",
+          "description": ", Wassermelone, Gurke, Avocado, veganer Hirtenkäse, Minze, Zitronendressing (a1,g)",
           "price": "7.50€",
           "allergens": []
         },
@@ -317,8 +389,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Oven-baked chicken thighs",
-          "description": "With BBQ dip.",
+          "title": "Ofenfrische",
+          "description": "Hähnchenschenkel mit BBQ Dip (f,2)",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -326,8 +398,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Spicy chili sin carne",
-          "description": "With kidney beans, peppers and corn.",
+          "title": "Feuriges Chili sin Carne",
+          "description": "mit Kidneybohnen, Paprika und Mais (g,a1,i)",
           "price": "1.38€/100g",
           "allergens": []
         },
@@ -409,11 +481,47 @@
       "fullLabel": "Wednesday, June 24",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "unknown",
+          "title": "Spanische Bowl",
+          "description": "Gallo Pinto l Reis l rote Bohnen l schwarze Bohnen l Salsa Lizano l marinierte Chili-Knoblauch",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "vegan",
+          "title": "Vegane Pasta ohne Ei",
+          "description": "an cremiger Kokosmilchsoße dazu Süßkartoffelwürfel Babyspinat",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Jägerschnitzel vom",
+          "description": "Schweinerücken Natur an feiner Champignon-Rahmsoße mit Butternudeln und Mandel-",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "unknown",
+          "title": "Pulled Chicken Burger",
+          "description": "im Sesam-Bun gefülltes BBQ-Chicken garniert mit Röstzwiebeln an Cole slaw",
+          "price": "",
+          "allergens": []
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Daily dish",
-          "description": "Daily offer, details at the counter.",
+          "title": "Tagesessen",
+          "description": "",
           "price": "",
           "allergens": []
         },
@@ -421,8 +529,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "unknown",
-          "title": "Lasagna Bolognese",
-          "description": "Beef lasagna in tomato bechamel sauce, baked with mozzarella.",
+          "title": "Lasagne Bolognese",
+          "description": "vom Rind in Tomaten-Béchamelsoße mit Mozzarella überbacken (g,a,i)",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -430,8 +538,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Sweet potato curry",
-          "description": "With fresh chard.",
+          "title": "Süßkartoffelcurry mit",
+          "description": "frischem Mangold (i,f)",
           "price": "1.43€/100g",
           "allergens": []
         },
@@ -513,11 +621,47 @@
       "fullLabel": "Thursday, June 25",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "unknown",
+          "title": "Spanische Bowl",
+          "description": "Gallo Pinto l Reis l rote Bohnen l schwarze Bohnen l Salsa Lizano l marinierte Chili-Knoblauch",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "meat",
+          "title": "Pizza Rucola e Parma",
+          "description": "ofenfrisches Pizzabrot an san Marzano Tomatensoße belegt mit Fior di Latte Parmaschinken Rucola und frisch geriebenem",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Jägerschnitzel vom",
+          "description": "Schweinerücken Natur an feiner Champignon-Rahmsoße mit Butternudeln und Mandel-",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "vegan",
+          "title": "Vegane Ofen-Backkartoffel",
+          "description": "Knusprig gebackene Kartoffel mit frischen Hummus,knackigem Gemüse,Zitronen-Tahini,frische Kräuter und gerösteten",
+          "price": "",
+          "allergens": []
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "meat",
-          "title": "Street food: oven-fresh spare ribs",
-          "description": "Pork spare ribs with BBQ sauce, coleslaw and potato wedges.",
+          "title": "Streetfood: Ofenfrische Spare- Rips",
+          "description": "vom Schwein mit BBQ-Soße, Coleslaw und Kartoffelwedges",
           "price": "8.50€",
           "allergens": [
             "g"
@@ -527,8 +671,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Turkey goulash",
-          "description": "In a fine paprika cream sauce.",
+          "title": "Putengulasch in feiner",
+          "description": "Paprikarahmsoße (g,i)",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -536,8 +680,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Roesti patties with tomato",
-          "description": "Baked with zucchini and mountain cheese.",
+          "title": "Röstitaler mit Tomaten",
+          "description": ", Zucchini & Bergkäse überbacken",
           "price": "1.43€/100g",
           "allergens": [
             "g"
@@ -630,11 +774,29 @@
       "fullLabel": "Friday, June 26",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "unknown",
+          "title": "Indisches Rotes Linsen-Dal",
+          "description": "cremig gekochte rote Linsen in einer würzigen Soße aus Tomaten,Kokosmilch,Zwiebeln,Knoblauch,Ingwer und feinen indischen Gewürzen serviert auf",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "vegan",
+          "title": "Vegane Falafel-Ebly-Pfanne",
+          "description": "knusprig gebackene Falafel auf buntem Mediterranem Gemüse dazu ein cremig veganer",
+          "price": "",
+          "allergens": []
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Daily dish",
-          "description": "Daily offer, details at the counter.",
+          "title": "Tagesessen",
+          "description": "",
           "price": "",
           "allergens": []
         },
@@ -642,8 +804,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "unknown",
-          "title": "Mediterranean pollock filet",
-          "description": "With dried tomatoes, olives and tomato sauce.",
+          "title": "Seelachsfilet",
+          "description": "nach mediterraner Art mit getrockneten Tomaten, Oliven und Tomatensoße (d,6,i)",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -651,8 +813,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Scrambled eggs with creamed spinach",
-          "description": "Scrambled eggs with creamed spinach.",
+          "title": "Rührei mit Rahmspinat",
+          "description": "(g,c,i)",
           "price": "1.38€/100g",
           "allergens": []
         },

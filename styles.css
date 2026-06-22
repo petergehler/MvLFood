@@ -90,42 +90,6 @@ main {
   padding: 14px 12px 32px;
 }
 
-.debug-panel {
-  align-items: center;
-  background: #fff7df;
-  border: 1px solid #e0c574;
-  border-radius: 8px;
-  color: #4b3b0b;
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  padding: 10px 12px;
-}
-
-.debug-label {
-  font-size: 0.72rem;
-  font-weight: 850;
-  letter-spacing: 0;
-  margin: 0 0 2px;
-  text-transform: uppercase;
-}
-
-.debug-title {
-  font-size: 0.98rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.debug-meta {
-  color: #6f5a16;
-  font-size: 0.78rem;
-  line-height: 1.25;
-  margin: 0;
-  text-align: right;
-}
-
 .settings-panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -395,16 +359,5 @@ main {
 
   .menu-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 520px) {
-  .debug-panel {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .debug-meta {
-    text-align: left;
   }
 }

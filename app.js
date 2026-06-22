@@ -5,15 +5,12 @@ const state = {
   selectedSources: null,
   language: "en",
   hiddenAllergens: new Set(),
-  debugMode: debugModeFromUrl(),
+  hasDateOverride: hasDateOverrideFromUrl(),
 };
 
 const nodes = {
   appTitle: document.querySelector("#appTitle"),
   dateLabel: document.querySelector("#dateLabel"),
-  debugPanel: document.querySelector("#debugPanel"),
-  debugTitle: document.querySelector("#debugTitle"),
-  debugMeta: document.querySelector("#debugMeta"),
   menuList: document.querySelector("#menuList"),
   settingsButton: document.querySelector("#settingsButton"),
   settingsPanel: document.querySelector("#settingsPanel"),
@@ -725,7 +722,6 @@ async function loadFeed() {
 
 function render() {
   renderChrome();
-  renderDebugPanel();
   renderSettings();
   renderMenu();
 }
@@ -737,20 +733,6 @@ function renderChrome() {
   nodes.dateLabel.textContent = formatDate(state.todayDate);
   nodes.settingsButton.ariaLabel = t("settings");
   nodes.settingsButton.title = t("settings");
-}
-
-function renderDebugPanel() {
-  if (!nodes.debugPanel) return;
-
-  nodes.debugPanel.hidden = !state.debugMode;
-  if (!state.debugMode) return;
-
-  const selectedDay = state.feed?.days.find((day) => day.date === state.todayDate);
-  const itemCount = selectedDay?.items.length || 0;
-  const feedUpdated = state.feed?.updatedAt ? new Date(state.feed.updatedAt).toLocaleString() : "unknown";
-
-  nodes.debugTitle.textContent = `${formatDate(state.todayDate)} (${state.todayDate})`;
-  nodes.debugMeta.textContent = `Feed updated: ${feedUpdated} · Items before filters: ${itemCount}`;
 }
 
 function renderSettings() {
@@ -890,8 +872,8 @@ function renderMenu() {
 
   if (!items.length) {
     nodes.menuList.innerHTML = selectedDay
-      ? `<div class="empty-state">${t(state.debugMode ? "noMatchesForDate" : "noMatches")}</div>`
-      : `<div class="empty-state">${t(state.debugMode ? "noMenuForDate" : "noMenu")}</div>`;
+      ? `<div class="empty-state">${t(state.hasDateOverride ? "noMatchesForDate" : "noMatches")}</div>`
+      : `<div class="empty-state">${t(state.hasDateOverride ? "noMenuForDate" : "noMenu")}</div>`;
     return;
   }
 
@@ -1079,7 +1061,7 @@ function selectedDateFromUrl() {
   const explicitDate = params.get("date");
   if (/^\d{4}-\d{2}-\d{2}$/.test(explicitDate || "")) return explicitDate;
 
-  if (params.get("debug") === "tomorrow" || params.get("date") === "tomorrow") {
+  if (params.get("date") === "tomorrow") {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return localDateString(tomorrow);
@@ -1088,9 +1070,9 @@ function selectedDateFromUrl() {
   return localDateString(new Date());
 }
 
-function debugModeFromUrl() {
+function hasDateOverrideFromUrl() {
   const params = new URLSearchParams(window.location.search);
-  return params.has("debug") || params.has("date");
+  return params.has("date");
 }
 
 function loadSettings() {
