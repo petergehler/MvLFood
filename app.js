@@ -163,6 +163,153 @@ const translations = {
   },
 };
 const englishDishes = {
+  "High Protein Bowl": {
+    title: "High protein bowl",
+    description:
+      "Marinated chicken breast with bulgur, vegetable brunoise, skyr dip, roasted edamame, herb croutons, cherry tomatoes and egg.",
+  },
+  "Pasta al Arrabiata": {
+    title: "Pasta all'arrabbiata",
+    description: "With spicy tomato sauce, vegetable brunoise, parmesan and fried arugula.",
+  },
+  "Sheperds Pie": {
+    title: "Shepherd's pie",
+    description: "Seasoned beef mince baked under mashed potatoes, with rich gravy.",
+  },
+  "Vegane Paella": {
+    title: "Vegan paella",
+    description: "Yellow rice with peas, carrots, onions, peppers, broccoli and vegan sour cream dip.",
+  },
+  Thüringer: {
+    title: "Thuringian bratwurst spiral",
+    description: "With roast gravy.",
+  },
+  Vegane: {
+    title: "Vegan crispy vegetable patty",
+    description: "With carrot-orange sauce.",
+  },
+  "Pizza Nduja": {
+    title: "Pizza 'nduja",
+    description: "San Marzano tomato sauce, fior di latte, Italian sausage, peperoncino oil and fresh pecorino.",
+  },
+  "Asiatisches Blumenkohlcurry": {
+    title: "Asian cauliflower curry",
+    description: "With chickpeas, coconut milk, broccoli, carrots and cauliflower.",
+  },
+  "Summer Bowl: Bulgur, Wildkräuter": {
+    title: "Summer bowl",
+    description: "Bulgur, wild herbs, watermelon, cucumber, avocado, vegan feta, mint and lemon dressing.",
+  },
+  Ofenfrische: {
+    title: "Oven-baked chicken thighs",
+    description: "With BBQ dip.",
+  },
+  "Feuriges Chili sin Carne": {
+    title: "Fiery chili sin carne",
+    description: "With kidney beans, bell peppers and corn.",
+  },
+  "Spanische Bowl": {
+    title: "Spanish bowl",
+    description: "Gallo pinto, rice, red and black beans, Salsa Lizano and marinated chili-garlic shrimp.",
+  },
+  "Vegane Pasta ohne Ei": {
+    title: "Vegan egg-free pasta",
+    description: "With creamy coconut milk sauce, sweet potato cubes, baby spinach and braised cherry tomatoes.",
+  },
+  "Jägerschnitzel vom": {
+    title: "Pork hunter schnitzel",
+    description: "Pork loin with mushroom cream sauce, buttered noodles and almond broccoli.",
+  },
+  "Pulled Chicken Burger": {
+    title: "Pulled chicken burger",
+    description: "BBQ chicken in a sesame bun with fried onions, coleslaw and criss-cut fries.",
+  },
+  "Lasagne Bolognese": {
+    title: "Lasagna Bolognese",
+    description: "Beef Bolognese in tomato bechamel sauce, baked with mozzarella.",
+  },
+  "Süßkartoffelcurry mit": {
+    title: "Sweet potato curry",
+    description: "With fresh chard.",
+  },
+  "Pizza Rucola e Parma": {
+    title: "Pizza arugula e Parma",
+    description: "Pizza bread with San Marzano tomato sauce, fior di latte, Parma ham, arugula and Grana Padano.",
+  },
+  "Vegane Ofen-Backkartoffel": {
+    title: "Vegan baked potato",
+    description: "Crispy baked potato with fresh hummus, vegetables, lemon tahini, fresh herbs and roasted walnuts.",
+  },
+  "Streetfood: Ofenfrische Spare- Rips": {
+    title: "Street food: oven-baked spare ribs",
+    description: "Pork spare ribs with BBQ sauce, coleslaw and potato wedges.",
+  },
+  "Putengulasch in feiner": {
+    title: "Turkey goulash",
+    description: "In a fine paprika cream sauce.",
+  },
+  "Röstitaler mit Tomaten": {
+    title: "Rosti rounds with tomato",
+    description: "Baked with zucchini and mountain cheese.",
+  },
+  "Indisches Rotes Linsen-Dal": {
+    title: "Indian red lentil dal",
+    description:
+      "Creamy red lentils in a spiced sauce with tomato, coconut milk, onions, garlic, ginger and Indian spices, served on basmati rice.",
+  },
+  "Vegane Falafel-Ebly-Pfanne": {
+    title: "Vegan falafel and Ebly pan",
+    description: "Crispy falafel on Mediterranean vegetables with a creamy vegan herb dip.",
+  },
+  Seelachsfilet: {
+    title: "Pollock filet",
+    description: "Mediterranean style with dried tomatoes, olives and tomato sauce.",
+  },
+  "Rührei mit Rahmspinat": {
+    title: "Scrambled eggs with creamed spinach",
+    description: "",
+  },
+  "Pita Gyros/Veggie/Halloumi/...": {
+    title: "Pita Gyros/Veggie/Halloumi/...",
+    description: "Pita sandwiches with gyros, souvlaki, bifteki, calamari, veggie, halloumi or meatless souvlaki.",
+  },
+  "Lunch Box Meat": {
+    title: "Lunch Box Meat",
+    description: "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
+  },
+  "Lunch Box Veggie": {
+    title: "Lunch Box Veggie",
+    description: "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+  },
+  "Lunch Box Fish": {
+    title: "Lunch Box Fish",
+    description: "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+  },
+  Choriatiki: {
+    title: "Choriatiki",
+    description: "Greek farmer salad.",
+  },
+  "Cakes and Sweets": {
+    title: "Cakes and Sweets",
+    description: "A changing selection of cakes and sweet treats from Apoteka.",
+  },
+  "Lemon Poppy Pancakes": {
+    title: "Lemon Poppy Pancakes",
+    description: "Lemon poppy seed pancakes with homemade lemon curd, balsamic strawberries, maple syrup and lavender.",
+  },
+  "Chickpea Pancakes (gf)": {
+    title: "Chickpea Pancakes (gf)",
+    description:
+      "Chickpea pancakes with lemon-herb hummus, grilled asparagus, fresh strawberries, microgreens and toasted almond flakes.",
+  },
+  "Crispy Miso-Lemon Polenta": {
+    title: "Crispy Miso-Lemon Polenta",
+    description: "Crispy miso-lemon polenta with roasted pointed cabbage, pickled radishes, pomegranate and chili oil.",
+  },
+  "Cardamom Porridge": {
+    title: "Cardamom Porridge",
+    description: "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
+  },
   "Tortellini gefüllt mit Ricotta und Spinat": {
     title: "Ricotta and spinach tortellini",
     description: "Baked in tomato cream sauce with mozzarella, served with a small mixed salad.",
@@ -189,6 +336,112 @@ const englishDishes = {
   },
 };
 const germanDishes = {
+  "High Protein Bowl": {
+    title: "High Protein Bowl",
+    description:
+      "Mariniertes Hähnchenbrustfilet mit Bulgur, Gemüsebrunoise, Skyrdip, gerösteten Edamame, Kräutercroutons, Kirschtomaten und Ei.",
+  },
+  "Pasta al Arrabiata": {
+    title: "Pasta all'arrabbiata",
+    description: "Mit scharfer Tomatensoße, Gemüsebrunoise, Parmesan und frittiertem Rucola.",
+  },
+  "Sheperds Pie": {
+    title: "Shepherd's Pie",
+    description: "Würziges Rinderhackfleisch mit Kartoffelpüree-Haube, überbacken mit kräftiger Bratensoße.",
+  },
+  "Vegane Paella": {
+    title: "Vegane Paella",
+    description: "Gelber Reis mit Erbsen, Karotten, Zwiebeln, Paprika, Brokkoli und veganem Sour-Cream-Dip.",
+  },
+  Thüringer: {
+    title: "Thüringer Rostbratwurstschnecke",
+    description: "Mit Bratenjus.",
+  },
+  Vegane: {
+    title: "Vegane Gemüse-Knusperfrikadelle",
+    description: "Mit Karotten-Orangensoße.",
+  },
+  "Pizza Nduja": {
+    title: "Pizza 'nduja",
+    description: "Mit San-Marzano-Tomatensugo, Fior di Latte, italienischer Bratwurst, Peperoncino-Öl und Pecorino.",
+  },
+  "Asiatisches Blumenkohlcurry": {
+    title: "Asiatisches Blumenkohlcurry",
+    description: "Mit Kichererbsen, Kokosmilch, Brokkoli, Karotten und Blumenkohl.",
+  },
+  "Summer Bowl: Bulgur, Wildkräuter": {
+    title: "Summer Bowl",
+    description: "Bulgur, Wildkräuter, Wassermelone, Gurke, Avocado, veganer Hirtenkäse, Minze und Zitronendressing.",
+  },
+  Ofenfrische: {
+    title: "Ofenfrische Hähnchenschenkel",
+    description: "Mit BBQ-Dip.",
+  },
+  "Feuriges Chili sin Carne": {
+    title: "Feuriges Chili sin Carne",
+    description: "Mit Kidneybohnen, Paprika und Mais.",
+  },
+  "Spanische Bowl": {
+    title: "Spanische Bowl",
+    description: "Gallo Pinto, Reis, rote und schwarze Bohnen, Salsa Lizano und marinierte Chili-Knoblauch-Garnelen.",
+  },
+  "Vegane Pasta ohne Ei": {
+    title: "Vegane Pasta ohne Ei",
+    description: "Mit cremiger Kokosmilchsoße, Süßkartoffelwürfeln, Babyspinat und geschmorten Kirschtomaten.",
+  },
+  "Jägerschnitzel vom": {
+    title: "Jägerschnitzel vom Schweinerücken",
+    description: "Mit Champignon-Rahmsoße, Butternudeln und Mandel-Brokkoli.",
+  },
+  "Pulled Chicken Burger": {
+    title: "Pulled Chicken Burger",
+    description: "BBQ-Chicken im Sesam-Bun mit Röstzwiebeln, Coleslaw und Criss-Cut-Fries.",
+  },
+  "Lasagne Bolognese": {
+    title: "Lasagne Bolognese",
+    description: "Vom Rind in Tomaten-Béchamelsoße, mit Mozzarella überbacken.",
+  },
+  "Süßkartoffelcurry mit": {
+    title: "Süßkartoffelcurry",
+    description: "Mit frischem Mangold.",
+  },
+  "Pizza Rucola e Parma": {
+    title: "Pizza Rucola e Parma",
+    description: "Pizzabrot mit San-Marzano-Tomatensoße, Fior di Latte, Parmaschinken, Rucola und Grana Padano.",
+  },
+  "Vegane Ofen-Backkartoffel": {
+    title: "Vegane Ofen-Backkartoffel",
+    description: "Knusprige Backkartoffel mit Hummus, Gemüse, Zitronen-Tahini, Kräutern und gerösteten Walnüssen.",
+  },
+  "Streetfood: Ofenfrische Spare- Rips": {
+    title: "Streetfood: Ofenfrische Spareribs",
+    description: "Vom Schwein mit BBQ-Soße, Coleslaw und Kartoffelwedges.",
+  },
+  "Putengulasch in feiner": {
+    title: "Putengulasch",
+    description: "In feiner Paprikarahmsoße.",
+  },
+  "Röstitaler mit Tomaten": {
+    title: "Röstitaler mit Tomaten",
+    description: "Mit Zucchini und Bergkäse überbacken.",
+  },
+  "Indisches Rotes Linsen-Dal": {
+    title: "Indisches rotes Linsen-Dal",
+    description:
+      "Cremige rote Linsen mit Tomaten, Kokosmilch, Zwiebeln, Knoblauch, Ingwer und indischen Gewürzen, auf Basmatireis.",
+  },
+  "Vegane Falafel-Ebly-Pfanne": {
+    title: "Vegane Falafel-Ebly-Pfanne",
+    description: "Knusprige Falafel auf mediterranem Gemüse mit veganem Kräuterdip.",
+  },
+  Seelachsfilet: {
+    title: "Seelachsfilet",
+    description: "Mediterran mit getrockneten Tomaten, Oliven und Tomatensoße.",
+  },
+  "Rührei mit Rahmspinat": {
+    title: "Rührei mit Rahmspinat",
+    description: "",
+  },
   "Italy Bowl": {
     title: "Italy Bowl",
     description:
@@ -438,6 +691,113 @@ const germanDishes = {
   },
 };
 const swabianDishes = {
+  "High Protein Bowl": {
+    title: "High Protein Bowl",
+    description:
+      "Marinierts Hähnchenbruschtfilet mit Bulgur, Gmiasbrunoise, Skyrdip, gröschtete Edamame, Kräutercroutons, Kirschtomata ond Ei.",
+  },
+  "Pasta al Arrabiata": {
+    title: "Pasta all'arrabbiata",
+    description: "Mit scharfer Tomatesoß, Gmiasbrunoise, Parmesan ond frittiertem Rucola.",
+  },
+  "Sheperds Pie": {
+    title: "Shepherd's Pie",
+    description: "Würzigs Rinderhack mit Kartoffelpüree-Haub, überbacka mit kräftiger Bratensoß.",
+  },
+  "Vegane Paella": {
+    title: "Vegane Paella",
+    description: "Gelber Reis mit Erbsa, Karotta, Zwiebl, Paprika, Brokkoli ond veganem Sour-Cream-Dip.",
+  },
+  Thüringer: {
+    title: "Thüringer Rostbratwurschtschnegg",
+    description: "Mit Bratenjus.",
+  },
+  Vegane: {
+    title: "Vegane Gmias-Knusperfrikadell",
+    description: "Mit Karotta-Orangasoß.",
+  },
+  "Pizza Nduja": {
+    title: "Pizza 'nduja",
+    description:
+      "Mit San-Marzano-Tomatesugo, Fior di Latte, italienischer Bratwurscht, Peperoncino-Öl ond Pecorino.",
+  },
+  "Asiatisches Blumenkohlcurry": {
+    title: "Asiatisches Blumakohlcurry",
+    description: "Mit Kichererbsa, Kokosmilch, Brokkoli, Karotta ond Blumakohl.",
+  },
+  "Summer Bowl: Bulgur, Wildkräuter": {
+    title: "Summer Bowl",
+    description: "Bulgur, Wildkräuter, Wassermelone, Gurka, Avocado, veganer Hirtenkäs, Minze ond Zitronedressing.",
+  },
+  Ofenfrische: {
+    title: "Ofenfrische Hähnchenschenkl",
+    description: "Mit BBQ-Dip.",
+  },
+  "Feuriges Chili sin Carne": {
+    title: "Feurigs Chili sin Carne",
+    description: "Mit Kidneybohna, Paprika ond Mais.",
+  },
+  "Spanische Bowl": {
+    title: "Spanische Bowl",
+    description: "Gallo Pinto, Reis, rote ond schwarze Bohna, Salsa Lizano ond marinierte Chili-Knoblauch-Garnela.",
+  },
+  "Vegane Pasta ohne Ei": {
+    title: "Vegane Pasta ohne Ei",
+    description: "Mit cremiger Kokosmilchsoß, Süßkartoffelwürfel, Babyspinat ond gschmorte Kirschtomata.",
+  },
+  "Jägerschnitzel vom": {
+    title: "Jägerschnitzel vom Schweinerücka",
+    description: "Mit Champignon-Rahmsoß, Butternudla ond Mandel-Brokkoli.",
+  },
+  "Pulled Chicken Burger": {
+    title: "Pulled Chicken Burger",
+    description: "BBQ-Chicken im Sesam-Bun mit Röstzwiebl, Coleslaw ond Criss-Cuts.",
+  },
+  "Lasagne Bolognese": {
+    title: "Lasagne Bolognese",
+    description: "Vom Rind in Tomata-Béchamelsoß, mit Mozzarella überbacka.",
+  },
+  "Süßkartoffelcurry mit": {
+    title: "Süßkartoffelcurry",
+    description: "Mit frischem Mangold.",
+  },
+  "Pizza Rucola e Parma": {
+    title: "Pizza Rucola e Parma",
+    description: "Pizzabrot mit San-Marzano-Tomatesoß, Fior di Latte, Parmaschinka, Rucola ond Grana Padano.",
+  },
+  "Vegane Ofen-Backkartoffel": {
+    title: "Vegane Ofa-Backkartoffel",
+    description: "Knusprige Backkartoffel mit Hummus, Gmias, Zitrona-Tahini, Kräuter ond gröschtete Walnüss.",
+  },
+  "Streetfood: Ofenfrische Spare- Rips": {
+    title: "Streetfood: Ofenfrische Spareribs",
+    description: "Vom Schwein mit BBQ-Soß, Coleslaw ond Kartoffelwedges.",
+  },
+  "Putengulasch in feiner": {
+    title: "Putengulasch",
+    description: "In feiner Paprikarahmsoß.",
+  },
+  "Röstitaler mit Tomaten": {
+    title: "Röstitaler mit Tomata",
+    description: "Mit Zucchini ond Bergkäs überbacka.",
+  },
+  "Indisches Rotes Linsen-Dal": {
+    title: "Indisches rots Linsa-Dal",
+    description:
+      "Cremige rote Linsa mit Tomata, Kokosmilch, Zwiebl, Knoblauch, Ingwer ond indische Gwürz, auf Basmatireis.",
+  },
+  "Vegane Falafel-Ebly-Pfanne": {
+    title: "Vegane Falafel-Ebly-Pfann",
+    description: "Knusprige Falafel auf mediterranem Gmias mit veganem Kräuterdip.",
+  },
+  Seelachsfilet: {
+    title: "Seelachsfilet",
+    description: "Mediterran mit trocknete Tomata, Oliva ond Tomatesoß.",
+  },
+  "Rührei mit Rahmspinat": {
+    title: "Rührei mit Rahmspinat",
+    description: "",
+  },
   "Italy Bowl": {
     title: "Italienische Schissl",
     description:
