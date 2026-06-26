@@ -1060,8 +1060,13 @@ function bindEvents() {
     const isOpen = !nodes.settingsPanel.hidden;
     nodes.settingsPanel.hidden = isOpen;
     nodes.settingsButton.setAttribute("aria-expanded", String(!isOpen));
-  });
 
+    if (!isOpen) {
+      requestAnimationFrame(() => {
+        nodes.settingsPanel.scrollIntoView({ block: "start" });
+      });
+    }
+  });
 }
 
 async function loadFeed() {

@@ -87,6 +87,7 @@ h1 {
 main {
   margin: 0 auto;
   max-width: 860px;
+  overflow-anchor: none;
   padding: 14px 12px 32px;
 }
 
@@ -95,6 +96,7 @@ main {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  scroll-margin-top: calc(82px + env(safe-area-inset-top));
 }
 
 .settings-body {
