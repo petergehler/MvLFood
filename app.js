@@ -163,6 +163,66 @@ const translations = {
   },
 };
 const englishDishes = {
+  "Takara Surimi Bowl": {
+    title: "Takara surimi bowl",
+    description:
+      "Jasmine rice with surimi, avocado, cucumber salad, mango, red onion, carrot, corn, roasted sesame and soy sauce.",
+  },
+  "Vegane Pilz Carbonara mit Spinat": {
+    title: "Vegan mushroom carbonara with spinach",
+    description: "Ribbon noodles with spinach, mushrooms, vegan mozzarella and cherry tomatoes.",
+  },
+  "Stollsteimer Currywurst": {
+    title: "Stollsteimer currywurst",
+    description: "Oberländer bratwurst with spicy curry sauce, colorful slaw and fries.",
+  },
+  "Oriental Wrap (vegan)": {
+    title: "Oriental wrap (vegan)",
+    description:
+      "Braised pointed cabbage, yellow pepper, fried onions, radicchio, guacamole dip and salad greens with pomegranate dressing.",
+  },
+  "Ofenfrische Roastbeef Pizza": {
+    title: "Oven-fresh roast beef pizza",
+    description: "Roast beef slices with tomato sugo, fior di latte, red onions, arugula and parmesan.",
+  },
+  "Köfte-Sandwich": {
+    title: "Kofte sandwich",
+    description: "Beef kofte in flatbread with ajvar cream, cucumber yogurt, onion-parsley salad and baked potato wedges.",
+  },
+  "Cesar Bowl": {
+    title: "Caesar bowl",
+    description:
+      "Romaine lettuce with chicken breast, herb croutons, cherry tomatoes, parmesan shavings and grilled vegetables. Vegetarian option available.",
+  },
+  "Vegane Vietnamesische": {
+    title: "Vegan Vietnamese summer rolls",
+    description: "Summer rolls with glass noodles, wok vegetables, spicy peanut-chili dip and a small mixed salad.",
+  },
+  "Piccata Milanese": {
+    title: "Piccata Milanese",
+    description: "Baked turkey schnitzel in a parmesan-egg crust with tomato spaghetti, wild garlic pesto and Grana Padano.",
+  },
+  "BBQ-Whiskey Burger": {
+    title: "BBQ whiskey burger",
+    description:
+      "Brioche bun with beef patty, crispy bacon, jalapeños, cheese, BBQ whiskey sauce, baked onion rings and sour cream dip.",
+  },
+  "Ofenfrisches Pizza-Brot": {
+    title: "Oven-fresh pizza bread",
+    description: "Tomato sugo, red onions, balsamic tomatoes, mozzarella and baby leaf salad.",
+  },
+  "Bunte Schupfnudel-Pfanne": {
+    title: "Colorful schupfnudel pan",
+    description: "Fresh market vegetables with schupfnudeln, cress and herb quark.",
+  },
+  "Ofenfrisches Schweinefilet": {
+    title: "Oven-fresh pork filet",
+    description: "With pepper cream sauce, green beans, sour cream topping and fine ribbon noodles.",
+  },
+  "Original Fish and Chips": {
+    title: "Original fish and chips",
+    description: "Beer-battered fish filet with homemade tartar sauce, homestyle fries, lemon wedge and a small salad.",
+  },
   "High Protein Bowl": {
     title: "High protein bowl",
     description:
@@ -336,6 +396,66 @@ const englishDishes = {
   },
 };
 const germanDishes = {
+  "Takara Surimi Bowl": {
+    title: "Takara Surimi Bowl",
+    description:
+      "Jasmin-Duftreis mit Surimi, Avocado, Gurkensalat, Mango, roter Zwiebel, Karotte, Mais, geröstetem Sesam und Sojasoße.",
+  },
+  "Vegane Pilz Carbonara mit Spinat": {
+    title: "Vegane Pilz-Carbonara mit Spinat",
+    description: "Wellenbandnudeln mit Blattspinat, Champignons, veganem Mozzarella und Cherrytomaten.",
+  },
+  "Stollsteimer Currywurst": {
+    title: "Stollsteimer Currywurst",
+    description: "Oberländer Bratwurst mit pikanter Currysoße, buntem Krautsalat und Pommes frites.",
+  },
+  "Oriental Wrap (vegan)": {
+    title: "Oriental Wrap (vegan)",
+    description:
+      "Geschmorter Spitzkohl, gelbe Paprika, Röstzwiebeln, Radicchio, Guacamole-Dip und Pflücksalat mit Granatapfel-Dressing.",
+  },
+  "Ofenfrische Roastbeef Pizza": {
+    title: "Ofenfrische Roastbeef-Pizza",
+    description: "Roastbeef-Scheiben mit Tomatensugo, Fior di Latte, roten Zwiebeln, Rucola und Parmesan.",
+  },
+  "Köfte-Sandwich": {
+    title: "Köfte-Sandwich",
+    description: "Rinder-Köfte im Fladenbrot mit Ajvar-Creme, Gurken-Joghurt, Zwiebel-Petersilien-Salat und gebackenen Kartoffelecken.",
+  },
+  "Cesar Bowl": {
+    title: "Caesar Bowl",
+    description:
+      "Romanasalat mit Hähnchenbrust, Kräutercroutons, Kirschtomaten, Parmesanspänen und Grillgemüse. Auch vegetarisch möglich.",
+  },
+  "Vegane Vietnamesische": {
+    title: "Vegane vietnamesische Sommerrollen",
+    description: "Sommerrollen mit Glasnudeln, Wok-Gemüse, scharfem Erdnuss-Chili-Dip und kleinem bunten Salat.",
+  },
+  "Piccata Milanese": {
+    title: "Piccata Milanese",
+    description: "Gebackenes Putenschnitzel in Parmesan-Ei-Hülle mit Tomaten-Spaghetti, Bärlauch-Pesto und Grana Padano.",
+  },
+  "BBQ-Whiskey Burger": {
+    title: "BBQ-Whiskey-Burger",
+    description:
+      "Brioche-Bun mit Rinderpatty, knusprigem Bacon, Jalapeños, Käse, BBQ-Whiskey-Soße, gebackenen Zwiebelringen und Sour-Cream-Dip.",
+  },
+  "Ofenfrisches Pizza-Brot": {
+    title: "Ofenfrisches Pizza-Brot",
+    description: "Tomatensugo, rote Zwiebeln, Balsamico-Tomaten, Mozzarella und Baby-Leaf-Salat.",
+  },
+  "Bunte Schupfnudel-Pfanne": {
+    title: "Bunte Schupfnudel-Pfanne",
+    description: "Frisches Marktgemüse mit Schupfnudeln, Kresse und Kräuterquark.",
+  },
+  "Ofenfrisches Schweinefilet": {
+    title: "Ofenfrisches Schweinefilet",
+    description: "Mit Pfeffer-Rahmsoße, grünen Bohnen, Sauerrahm-Topping und feinen Bandnudeln.",
+  },
+  "Original Fish and Chips": {
+    title: "Original Fish and Chips",
+    description: "Fischfilet im Bierteig mit hausgemachter Tartarsoße, Homestyle-Pommes, Zitronenecke und kleinem Salat.",
+  },
   "High Protein Bowl": {
     title: "High Protein Bowl",
     description:
@@ -691,6 +811,66 @@ const germanDishes = {
   },
 };
 const swabianDishes = {
+  "Takara Surimi Bowl": {
+    title: "Takara Surimi Bowl",
+    description:
+      "Jasminreis mit Surimi, Avocado, Gurkasalat, Mango, roter Zwiebl, Karotta, Mais, gröschtetem Sesam ond Sojasoß.",
+  },
+  "Vegane Pilz Carbonara mit Spinat": {
+    title: "Vegane Pilz-Carbonara mit Schbinaat",
+    description: "Wellenbandnudla mit Blattspinat, Champignons, veganem Mozzarella ond Kirschtomata.",
+  },
+  "Stollsteimer Currywurst": {
+    title: "Stollsteimer Currywurscht",
+    description: "Oberländer Bratwurscht mit pikanter Currysoß, buntem Krautsalat ond Pommes.",
+  },
+  "Oriental Wrap (vegan)": {
+    title: "Oriental Wrap (vegan)",
+    description:
+      "Gschmorter Spitzkohl, gelbe Paprika, Röstzwiebl, Radicchio, Guacamole-Dip ond Pflücksalat mit Granatapfel-Dressing.",
+  },
+  "Ofenfrische Roastbeef Pizza": {
+    title: "Ofenfrische Roastbeef-Pizza",
+    description: "Roastbeef-Scheiba mit Tomatesugo, Fior di Latte, rote Zwiebl, Rucola ond Parmesan.",
+  },
+  "Köfte-Sandwich": {
+    title: "Köfte-Sandwich",
+    description: "Rinder-Köfte im Fladebrot mit Ajvar-Creme, Gurka-Joghurt, Zwiebl-Petersilie-Salat ond Backkartoffelecka.",
+  },
+  "Cesar Bowl": {
+    title: "Caesar Bowl",
+    description:
+      "Romanasalat mit Hähnabruscht, Kräutercroutons, Kirschtomata, Parmesanspäna ond Grillgmias. Au vegetarisch möglich.",
+  },
+  "Vegane Vietnamesische": {
+    title: "Vegane vietnamesische Sommerrolla",
+    description: "Sommerrolla mit Glasnudla, Wok-Gmias, scharfem Erdnuss-Chili-Dip ond kloinem buntem Salat.",
+  },
+  "Piccata Milanese": {
+    title: "Piccata Milanese",
+    description: "Baggens Puta-Schnitzel in Parmesan-Ei-Hüll mit Tomata-Spaghetti, Bärlauch-Pesto ond Grana Padano.",
+  },
+  "BBQ-Whiskey Burger": {
+    title: "BBQ-Whiskey-Burger",
+    description:
+      "Brioche-Weckla mit Rindspatty, knusprigem Bacon, Jalapeños, Käs, BBQ-Whiskey-Soß, baggene Zwiebelring ond Sour-Cream-Dip.",
+  },
+  "Ofenfrisches Pizza-Brot": {
+    title: "Ofenfrischs Pizza-Brot",
+    description: "Tomatesugo, rote Zwiebl, Balsamico-Tomata, Mozzarella ond Baby-Leaf-Salat.",
+  },
+  "Bunte Schupfnudel-Pfanne": {
+    title: "Bunte Schupfnudla-Pfann",
+    description: "Frischs Marktgmias mit Schupfnudla, Kress ond Kräuterquark.",
+  },
+  "Ofenfrisches Schweinefilet": {
+    title: "Ofenfrischs Schweinefilet",
+    description: "Mit Pfefferrahmsoß, grüne Bohna, Sauerrahm-Topping ond feine Bandnudla.",
+  },
+  "Original Fish and Chips": {
+    title: "Original Fish and Chips",
+    description: "Fischfilet im Bierteig mit hausgmachter Tartarsoß, Homestyle-Pommes, Zitronaeck ond kloinem Salat.",
+  },
   "High Protein Bowl": {
     title: "High Protein Bowl",
     description:
