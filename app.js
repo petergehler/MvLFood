@@ -163,6 +163,63 @@ const translations = {
   },
 };
 const englishDishes = {
+  "Geschnetzeltes Züricher Art": {
+    title: "Zurich-style sliced pork",
+    description: "Sliced pork in a fine mushroom cream sauce.",
+  },
+  "Moussaka mit Kartoffeln": {
+    title: "Moussaka with potatoes",
+    description: "With eggplant and tomatoes.",
+  },
+  "Nacho bowl": {
+    title: "Nacho bowl",
+    description: "Mushrooms, peppers, zucchini, jalapeno, tortilla chips, rice, kidney beans and baby spinach with avocado dressing.",
+  },
+  "Rinder Frikadelle in feuriger": {
+    title: "Beef patty in fiery paprika sauce",
+    description: "Beef patty with spicy paprika sauce.",
+  },
+  "Asiatische Frühlingsrolle mit": {
+    title: "Asian spring roll",
+    description: "With sweet-and-sour sauce.",
+  },
+  "Bacon-Cheese-Burger": {
+    title: "Bacon cheeseburger",
+    description: "Brioche bun with beef patty, crispy bacon, jalapeños, cheese, burger sauce, truffle fries and sour cream dip.",
+  },
+  "Holzfällersteak von": {
+    title: "Pork neck lumberjack steak",
+    description: "With roast gravy and herb butter.",
+  },
+  "Bunte Schupfnudel Pfanne": {
+    title: "Colorful schupfnudel pan",
+    description: "With fresh vegetables and soy dip.",
+  },
+  "Bunte Gnocchi-Pfanne": {
+    title: "Colorful gnocchi pan",
+    description: "Fresh market vegetables with gnocchi, cress and herb quark.",
+  },
+  Streetfood: {
+    title: "Pulled salmon burger",
+    description:
+      "Pulled salmon filet with wasabi horseradish cream, salad, marinated cucumber slices, sesame, cress and potato wedges.",
+  },
+  "Japanisches Putensteak": {
+    title: "Japanese turkey steak tonkatsu",
+    description: "With soy-honey glaze and black and white sesame.",
+  },
+  "Hausgemachte Gemüse": {
+    title: "Homemade vegetable quiche",
+    description: "With pesto dip.",
+  },
+  "Paniertes Seelachsfilet mit": {
+    title: "Breaded pollock filet",
+    description: "With homemade remoulade.",
+  },
+  "Grüner Udon Nudeltopf mit": {
+    title: "Green udon noodle pot",
+    description: "With Chinese cabbage, pak choi, spring onion and fried tofu.",
+  },
   "Takara Surimi Bowl": {
     title: "Takara surimi bowl",
     description:
@@ -396,6 +453,63 @@ const englishDishes = {
   },
 };
 const germanDishes = {
+  "Geschnetzeltes Züricher Art": {
+    title: "Geschnetzeltes Züricher Art",
+    description: "Vom Schwein in feiner Champignonrahmsoße.",
+  },
+  "Moussaka mit Kartoffeln": {
+    title: "Moussaka mit Kartoffeln",
+    description: "Mit Auberginen und Tomaten.",
+  },
+  "Nacho bowl": {
+    title: "Nacho Bowl",
+    description: "Champignons, Paprika, Zucchini, Jalapeno, Tortilla-Chips, Reis, Kidneybohnen und Babyspinat mit Avocado-Dressing.",
+  },
+  "Rinder Frikadelle in feuriger": {
+    title: "Rinderfrikadelle in feuriger Paprikasoße",
+    description: "Rinderfrikadelle mit feuriger Paprikasoße.",
+  },
+  "Asiatische Frühlingsrolle mit": {
+    title: "Asiatische Frühlingsrolle",
+    description: "Mit Süßsauer-Soße.",
+  },
+  "Bacon-Cheese-Burger": {
+    title: "Bacon-Cheese-Burger",
+    description: "Brioche-Bun mit Rinderpatty, knusprigem Bacon, Jalapeños, Käse, Burger-Soße, Trüffel-Pommes und Sour-Cream-Dip.",
+  },
+  "Holzfällersteak von": {
+    title: "Holzfällersteak vom Schweinenacken",
+    description: "Mit Bratenjus und Kräuterbutter.",
+  },
+  "Bunte Schupfnudel Pfanne": {
+    title: "Bunte Schupfnudel-Pfanne",
+    description: "Mit frischem Gemüse und Soja-Dip.",
+  },
+  "Bunte Gnocchi-Pfanne": {
+    title: "Bunte Gnocchi-Pfanne",
+    description: "Frisches Marktgemüse mit Gnocchi, Kresse und Kräuterquark.",
+  },
+  Streetfood: {
+    title: "Pulled-Lachs-Burger",
+    description:
+      "Gezupftes Lachsfilet mit Wasabi-Meerrettichcreme, Salat, marinierten Gurkenscheiben, Sesam, Kresse und Wedges.",
+  },
+  "Japanisches Putensteak": {
+    title: "Japanisches Putensteak Tonkatsu",
+    description: "Mit Soja-Honigglasur und schwarzem und weißem Sesam.",
+  },
+  "Hausgemachte Gemüse": {
+    title: "Hausgemachte Gemüse-Quiche",
+    description: "Mit Pesto-Dip.",
+  },
+  "Paniertes Seelachsfilet mit": {
+    title: "Paniertes Seelachsfilet",
+    description: "Mit hausgemachter Remoulade.",
+  },
+  "Grüner Udon Nudeltopf mit": {
+    title: "Grüner Udon-Nudeltopf",
+    description: "Mit Chinakohl, Pak Choi, Frühlingslauch und gebratenem Tofu.",
+  },
   "Takara Surimi Bowl": {
     title: "Takara Surimi Bowl",
     description:
@@ -811,6 +925,63 @@ const germanDishes = {
   },
 };
 const swabianDishes = {
+  "Geschnetzeltes Züricher Art": {
+    title: "Züricher Gschnetzelts",
+    description: "Vom Schwein in feiner Champignonrahmsoß.",
+  },
+  "Moussaka mit Kartoffeln": {
+    title: "Moussaka mit Kartoffla",
+    description: "Mit Aubergina ond Tomata.",
+  },
+  "Nacho bowl": {
+    title: "Nacho Bowl",
+    description: "Champignons, Paprika, Zucchini, Jalapeno, Tortilla-Chips, Reis, Kidneybohna ond Babyspinat mit Avocado-Dressing.",
+  },
+  "Rinder Frikadelle in feuriger": {
+    title: "Rinderfrikadell in feuriger Paprikasoß",
+    description: "Rinderfrikadell mit feuriger Paprikasoß.",
+  },
+  "Asiatische Frühlingsrolle mit": {
+    title: "Asiatische Frühlingsroll",
+    description: "Mit Süßsauer-Soß.",
+  },
+  "Bacon-Cheese-Burger": {
+    title: "Bacon-Cheese-Burger",
+    description: "Brioche-Weckla mit Rindspatty, knusprigem Bacon, Jalapeños, Käs, Burgersoß, Trüffel-Pommes ond Sour-Cream-Dip.",
+  },
+  "Holzfällersteak von": {
+    title: "Holzfällersteak vom Schweinenacka",
+    description: "Mit Bratenjus ond Kräuterbutter.",
+  },
+  "Bunte Schupfnudel Pfanne": {
+    title: "Bunte Schupfnudla-Pfann",
+    description: "Mit frischem Gmias ond Soja-Dip.",
+  },
+  "Bunte Gnocchi-Pfanne": {
+    title: "Bunte Gnocchi-Pfann",
+    description: "Frischs Marktgmias mit Gnocchi, Kress ond Kräuterquark.",
+  },
+  Streetfood: {
+    title: "Pulled-Lachs-Burger",
+    description:
+      "Zupfter Lachs mit Wasabi-Meerrettichcreme, Salat, marinierten Gurkascheiba, Sesam, Kress ond Wedges.",
+  },
+  "Japanisches Putensteak": {
+    title: "Japanisches Puta-Schteak Tonkatsu",
+    description: "Mit Soja-Honigglasur ond schwarzem ond weißem Sesam.",
+  },
+  "Hausgemachte Gemüse": {
+    title: "Hausgmachte Gmias-Quiche",
+    description: "Mit Pesto-Dip.",
+  },
+  "Paniertes Seelachsfilet mit": {
+    title: "Panierts Seelachsfilet",
+    description: "Mit hausgmachter Remoulade.",
+  },
+  "Grüner Udon Nudeltopf mit": {
+    title: "Grüner Udon-Nudeltopf",
+    description: "Mit Chinakohl, Pak Choi, Frühlingslauch ond bratenem Tofu.",
+  },
   "Takara Surimi Bowl": {
     title: "Takara Surimi Bowl",
     description:

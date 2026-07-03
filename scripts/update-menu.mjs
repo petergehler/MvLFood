@@ -71,7 +71,7 @@ async function fetchMphSource() {
   const html = await fetchText(pageUrl);
   const upcomingPdf = findMphUpcomingPdf(html, pageUrl);
 
-  if (!upcomingPdf || process.env.MPH_USE_UPCOMING_PDF === "0") {
+  if (!upcomingPdf || process.env.MPH_USE_UPCOMING_PDF !== "1") {
     return { kind: "html", text: html, url: pageUrl };
   }
 

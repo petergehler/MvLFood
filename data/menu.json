@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T11:07:43.816Z",
+  "updatedAt": "2026-07-03T09:03:48.601Z",
   "week": "2026-W27",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=44935",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=18741",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -203,7 +203,7 @@
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "fish",
+          "diet": "unknown",
           "title": "Takara Surimi Bowl",
           "description": "Jasmin Duftreis I Surimi I Avocado l Gurkensalat I Mango I rote Zwiebel l Karotte l Mais l gerösteter Sesam I Sojasoße",
           "price": "Int 6.10 / Ext 8.10",
@@ -227,7 +227,7 @@
         {
           "source": "hungry-elk",
           "category": "Region",
-          "diet": "meat",
+          "diet": "unknown",
           "title": "Stollsteimer Currywurst",
           "description": "Oberländer Bratwurst l pikante Currysoße l bunter Krautsalat l Pommes frites",
           "price": "Int 8.80 / Ext 10.80",
@@ -247,6 +247,39 @@
             "AW",
             "I",
             "J"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Tagesessen",
+          "description": "",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "mph",
+          "category": "Main",
+          "diet": "meat",
+          "title": "Geschnetzeltes Züricher Art",
+          "description": "vom Schwein in feiner Champignonrahmsoße",
+          "price": "1.49€/100g",
+          "allergens": [
+            "g",
+            "i"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Vegan/Veggie",
+          "diet": "vegetarian",
+          "title": "Moussaka mit Kartoffeln",
+          "description": ", Auberginen und Tomaten",
+          "price": "1.49€/100g",
+          "allergens": [
+            "g",
+            "i"
           ]
         },
         {
@@ -329,7 +362,7 @@
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "fish",
+          "diet": "unknown",
           "title": "Takara Surimi Bowl",
           "description": "Jasmin Duftreis I Surimi I Avocado l Gurkensalat I Mango I rote Zwiebel l Karotte l Mais l gerösteter Sesam I Sojasoße",
           "price": "Int 6.10 / Ext 8.10",
@@ -342,9 +375,9 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "meat",
+          "diet": "unknown",
           "title": "Ofenfrische Roastbeef Pizza",
-          "description": "Roastbeef Scheiben I Tomatensugo l Fior di Latte I rote Zwiebeln I Rucola I Parmesan",
+          "description": "Roastbeef Scheiben I Tomatensugo l Fior di Latte I rote Zwiebeln I Rucola I Parmesan auch Vegetarisch erhältlich",
           "price": "Int 10.80 / Ext 12.80",
           "allergens": [
             "AW",
@@ -354,7 +387,7 @@
         {
           "source": "hungry-elk",
           "category": "Region",
-          "diet": "meat",
+          "diet": "unknown",
           "title": "Stollsteimer Currywurst",
           "description": "Oberländer Bratwurst pikante Currysoße l bunter Krautsalat l Pommes frites",
           "price": "Int 8.80 / Ext 10.80",
@@ -366,7 +399,7 @@
         {
           "source": "hungry-elk",
           "category": "Street Food",
-          "diet": "meat",
+          "diet": "unknown",
           "title": "Köfte-Sandwich",
           "description": "Rinder-Köfte I Fladenbrot I Ajvar-Creme I Gurken-Joghurt I Zwiebel-Petersilien-Salat I gebackene Kartoffelecken",
           "price": "Int 9.80 / Ext 11.80",
@@ -375,6 +408,41 @@
             "B",
             "F",
             "J"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Nacho bowl",
+          "description": ": Champignons, Paprika, Zucchini, Jalapeno, Tortilla Chips, Reis, Kidneybohnen & Babyspinat dazu Avocado Dressing",
+          "price": "7.50€",
+          "allergens": [
+            "f"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Main",
+          "diet": "meat",
+          "title": "Rinder Frikadelle in feuriger",
+          "description": "Paprikasoße",
+          "price": "1.56€/100g",
+          "allergens": [
+            "i"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Vegan/Veggie",
+          "diet": "vegetarian",
+          "title": "Asiatische Frühlingsrolle mit",
+          "description": "Süßsauer Soße",
+          "price": "1.43€/100g",
+          "allergens": [
+            "f",
+            "a1",
+            "2"
           ]
         },
         {
@@ -495,13 +563,47 @@
         {
           "source": "hungry-elk",
           "category": "Street Food",
-          "diet": "meat",
-          "title": "BBQ-Whiskey Burger",
-          "description": "Brioche Bun l Rinderpatty l knuspriger Bacon l Jalapeños l Käse l BBQ-Whiskey-Soße l gebackene Zwiebelringe l sour cream Dip",
+          "diet": "unknown",
+          "title": "Bacon-Cheese-Burger",
+          "description": "Brioche Bun l Rinder Patty l knuspriger Bacon l Jalapeños l Käse l Burger-Soße l Trüffel-Pommes l Sour Cream Dip",
           "price": "Int 10.80 / Ext 12.80",
           "allergens": [
             "AW",
             "B"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Tagesessen",
+          "description": "",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "mph",
+          "category": "Main",
+          "diet": "meat",
+          "title": "Holzfällersteak von",
+          "description": "Schweinenacken mit Bratenjus & Kräuterbutter",
+          "price": "1.49€/100g",
+          "allergens": [
+            "g",
+            "i",
+            "20"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Vegan/Veggie",
+          "diet": "vegetarian",
+          "title": "Bunte Schupfnudel Pfanne",
+          "description": "mit frischem Gemüse und Soja Dip",
+          "price": "1.38€/100g",
+          "allergens": [
+            "f",
+            "a1"
           ]
         },
         {
@@ -622,9 +724,9 @@
         {
           "source": "hungry-elk",
           "category": "Street Food",
-          "diet": "vegetarian",
-          "title": "Bunte Schupfnudel-Pfanne",
-          "description": "frisches Marktgemüse l Schupfnudeln l Kresse l Kräuterquark",
+          "diet": "unknown",
+          "title": "Bunte Gnocchi-Pfanne",
+          "description": "frisches Marktgemüse l Gnocchi l Kresse l Kräuterquark",
           "price": "Int 5.50 / Ext 7.50",
           "allergens": [
             "AW",
@@ -632,6 +734,44 @@
             "F",
             "G",
             "J"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "fish",
+          "title": "Streetfood",
+          "description": ": Pulled Lax Burger mit Wasabi- Meerrettichcreme, Salat, marinierte Gurkenscheiben mit Sesam gezupftem Lachsfilet und Kresse dazu Wedges",
+          "price": "8.50€",
+          "allergens": [
+            "a1",
+            "g",
+            "k"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Main",
+          "diet": "meat",
+          "title": "Japanisches Putensteak",
+          "description": "„Tonkatsu“ mit Soja- Honigglasur mit schwarzem und weißem Sesam",
+          "price": "1.56€/100g",
+          "allergens": [
+            "k",
+            "f"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Vegan/Veggie",
+          "diet": "vegetarian",
+          "title": "Hausgemachte Gemüse",
+          "description": "Quiche mit Pesto-Dip",
+          "price": "1.42€/100g",
+          "allergens": [
+            "a1",
+            "c",
+            "g"
           ]
         },
         {
@@ -746,6 +886,41 @@
             "F",
             "G",
             "J"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "unknown",
+          "title": "Tagesessen",
+          "description": "",
+          "price": "",
+          "allergens": []
+        },
+        {
+          "source": "mph",
+          "category": "Main",
+          "diet": "fish",
+          "title": "Paniertes Seelachsfilet mit",
+          "description": "hausgemachter Remoulade",
+          "price": "1.56€/100g",
+          "allergens": [
+            "g",
+            "d",
+            "a1"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Vegan/Veggie",
+          "diet": "vegan",
+          "title": "Grüner Udon Nudeltopf mit",
+          "description": "Chinakohl, Pak Choi, Frühlingslauch und gebratenem Tofu",
+          "price": "1.49€/100g",
+          "allergens": [
+            "a1",
+            "f",
+            "i"
           ]
         },
         {

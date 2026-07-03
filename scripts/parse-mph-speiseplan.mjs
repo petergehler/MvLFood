@@ -59,11 +59,13 @@ export function parseMphSpeiseplanPdfText(text) {
 }
 
 function parseWeekStart(html) {
-  const match = html.match(/<h2>\s*<strong>\s*(\d{2})\.(\d{2})\.-(\d{2})\.(\d{2})\.(\d{4})\s*<\/strong>\s*<\/h2>/i);
+  const normalized = decodeEntities(html).replace(/\s+/g, " ");
+  const match = normalized.match(/<h2>\s*<strong>\s*(\d{2})\.(\d{2})\.(\d{2,4})?\s*[-–]\s*(\d{2})\.(\d{2})\.(\d{2,4})\s*<\/strong>\s*<\/h2>/i);
   if (!match) throw new Error("Could not find MPH week date range");
 
-  const [, startDay, startMonth, , , year] = match;
-  return new Date(Number(year), Number(startMonth) - 1, Number(startDay));
+  const [, startDay, startMonth, startYear, , , endYear] = match;
+  const year = Number(startYear || endYear);
+  return new Date(year < 100 ? 2000 + year : year, Number(startMonth) - 1, Number(startDay));
 }
 
 function parsePdfWeekStart(words) {
@@ -207,9 +209,9 @@ function dietFromHeaderAndText(header, text) {
   const normalizedText = normalizeText(text).toLowerCase();
 
   if (normalizedText.includes("vegan") || /\b(tofu|quinoa)\b/i.test(text)) return "vegan";
-  if (/\b(rabas|tintenfisch|fisch)\b/i.test(text)) return "fish";
+  if (/(rabas|tintenfisch|fisch|seelachs|lachs|lax)/i.test(text)) return "fish";
   if (normalizedHeader.includes("vegan") || normalizedHeader.includes("veggie")) return "vegetarian";
-  if (/(schwein|pute|puten|hähnchen|hackfleisch|fleisch|gyros)/i.test(text)) return "meat";
+  if (/(schwein|pute|puten|hähnchen|hackfleisch|fleisch|gyros|rind|rinder|bacon)/i.test(text)) return "meat";
   return "unknown";
 }
 
@@ -222,7 +224,7 @@ function titleFromText(text, category) {
     .filter(Boolean);
 
   if (category === "Quick & Easy" && /^Tagesessen$/i.test(lines[0] || "")) return "Tagesessen";
-  return (lines[0] || "Tagesessen").replace(/[:;,.]$/, "");
+  return (lines[0] || "Tagesessen").replace(/[:;,.]$/, "").trim();
 }
 
 function descriptionFromText(text, title, price) {
