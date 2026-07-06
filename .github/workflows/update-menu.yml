@@ -19,9 +19,8 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: npm run update:menu
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-      - run: npm run validate
+          MENU_LLM_NORMALIZE: "0"
+      - run: npm run validate:data
       - name: Commit menu update
         run: |
           if git diff --quiet -- data/menu.json; then

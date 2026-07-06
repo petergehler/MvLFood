@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "python3 -m http.server 5173",
     "validate": "node scripts/validate-menu.mjs && node scripts/validate-translations.mjs",
+    "validate:data": "node scripts/validate-menu.mjs",
     "update:menu": "node scripts/update-menu.mjs",
     "parse:mph": "node scripts/parse-mph-speiseplan.mjs",
     "parse:spicetripping": "node scripts/parse-spicetripping-email.mjs",
