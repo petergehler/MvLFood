@@ -209,9 +209,10 @@ function dietFromHeaderAndText(header, text) {
   const normalizedText = normalizeText(text).toLowerCase();
 
   if (normalizedText.includes("vegan") || /\b(tofu|quinoa)\b/i.test(text)) return "vegan";
-  if (/(rabas|tintenfisch|fisch|seelachs|lachs|lax)/i.test(text)) return "fish";
+  if (/(rabas|tintenfisch|fisch|seelachs|lachs|lachfilet|lax)/i.test(text)) return "fish";
   if (normalizedHeader.includes("vegan") || normalizedHeader.includes("veggie")) return "vegetarian";
-  if (/(schwein|pute|puten|hähnchen|hackfleisch|fleisch|gyros|rind|rinder|bacon)/i.test(text)) return "meat";
+  if (/(schwein|pute|puten|hähnchen|hackfleisch|fleisch|gyros|rind|rinder|bacon|roastbeef)/i.test(text)) return "meat";
+  if (/(pak choi|glasnudeln|frühlingsröllchen|edamame)/i.test(text)) return "vegetarian";
   return "unknown";
 }
 

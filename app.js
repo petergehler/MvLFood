@@ -163,6 +163,111 @@ const translations = {
   },
 };
 const englishDishes = {
+  "Asiatische Nudelpfanne": {
+    title: "Asian noodle pan",
+    description: "Mie noodles with tofu, colorful wok vegetables, king oyster mushrooms, crispy chili oil and egg.",
+  },
+  "Hawaii Schnitzel": {
+    title: "Hawaii schnitzel",
+    description: "Breaded turkey schnitzel with coconut panko, pineapple, cheese, sweet-and-sour sauce and vegetable rice.",
+  },
+  "Tagliata di Manzo": {
+    title: "Tagliata di Manzo",
+    description: "Pink roast beef with arugula, tomato, onion, Grana Padano, potato and balsamic cream.",
+  },
+  "Saftiges Puten Gyros aus der Keule mit hausgemachtem Zaziki und Roten Zwiebeln": {
+    title: "Juicy turkey gyros",
+    description: "Turkey thigh gyros with homemade tzatziki and red onions.",
+  },
+  "Orientalisches Linsen Dal mit Roten Linsen in Kokosmilch": {
+    title: "Oriental lentil dal",
+    description: "Red lentils cooked in coconut milk.",
+  },
+  "Spaghetti aus dem Parmesanlaib": {
+    title: "Spaghetti from the parmesan wheel",
+    description: "Fresh spaghetti with truffle paste, Grana Padano and fried spinach leaves.",
+  },
+  "Japanische Ramen": {
+    title: "Japanese ramen",
+    description:
+      "With duck strips, egg, udon noodles, lotus root, mung bean sprouts, snow peas, carrot, broccoli and bell pepper. Vegetarian option available.",
+  },
+  "Asia Bowl": {
+    title: "Asia bowl",
+    description:
+      "Fried pak choi, glass noodles with vegetable strips, spring rolls, edamame, sesame oil, soy sauce and sweet chili sauce.",
+  },
+  "Ofenfrischer Schweinebraten mit Bier Soße": {
+    title: "Oven-fresh roast pork",
+    description: "Roast pork with beer sauce.",
+  },
+  "Hausgemachte Gemüselasagne mit mediterranem Gemüse in Tomaten-Béchamelsoße und Käse überbacken": {
+    title: "Homemade vegetable lasagna",
+    description: "Mediterranean vegetables in tomato bechamel sauce, baked with cheese.",
+  },
+  "Salat Nicoise": {
+    title: "Salad Nicoise",
+    description:
+      "Potato, green beans, red onion, bell pepper, cucumber, tomato, mixed leaf salad, olives and marinated tuna.",
+  },
+  "Flammkuchen Pera é": {
+    title: "Pear tarte flambee",
+    description: "Gorgonzola creme fraiche with cheese, pear, gorgonzola, radicchio and walnuts.",
+  },
+  "Ofenfrischer Leberkäse": {
+    title: "Oven-fresh Leberkaese",
+    description: "With fried egg, melted onions, roast gravy and crispy potato slices.",
+  },
+  "Fly Away Chicken Burger": {
+    title: "Fly Away chicken burger",
+    description: "Crispy turkey breast filet with mango salsa, multigrain bun, frisee and rosemary fries.",
+  },
+  "Hähnchenbustfilet in knuspriger Panko Panade & Curry-Mango Dip": {
+    title: "Crispy panko chicken breast",
+    description: "Chicken breast filet in crispy panko breading with curry-mango dip.",
+  },
+  "Gebratene Asia Nudeln mit frischen Gemüsestreifen und Sojasoße": {
+    title: "Fried Asian noodles",
+    description: "Fried Asian noodles with fresh vegetable strips and soy sauce.",
+  },
+  "Pizza Diavolo": {
+    title: "Pizza Diavolo",
+    description: "Tomato sugo with spicy pepperoni salami, bell pepper strips, mushrooms and arugula. Vegetarian option available.",
+  },
+  "Paneer Butter Marsala": {
+    title: "Paneer butter masala",
+    description: "Paneer cheese with curry sauce, wild rice, vegetables and naan bread.",
+  },
+  "Rindergeschnetzeltes Stroganoff mit Sauerrahm, Essiggurken und Champignons": {
+    title: "Beef Stroganoff",
+    description: "Sliced beef Stroganoff with sour cream, pickles and mushrooms.",
+  },
+  "Hausgemachte gefüllte Zucchini mit Bulgur und mediterranem Gemüse überbacken mit Mozzarella Käse": {
+    title: "Homemade stuffed zucchini",
+    description: "Zucchini filled with bulgur and Mediterranean vegetables, baked with mozzarella.",
+  },
+  "Fischstäbchen-Wrap": {
+    title: "Fish finger wrap",
+    description: "Wheat wrap with fish fingers, red cabbage, bell pepper, sour cream, sriracha sauce and fries.",
+  },
+  "Vegetarischer Döner": {
+    title: "Vegetarian doner",
+    description:
+      "Flatbread with iceberg lettuce, red cabbage, white cabbage, tomato, cucumber, onions, yogurt sauce, halloumi and fries.",
+  },
+  "Lachfilet im Spitzpaprika mit Kräutersoße": {
+    title: "Salmon filet with pointed pepper",
+    description: "Salmon filet with pointed pepper and herb sauce.",
+  },
+  "Kartoffeltaschen mit Frischkäsefüllung und Kräuterquark": {
+    title: "Potato pockets with cream cheese",
+    description: "Potato pockets with cream cheese filling and herb quark.",
+  },
+  "Italy Bowl": {
+    title: "Italy bowl",
+    description:
+      "Leaf salad, arugula, burrata, cherry tomatoes, baguette, pesto, peach slices and Parma ham. Vegetarian option available.",
+  },
   "Geschnetzeltes Züricher Art": {
     title: "Zurich-style sliced pork",
     description: "Sliced pork in a fine mushroom cream sauce.",
@@ -453,6 +558,106 @@ const englishDishes = {
   },
 };
 const germanDishes = {
+  "Asiatische Nudelpfanne": {
+    title: "Asiatische Nudelpfanne",
+    description: "Mie-Nudeln mit Tofu, buntem Wok-Gemüse, Kräutersaitlingen, Crispy-Chili-Öl und Ei.",
+  },
+  "Hawaii Schnitzel": {
+    title: "Hawaii-Schnitzel",
+    description: "Paniertes Putenschnitzel mit Kokospanko, Ananas, Käse, Süß-Sauer-Soße und Gemüsereis.",
+  },
+  "Tagliata di Manzo": {
+    title: "Tagliata di Manzo",
+    description: "Rosa Roastbeef mit Rucola, Tomate, Zwiebel, Grana Padano, Kartoffel und Balsamico-Creme.",
+  },
+  "Saftiges Puten Gyros aus der Keule mit hausgemachtem Zaziki und Roten Zwiebeln": {
+    title: "Saftiges Puten-Gyros",
+    description: "Aus der Keule mit hausgemachtem Zaziki und roten Zwiebeln.",
+  },
+  "Orientalisches Linsen Dal mit Roten Linsen in Kokosmilch": {
+    title: "Orientalisches Linsen-Dal",
+    description: "Rote Linsen in Kokosmilch.",
+  },
+  "Spaghetti aus dem Parmesanlaib": {
+    title: "Spaghetti aus dem Parmesanlaib",
+    description: "Frische Spaghetti mit Trüffelpaste, Grana Padano und frittiertem Blattspinat.",
+  },
+  "Japanische Ramen": {
+    title: "Japanische Ramen",
+    description:
+      "Mit Entenstreifen, Ei, Udon-Nudeln, Lotuswurzel, Mungosprossen, Kaiserschoten, Karotte, Brokkoli und Paprika. Auch vegetarisch erhältlich.",
+  },
+  "Asia Bowl": {
+    title: "Asia Bowl",
+    description:
+      "Gebratener Pak Choi, Glasnudeln mit Gemüsestreifen, Frühlingsröllchen, Edamame, Sesamöl, Sojasoße und Sweet-Chili-Soße.",
+  },
+  "Ofenfrischer Schweinebraten mit Bier Soße": {
+    title: "Ofenfrischer Schweinebraten",
+    description: "Mit Bier-Soße.",
+  },
+  "Hausgemachte Gemüselasagne mit mediterranem Gemüse in Tomaten-Béchamelsoße und Käse überbacken": {
+    title: "Hausgemachte Gemüselasagne",
+    description: "Mediterranes Gemüse in Tomaten-Béchamelsoße, mit Käse überbacken.",
+  },
+  "Salat Nicoise": {
+    title: "Salat Nicoise",
+    description:
+      "Kartoffel, grüne Bohnen, rote Zwiebel, Paprika, Gurke, Tomate, bunter Blattsalat, Oliven und marinierter Thunfisch.",
+  },
+  "Flammkuchen Pera é": {
+    title: "Flammkuchen Pera",
+    description: "Gorgonzola-Creme-fraiche mit Käse, Birne, Gorgonzola, Radicchio und Walnüssen.",
+  },
+  "Ofenfrischer Leberkäse": {
+    title: "Ofenfrischer Leberkäse",
+    description: "Mit Spiegelei, Schmelzzwiebeln, Bratenjus und knusprigen Kartoffelscheiben.",
+  },
+  "Fly Away Chicken Burger": {
+    title: "Fly Away Chicken Burger",
+    description: "Knuspriges Putenbrustfilet mit Mango-Salsa, Mehrkorn-Bun, Frisee und Rosmarin-Pommes.",
+  },
+  "Hähnchenbustfilet in knuspriger Panko Panade & Curry-Mango Dip": {
+    title: "Hähnchenbrustfilet in knuspriger Panko-Panade",
+    description: "Mit Curry-Mango-Dip.",
+  },
+  "Gebratene Asia Nudeln mit frischen Gemüsestreifen und Sojasoße": {
+    title: "Gebratene Asia-Nudeln",
+    description: "Mit frischen Gemüsestreifen und Sojasoße.",
+  },
+  "Pizza Diavolo": {
+    title: "Pizza Diavolo",
+    description: "Tomatensugo mit scharfer Peperoni-Salami, Paprikastreifen, Champignons und Rucola. Auch vegetarisch erhältlich.",
+  },
+  "Paneer Butter Marsala": {
+    title: "Paneer Butter Masala",
+    description: "Paneer-Käse mit Currysoße, Wildreis, Gemüse und Naan-Brot.",
+  },
+  "Rindergeschnetzeltes Stroganoff mit Sauerrahm, Essiggurken und Champignons": {
+    title: "Rindergeschnetzeltes Stroganoff",
+    description: "Mit Sauerrahm, Essiggurken und Champignons.",
+  },
+  "Hausgemachte gefüllte Zucchini mit Bulgur und mediterranem Gemüse überbacken mit Mozzarella Käse": {
+    title: "Hausgemachte gefüllte Zucchini",
+    description: "Mit Bulgur und mediterranem Gemüse, überbacken mit Mozzarella.",
+  },
+  "Fischstäbchen-Wrap": {
+    title: "Fischstäbchen-Wrap",
+    description: "Weizen-Wrap mit Fischstäbchen, Rotkraut, Paprika, Schmand, Sriracha-Soße und Pommes frites.",
+  },
+  "Vegetarischer Döner": {
+    title: "Vegetarischer Döner",
+    description:
+      "Fladenbrot mit Eisbergsalat, Rotkraut, Weißkraut, Tomate, Gurke, Zwiebeln, Joghurtsoße, Halloumi und Pommes frites.",
+  },
+  "Lachfilet im Spitzpaprika mit Kräutersoße": {
+    title: "Lachsfilet mit Spitzpaprika",
+    description: "Lachsfilet mit Spitzpaprika und Kräutersoße.",
+  },
+  "Kartoffeltaschen mit Frischkäsefüllung und Kräuterquark": {
+    title: "Kartoffeltaschen mit Frischkäsefüllung",
+    description: "Mit Kräuterquark.",
+  },
   "Geschnetzeltes Züricher Art": {
     title: "Geschnetzeltes Züricher Art",
     description: "Vom Schwein in feiner Champignonrahmsoße.",
@@ -925,6 +1130,106 @@ const germanDishes = {
   },
 };
 const swabianDishes = {
+  "Asiatische Nudelpfanne": {
+    title: "Asiatische Nudlpfann",
+    description: "Mie-Nudla mit Tofu, buntem Wok-Gmias, Kräutersaitling, Crispy-Chili-Öl ond Ei.",
+  },
+  "Hawaii Schnitzel": {
+    title: "Hawaii-Schnitzel",
+    description: "Panierts Puta-Schnitzel mit Kokospanko, Ananas, Käs, Süß-Sauer-Soß ond Gmiasreis.",
+  },
+  "Tagliata di Manzo": {
+    title: "Tagliata di Manzo",
+    description: "Rosa Roastbeef mit Rucola, Tomata, Zwiebl, Grana Padano, Kartoffel ond Balsamico-Creme.",
+  },
+  "Saftiges Puten Gyros aus der Keule mit hausgemachtem Zaziki und Roten Zwiebeln": {
+    title: "Saftigs Puta-Gyros",
+    description: "Aus dr Keul mit hausgmachtem Zaziki ond rote Zwiebl.",
+  },
+  "Orientalisches Linsen Dal mit Roten Linsen in Kokosmilch": {
+    title: "Orientalischs Linsa-Dal",
+    description: "Rote Linsa in Kokosmilch.",
+  },
+  "Spaghetti aus dem Parmesanlaib": {
+    title: "Spaghetti aus em Parmesanlaib",
+    description: "Frische Spaghetti mit Trüffelpaste, Grana Padano ond frittiertem Blattspinat.",
+  },
+  "Japanische Ramen": {
+    title: "Japanische Ramen",
+    description:
+      "Mit Entestreifa, Ei, Udon-Nudla, Lotuswurzel, Mungosprossa, Kaiserschota, Karotta, Brokkoli ond Paprika. Au vegetarisch erhältlich.",
+  },
+  "Asia Bowl": {
+    title: "Asia Bowl",
+    description:
+      "Gebratener Pak Choi, Glasnudla mit Gmiasstreifa, Frühlingsröllla, Edamame, Sesamöl, Sojasoß ond Sweet-Chili-Soß.",
+  },
+  "Ofenfrischer Schweinebraten mit Bier Soße": {
+    title: "Ofenfrischer Schweinsbrata",
+    description: "Mit Bier-Soß.",
+  },
+  "Hausgemachte Gemüselasagne mit mediterranem Gemüse in Tomaten-Béchamelsoße und Käse überbacken": {
+    title: "Hausgmachte Gmiaslasagne",
+    description: "Mediterrans Gmias in Tomata-Béchamelsoß, mit Käs überbacka.",
+  },
+  "Salat Nicoise": {
+    title: "Salat Nicoise",
+    description:
+      "Kartoffel, grüne Bohna, rote Zwiebl, Paprika, Gurka, Tomata, bunter Blattsalat, Oliva ond marinierter Thunfisch.",
+  },
+  "Flammkuchen Pera é": {
+    title: "Flammkucha Pera",
+    description: "Gorgonzola-Creme-fraiche mit Käs, Bira, Gorgonzola, Radicchio ond Walnüss.",
+  },
+  "Ofenfrischer Leberkäse": {
+    title: "Ofenfrischer Leberkäs",
+    description: "Mit Spiegelei, Schmelzzwiebl, Bratenjus ond knusprige Kartoffelscheiba.",
+  },
+  "Fly Away Chicken Burger": {
+    title: "Fly Away Chicken Burger",
+    description: "Knusprigs Putenbruschtfilet mit Mango-Salsa, Mehrkorn-Weckla, Frisee ond Rosmarin-Pommes.",
+  },
+  "Hähnchenbustfilet in knuspriger Panko Panade & Curry-Mango Dip": {
+    title: "Hähnchenbruschtfilet in knuspriger Panko-Panad",
+    description: "Mit Curry-Mango-Dip.",
+  },
+  "Gebratene Asia Nudeln mit frischen Gemüsestreifen und Sojasoße": {
+    title: "Gebratene Asia-Nudla",
+    description: "Mit frische Gmiasstreifa ond Sojasoß.",
+  },
+  "Pizza Diavolo": {
+    title: "Pizza Diavolo",
+    description: "Tomatesugo mit scharfer Peperoni-Salami, Paprikastreifa, Champignons ond Rucola. Au vegetarisch erhältlich.",
+  },
+  "Paneer Butter Marsala": {
+    title: "Paneer Butter Masala",
+    description: "Paneer-Käs mit Currysoß, Wildreis, Gmias ond Naan-Brot.",
+  },
+  "Rindergeschnetzeltes Stroganoff mit Sauerrahm, Essiggurken und Champignons": {
+    title: "Rindergschnetzelts Stroganoff",
+    description: "Mit Sauerrahm, Essiggurka ond Champignons.",
+  },
+  "Hausgemachte gefüllte Zucchini mit Bulgur und mediterranem Gemüse überbacken mit Mozzarella Käse": {
+    title: "Hausgmachte gfüllte Zucchini",
+    description: "Mit Bulgur ond mediterranem Gmias, mit Mozzarella überbacka.",
+  },
+  "Fischstäbchen-Wrap": {
+    title: "Fischstäbchen-Wrap",
+    description: "Weiza-Wrap mit Fischstäbchen, Rotkraut, Paprika, Schmand, Sriracha-Soß ond Pommes.",
+  },
+  "Vegetarischer Döner": {
+    title: "Vegetarischer Döner",
+    description:
+      "Fladebrot mit Eisbergsalat, Rotkraut, Weißkraut, Tomata, Gurka, Zwiebl, Joghurtsoß, Halloumi ond Pommes.",
+  },
+  "Lachfilet im Spitzpaprika mit Kräutersoße": {
+    title: "Lachsfilet mit Spitzpaprika",
+    description: "Lachsfilet mit Spitzpaprika ond Kräutersoß.",
+  },
+  "Kartoffeltaschen mit Frischkäsefüllung und Kräuterquark": {
+    title: "Kartoffeltascha mit Frischkäsfüllung",
+    description: "Mit Kräuterquark.",
+  },
   "Geschnetzeltes Züricher Art": {
     title: "Züricher Gschnetzelts",
     description: "Vom Schwein in feiner Champignonrahmsoß.",

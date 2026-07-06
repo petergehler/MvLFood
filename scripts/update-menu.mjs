@@ -275,9 +275,13 @@ function normalizeHungryPrice(value) {
 
 function hungryDiet(text) {
   if (/vegan/i.test(text)) return "vegan";
-  if (/(seelachs|fisch|calamari)/i.test(text)) return "fish";
-  if (/(hähnchen|fleisch|schwein|puten|bolognese|hack|schinken|maultaschen)/i.test(text)) return "meat";
-  if (/(camembert|mozzarella|gorgonzola|ricotta|spinat|pasta|spaghetti)/i.test(text)) return "vegetarian";
+  if (/(seelachs|fisch|calamari|lachs|thunfisch)/i.test(text)) return "fish";
+  if (/(hähnchen|fleisch|schwein|puten|bolognese|hack|schinken|maultaschen|manzo|roastbeef|ente|enten|leberkäse|salami)/i.test(text)) {
+    return "meat";
+  }
+  if (/(camembert|mozzarella|gorgonzola|ricotta|spinat|pasta|spaghetti|tofu|paneer|halloumi|vegetarisch|gnocchi)/i.test(text)) {
+    return "vegetarian";
+  }
   return "unknown";
 }
 
