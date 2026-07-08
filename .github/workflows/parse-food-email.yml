@@ -1,0 +1,54 @@
+name: Parse food email
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Source hint, e.g. spicetripping"
+        required: true
+      email_body:
+        description: "Raw email body"
+        required: true
+      subject:
+        description: "Email subject"
+        required: false
+      from:
+        description: "Email sender"
+        required: false
+      received_at:
+        description: "Received timestamp"
+        required: false
+      messageId:
+        description: "Stable email message id"
+        required: false
+  repository_dispatch:
+    types: [food-email]
+
+permissions:
+  contents: write
+
+jobs:
+  parse-food-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Parse email
+        run: npm run parse:food-email -- --payload="$GITHUB_EVENT_PATH" --write
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+      - name: Commit parsed event
+        run: |
+          if git diff --quiet -- data/email-events; then
+            echo "No parsed email event changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/email-events
+          git commit -m "Add parsed food email event"
+          git push

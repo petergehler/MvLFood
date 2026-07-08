@@ -8,6 +8,7 @@
     "validate": "node scripts/validate-menu.mjs && node scripts/validate-translations.mjs",
     "validate:data": "node scripts/validate-menu.mjs",
     "update:menu": "node scripts/update-menu.mjs",
+    "parse:food-email": "node scripts/parse-food-email-llm.mjs",
     "parse:mph": "node scripts/parse-mph-speiseplan.mjs",
     "parse:spicetripping": "node scripts/parse-spicetripping-email.mjs",
     "update:source-text": "node scripts/update-source-text.mjs"
