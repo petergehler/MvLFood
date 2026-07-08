@@ -21,6 +21,10 @@ on:
       messageId:
         description: "Stable email message id"
         required: false
+      dry_run:
+        description: "Parse without writing/committing an event"
+        required: false
+        default: "true"
   repository_dispatch:
     types: [food-email]
 
@@ -35,12 +39,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Parse email
+      - name: Parse email dry run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true' }}
+        run: npm run parse:food-email -- --payload="$GITHUB_EVENT_PATH"
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+      - name: Parse email and write event
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true' }}
         run: npm run parse:food-email -- --payload="$GITHUB_EVENT_PATH" --write
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
       - name: Commit parsed event
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true' }}
         run: |
           if git diff --quiet -- data/email-events; then
             echo "No parsed email event changes"
