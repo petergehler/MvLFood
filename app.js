@@ -3,6 +3,7 @@ const state = {
   todayDate: selectedDateFromUrl(),
   selectedDiets: new Set(),
   selectedSources: null,
+  knownSources: null,
   language: "en",
   hiddenAllergens: new Set(),
   hasDateOverride: hasDateOverrideFromUrl(),
@@ -2199,6 +2200,7 @@ function loadSettings() {
     state.language = saved.language || detectLanguage();
     state.selectedDiets = new Set((saved.selectedDiets || []).filter((diet) => dietOptions.includes(diet)));
     state.selectedSources = Array.isArray(saved.selectedSources) ? new Set(saved.selectedSources) : null;
+    state.knownSources = Array.isArray(saved.knownSources) ? new Set(saved.knownSources) : null;
     if (saved.veggieOnly && !saved.selectedDiets) {
       state.selectedDiets = new Set(["vegan", "vegetarian"]);
     }
@@ -2207,6 +2209,7 @@ function loadSettings() {
     state.language = detectLanguage();
     state.selectedDiets = new Set();
     state.selectedSources = null;
+    state.knownSources = null;
     state.hiddenAllergens = new Set();
   }
 }
@@ -2218,6 +2221,7 @@ function saveSettings() {
       language: state.language,
       selectedDiets: [...state.selectedDiets],
       selectedSources: state.selectedSources ? [...state.selectedSources] : null,
+      knownSources: state.feed ? Object.keys(state.feed.sources) : state.knownSources ? [...state.knownSources] : null,
       hiddenAllergens: [...state.hiddenAllergens],
     }),
   );
@@ -2229,10 +2233,22 @@ function ensureSelectedSources() {
   const allSources = Object.keys(state.feed.sources);
   if (!state.selectedSources) {
     state.selectedSources = new Set(allSources);
+    state.knownSources = new Set(allSources);
     return;
   }
 
-  state.selectedSources = new Set([...state.selectedSources].filter((sourceId) => allSources.includes(sourceId)));
+  const availableSources = new Set(allSources);
+  const knownSources = state.knownSources || new Set(state.selectedSources);
+  const selectedSources = new Set([...state.selectedSources].filter((sourceId) => availableSources.has(sourceId)));
+
+  for (const sourceId of allSources) {
+    if (!knownSources.has(sourceId)) {
+      selectedSources.add(sourceId);
+    }
+  }
+
+  state.selectedSources = selectedSources;
+  state.knownSources = new Set(allSources);
 }
 
 function formatDate(dateString) {
