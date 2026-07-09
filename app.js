@@ -47,6 +47,7 @@ const translations = {
     noMenu: "No menu listed for today.",
     noMenuForDate: "No menu listed for this date.",
     closedNow: "Closed",
+    opensAt: "Opens {time}",
     diets: {
       vegan: "vegan",
       vegetarian: "vegetarian",
@@ -92,6 +93,7 @@ const translations = {
     noMenu: "Für heute ist kein Menü eingetragen.",
     noMenuForDate: "Für dieses Datum ist kein Menü eingetragen.",
     closedNow: "Geschlossen",
+    opensAt: "Öffnet {time}",
     diets: {
       vegan: "vegan",
       vegetarian: "vegetarisch",
@@ -137,6 +139,7 @@ const translations = {
     noMenu: "Für heit isch koi Menü drin.",
     noMenuForDate: "Für des Datum isch koi Menü drin.",
     closedNow: "Zua",
+    opensAt: "Macht {time} uff",
     diets: {
       vegan: "vegan",
       vegetarian: "vegetarisch",
@@ -2023,41 +2026,54 @@ function renderAvailability(element, item, source) {
   const availability = element.querySelector(".availability");
   const status = availabilityStatus(item, source);
 
-  if (status !== "closed") {
+  if (status.state !== "closed") {
     availability.hidden = true;
     return;
   }
 
   element.classList.add("is-closed");
   availability.hidden = false;
-  availability.textContent = t("closedNow");
+  availability.textContent = status.nextOpening
+    ? t("opensAt").replace("{time}", status.nextOpening)
+    : t("closedNow");
 }
 
 function availabilityStatus(item, source) {
   if (new URLSearchParams(window.location.search).has("mockClosed")) {
-    return "closed";
+    return { state: "closed", nextOpening: null };
   }
 
   const now = new Date();
   const today = localDateString(now);
 
   if (today !== state.todayDate) {
-    return "unknown";
+    return { state: "unknown", nextOpening: null };
   }
 
   const intervals = openingIntervalsFor(item, source, today);
   if (!intervals.length) {
-    return "unknown";
+    return { state: "unknown", nextOpening: null };
   }
 
   const minutesNow = now.getHours() * 60 + now.getMinutes();
-  const isOpen = intervals.some((interval) => {
-    const start = timeToMinutes(interval.start);
-    const end = timeToMinutes(interval.end);
-    return start !== null && end !== null && minutesNow >= start && minutesNow < end;
+  const normalizedIntervals = intervals
+    .map((interval) => ({
+      start: timeToMinutes(interval.start),
+      end: timeToMinutes(interval.end),
+    }))
+    .filter((interval) => interval.start !== null && interval.end !== null);
+  const isOpen = normalizedIntervals.some((interval) => {
+    return minutesNow >= interval.start && minutesNow < interval.end;
   });
+  const nextOpening = normalizedIntervals
+    .map((interval) => interval.start)
+    .filter((start) => minutesNow < start)
+    .sort((a, b) => a - b)[0];
 
-  return isOpen ? "open" : "closed";
+  return {
+    state: isOpen ? "open" : "closed",
+    nextOpening: isOpen || nextOpening === undefined ? null : formatMinutesAsTime(nextOpening),
+  };
 }
 
 function openingIntervalsFor(item, source, dateString) {
@@ -2091,6 +2107,12 @@ function timeToMinutes(time) {
   const [hours, minutes] = time.split(":").map(Number);
   if (!Number.isFinite(hours) || !Number.isFinite(minutes)) return null;
   return hours * 60 + minutes;
+}
+
+function formatMinutesAsTime(totalMinutes) {
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
 }
 
 function dietLabel(diet) {
