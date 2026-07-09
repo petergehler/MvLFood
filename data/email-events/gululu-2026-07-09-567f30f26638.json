@@ -1,0 +1,33 @@
+{
+  "id": "gululu-2026-07-09-567f30f26638",
+  "source": "gululu",
+  "email": {
+    "messageId": "19f460799ddce74e",
+    "messageIdHash": "567f30f26638",
+    "subject": "Fwd: [MvL6] Gululu Chinese Foodtruck🥢- Thursday 09.July",
+    "from": "Peter Gehler <peter.gehler@uni-tuebingen.de>",
+    "receivedAt": "2026-07-09T08:38:40.000Z"
+  },
+  "service": {
+    "date": "2026-07-09",
+    "start": "",
+    "end": "",
+    "location": "MvL6"
+  },
+  "items": [
+    {
+      "source": "gululu",
+      "category": "noodles",
+      "diet": "unknown",
+      "title": "Cold Noodles",
+      "description": "A simple, refreshing dish to cool down and recharge, topped with your choice of savoury meat, a fried egg, or a classic mix of shredded vegetables.",
+      "price": "unknown",
+      "allergens": [
+        "unknown"
+      ]
+    }
+  ],
+  "confidence": 0.8,
+  "needsReview": true,
+  "notes": "Menu is attached."
+}
