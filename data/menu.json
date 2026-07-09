@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T07:59:14.319Z",
+  "updatedAt": "2026-07-08T00:00:00.000Z",
   "week": "2026-W28",
   "sources": {
     "hungry-elk": {
@@ -70,6 +70,26 @@
           3,
           4,
           5
+        ],
+        "intervals": [
+          {
+            "start": "11:00",
+            "end": "14:00"
+          }
+        ]
+      }
+    },
+    "gululu": {
+      "name": "Gululu",
+      "shortName": "GU",
+      "kind": "truck",
+      "url": "https://www.instagram.com/gululufoodtruck/",
+      "menuUrl": "",
+      "logo": "data/images/logos/gululu-logo.jpg",
+      "openingHours": {
+        "days": [
+          2,
+          4
         ],
         "intervals": [
           {
@@ -192,6 +212,34 @@
     {
       "code": "milk",
       "label": "Milk / yogurt"
+    },
+    {
+      "code": "GULULU_ADD_A",
+      "label": "Colorant"
+    },
+    {
+      "code": "GULULU_ADD_B",
+      "label": "Preservative"
+    },
+    {
+      "code": "GULULU_ADD_D",
+      "label": "Flavor enhancer"
+    },
+    {
+      "code": "GULULU_SOY",
+      "label": "Soy"
+    },
+    {
+      "code": "GULULU_SESAME",
+      "label": "Sesame"
+    },
+    {
+      "code": "GULULU_CRUSTACEANS",
+      "label": "Crustaceans"
+    },
+    {
+      "code": "GULULU_EGG",
+      "label": "Egg"
     }
   ],
   "days": [
@@ -529,6 +577,58 @@
           "allergens": [
             "B"
           ]
+        },
+        {
+          "source": "gululu",
+          "category": "Food truck",
+          "diet": "meat",
+          "title": "Braised Pork Rice",
+          "description": "Rice with pork, onion, egg, vegetables and pickled radish. Add Mapo Tofu for 2.00 extra.",
+          "price": "7.00",
+          "allergens": [
+            "GULULU_ADD_A",
+            "GULULU_ADD_B",
+            "GULULU_ADD_D",
+            "GULULU_SOY",
+            "GULULU_SESAME",
+            "GULULU_CRUSTACEANS",
+            "GULULU_EGG"
+          ],
+          "openingHours": {
+            "date": "2026-07-07",
+            "intervals": [
+              {
+                "start": "11:00",
+                "end": "14:00"
+              }
+            ]
+          },
+          "image": "data/images/trucks/gululu-2026-07-07.png"
+        },
+        {
+          "source": "gululu",
+          "category": "Food truck",
+          "diet": "vegan",
+          "title": "Mapo Tofu Rice",
+          "description": "Rice with tofu and mushrooms, vegetables and pickled radish.",
+          "price": "7.00",
+          "allergens": [
+            "GULULU_ADD_A",
+            "GULULU_ADD_B",
+            "GULULU_ADD_D",
+            "GULULU_SOY",
+            "GULULU_CRUSTACEANS"
+          ],
+          "openingHours": {
+            "date": "2026-07-07",
+            "intervals": [
+              {
+                "start": "11:00",
+                "end": "14:00"
+              }
+            ]
+          },
+          "image": "data/images/trucks/gululu-2026-07-07.png"
         }
       ]
     },

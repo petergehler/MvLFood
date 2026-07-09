@@ -194,6 +194,15 @@ main {
   width: 38px;
 }
 
+.location-choice.gululu {
+  background: #fff5ef;
+}
+
+.location-choice.gululu .source-logo {
+  height: 40px;
+  width: 40px;
+}
+
 .location-choice[aria-pressed="true"] {
   background: rgba(255, 255, 255, 0.96);
   border-color: var(--green);
@@ -272,6 +281,14 @@ main {
   opacity: 0.18;
   right: -24px;
   width: 220px;
+}
+
+.source-watermark.gululu {
+  bottom: -16px;
+  height: 124px;
+  opacity: 0.2;
+  right: -18px;
+  width: 124px;
 }
 
 .source-logo {

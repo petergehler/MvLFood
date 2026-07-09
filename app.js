@@ -71,7 +71,11 @@ const translations = {
       Hazelnut: "Hazelnut",
       Peanut: "Peanut",
       Fish: "Fish",
+      Crustaceans: "Crustaceans",
       "Milk / yogurt": "Milk / yogurt",
+      Colorant: "Colorant",
+      Preservative: "Preservative",
+      "Flavor enhancer": "Flavor enhancer",
     },
   },
   de: {
@@ -112,7 +116,11 @@ const translations = {
       Hazelnut: "Haselnuss",
       Peanut: "Erdnuss",
       Fish: "Fisch",
+      Crustaceans: "Krebstiere",
       "Milk / yogurt": "Milch / Joghurt",
+      Colorant: "Farbstoff",
+      Preservative: "Konservierungsstoff",
+      "Flavor enhancer": "Geschmacksverstärker",
     },
   },
   sw: {
@@ -158,7 +166,11 @@ const translations = {
       Hazelnut: "Haselnuss",
       Peanut: "Erdnuss",
       Fish: "Fisch",
+      Crustaceans: "Krebstiere",
       "Milk / yogurt": "Milch / Joghurt",
+      Colorant: "Farbstoff",
+      Preservative: "Konservierungsstoff",
+      "Flavor enhancer": "Gschmacksverstärker",
     },
   },
 };
@@ -555,6 +567,14 @@ const englishDishes = {
   "Alu Goobi: Indisches": {
     title: "Alu Goobi",
     description: "Indian potato and cauliflower curry.",
+  },
+  "Braised Pork Rice": {
+    title: "Braised pork rice",
+    description: "Rice with pork, onion, egg, vegetables and pickled radish. Add Mapo Tofu for 2.00 extra.",
+  },
+  "Mapo Tofu Rice": {
+    title: "Mapo tofu rice",
+    description: "Rice with tofu and mushrooms, vegetables and pickled radish.",
   },
 };
 const germanDishes = {
@@ -1128,6 +1148,14 @@ const germanDishes = {
     title: "Rührei mit Rahmspinat",
     description: "Rührei mit Rahmspinat.",
   },
+  "Braised Pork Rice": {
+    title: "Braised Pork Rice",
+    description: "Reis mit Schweinefleisch, Zwiebel, Ei, Gemüse und eingelegtem Rettich. Mapo Tofu dazu für 2,00 extra.",
+  },
+  "Mapo Tofu Rice": {
+    title: "Mapo Tofu Rice",
+    description: "Reis mit Tofu, Pilzen, Gemüse und eingelegtem Rettich.",
+  },
 };
 const swabianDishes = {
   "Asiatische Nudelpfanne": {
@@ -1688,6 +1716,14 @@ const swabianDishes = {
   "Scrambled eggs with creamed spinach": {
     title: "Rührei mit Rahmspinat",
     description: "Rührei mit Rahmspinat.",
+  },
+  "Braised Pork Rice": {
+    title: "Braised Pork Rice",
+    description: "Reis mit Schweinefleisch, Zwiebl, Ei, Gmias ond aiglegtem Rettich. Mapo Tofu drzua für 2,00 extra.",
+  },
+  "Mapo Tofu Rice": {
+    title: "Mapo Tofu Rice",
+    description: "Reis mit Tofu, Pilz, Gmias ond aiglegtem Rettich.",
   },
 };
 const icons = {
