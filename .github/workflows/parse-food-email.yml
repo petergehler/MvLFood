@@ -31,6 +31,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: parse-food-email
+  cancel-in-progress: false
+
 jobs:
   parse-food-email:
     runs-on: ubuntu-latest
