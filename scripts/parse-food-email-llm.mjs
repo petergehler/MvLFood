@@ -31,10 +31,25 @@ if (args.write) {
   const outDir = args.outDir || "data/email-events";
   await mkdir(outDir, { recursive: true });
   const outPath = join(outDir, `${safeSlug(parsed.source)}-${parsed.service.date || "undated"}-${parsed.email.messageIdHash}.json`);
+  if (await fileExists(outPath)) {
+    console.log(`${outPath} already exists`);
+    process.exit(0);
+  }
+
   await writeFile(outPath, `${JSON.stringify(parsed, null, 2)}\n`);
   console.log(outPath);
 } else {
   console.log(JSON.stringify(parsed, null, 2));
+}
+
+async function fileExists(path) {
+  try {
+    await readFile(path, "utf8");
+    return true;
+  } catch (error) {
+    if (error?.code === "ENOENT") return false;
+    throw error;
+  }
 }
 
 async function inputFromEmailFile(path) {
