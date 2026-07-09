@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T00:00:00.000Z",
+  "updatedAt": "2026-07-09T08:15:38.298Z",
   "week": "2026-W28",
   "sources": {
     "hungry-elk": {
@@ -240,6 +240,10 @@
     {
       "code": "GULULU_EGG",
       "label": "Egg"
+    },
+    {
+      "code": "GULULU_PEANUT",
+      "label": "Peanut"
     }
   ],
   "days": [
@@ -962,6 +966,76 @@
           "description": "A changing selection of cakes and sweet treats from Apoteka.",
           "price": "",
           "allergens": []
+        },
+        {
+          "source": "gululu",
+          "category": "Food truck",
+          "diet": "vegan",
+          "title": "Shanghai Cold Noodles",
+          "description": "Chilled noodles in a savoury soy-vinegar base, served with fresh cucumber and carrot. Sauce options: sesame-peanut dressing, pure sesame dressing, or no sauce.",
+          "price": "6.00",
+          "allergens": [
+            "GULULU_ADD_B",
+            "GULULU_ADD_D",
+            "GULULU_SOY",
+            "GULULU_SESAME",
+            "GULULU_PEANUT"
+          ],
+          "openingHours": {
+            "date": "2026-07-09",
+            "intervals": [
+              {
+                "start": "11:00",
+                "end": "14:00"
+              }
+            ]
+          },
+          "image": "data/images/trucks/gululu-2026-07-09.png"
+        },
+        {
+          "source": "gululu",
+          "category": "Add-on",
+          "diet": "meat",
+          "title": "Shredded Pork with Peppers",
+          "description": "Stir-fried pork with peppers, light and savoury. Add as a topping to the cold noodles.",
+          "price": "+2.00",
+          "allergens": [
+            "GULULU_ADD_B",
+            "GULULU_ADD_D",
+            "GULULU_SOY",
+            "GULULU_CRUSTACEANS"
+          ],
+          "openingHours": {
+            "date": "2026-07-09",
+            "intervals": [
+              {
+                "start": "11:00",
+                "end": "14:00"
+              }
+            ]
+          },
+          "image": "data/images/trucks/gululu-2026-07-09.png"
+        },
+        {
+          "source": "gululu",
+          "category": "Add-on",
+          "diet": "vegan",
+          "title": "Celery & Smoked Tofu",
+          "description": "Fresh celery stir-fried with smoked tofu, finished with a hint of sesame oil. Light and aromatic. Add as a topping to the cold noodles.",
+          "price": "+2.00",
+          "allergens": [
+            "GULULU_SESAME"
+          ],
+          "openingHours": {
+            "date": "2026-07-09",
+            "intervals": [
+              {
+                "start": "11:00",
+                "end": "14:00"
+              }
+            ]
+          },
+          "image": "data/images/trucks/gululu-2026-07-09.png"
         }
       ]
     },

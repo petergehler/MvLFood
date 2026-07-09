@@ -576,6 +576,19 @@ const englishDishes = {
     title: "Mapo tofu rice",
     description: "Rice with tofu and mushrooms, vegetables and pickled radish.",
   },
+  "Shanghai Cold Noodles": {
+    title: "Shanghai cold noodles",
+    description:
+      "Chilled noodles in a savoury soy-vinegar base with fresh cucumber and carrot. Choose sesame-peanut dressing, pure sesame dressing, or no sauce.",
+  },
+  "Shredded Pork with Peppers": {
+    title: "Shredded pork with peppers",
+    description: "Stir-fried pork with peppers, light and savoury. Add as a topping to the cold noodles.",
+  },
+  "Celery & Smoked Tofu": {
+    title: "Celery & smoked tofu",
+    description: "Fresh celery stir-fried with smoked tofu and a hint of sesame oil. Light and aromatic.",
+  },
 };
 const germanDishes = {
   "Asiatische Nudelpfanne": {
@@ -1156,6 +1169,19 @@ const germanDishes = {
     title: "Mapo Tofu Rice",
     description: "Reis mit Tofu, Pilzen, Gemüse und eingelegtem Rettich.",
   },
+  "Shanghai Cold Noodles": {
+    title: "Shanghai Cold Noodles",
+    description:
+      "Gekühlte Nudeln in einer herzhaften Soja-Essig-Basis mit frischer Gurke und Karotte. Mit Sesam-Erdnuss-Dressing, reinem Sesam-Dressing oder ohne Sauce.",
+  },
+  "Shredded Pork with Peppers": {
+    title: "Schweinefleischstreifen mit Paprika",
+    description: "Gebratenes Schweinefleisch mit Paprika, leicht und herzhaft. Als Topping zu den kalten Nudeln.",
+  },
+  "Celery & Smoked Tofu": {
+    title: "Sellerie & Räuchertofu",
+    description: "Frischer Sellerie mit Räuchertofu, abgerundet mit etwas Sesamöl. Leicht und aromatisch.",
+  },
 };
 const swabianDishes = {
   "Asiatische Nudelpfanne": {
@@ -1724,6 +1750,19 @@ const swabianDishes = {
   "Mapo Tofu Rice": {
     title: "Mapo Tofu Rice",
     description: "Reis mit Tofu, Pilz, Gmias ond aiglegtem Rettich.",
+  },
+  "Shanghai Cold Noodles": {
+    title: "Shanghai Cold Noodles",
+    description:
+      "Kalte Nudla in herzhafter Soja-Essig-Basis mit frischer Gurk ond Karotta. Mit Sesam-Erdnuss-Dressing, reinem Sesam-Dressing oder ohne Soß.",
+  },
+  "Shredded Pork with Peppers": {
+    title: "Schweinefleischstreifa mit Paprika",
+    description: "Bratens Schweinefleisch mit Paprika, leicht ond herzhaft. Als Topping zu de kalte Nudla.",
+  },
+  "Celery & Smoked Tofu": {
+    title: "Sellerie & Räuchertofu",
+    description: "Frischer Sellerie mit Räuchertofu ond am Hauch Sesamöl. Leicht ond aromatisch.",
   },
 };
 const icons = {
