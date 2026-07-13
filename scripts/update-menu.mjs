@@ -71,7 +71,12 @@ async function fetchMphSource() {
   const html = await fetchText(pageUrl);
   const upcomingPdf = findMphUpcomingPdf(html, pageUrl);
 
-  if (!upcomingPdf || process.env.MPH_USE_UPCOMING_PDF !== "1") {
+  if (!upcomingPdf) {
+    return { kind: "html", text: html, url: pageUrl };
+  }
+
+  const htmlDays = parseMphSpeiseplan(html);
+  if (process.env.MPH_USE_UPCOMING_PDF !== "1" && !isStaleMenu(htmlDays)) {
     return { kind: "html", text: html, url: pageUrl };
   }
 
@@ -80,6 +85,11 @@ async function fetchMphSource() {
     text: await pdfText(upcomingPdf, ["-tsv"]),
     url: upcomingPdf,
   };
+}
+
+function isStaleMenu(days) {
+  const latestDate = days.map((day) => day.date).filter(Boolean).sort().at(-1);
+  return Boolean(latestDate && latestDate < isoDate(new Date()));
 }
 
 function findMphUpcomingPdf(html, baseUrl) {
@@ -577,6 +587,10 @@ function monthNumber(monthName) {
 function addDays(dateString, offset) {
   const date = new Date(`${dateString}T00:00:00Z`);
   date.setUTCDate(date.getUTCDate() + offset);
+  return date.toISOString().slice(0, 10);
+}
+
+function isoDate(date) {
   return date.toISOString().slice(0, 10);
 }
 
