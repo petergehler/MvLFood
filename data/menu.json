@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T08:15:48.379Z",
+  "updatedAt": "2026-07-14T11:05:02.789Z",
   "week": "2026-W29",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=39672",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=12017",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -30,7 +30,7 @@
       "shortName": "MPH",
       "kind": "restaurant",
       "url": "https://www.mph.tuebingen.mpg.de/speiseplan",
-      "menuUrl": "https://www.mph.tuebingen.mpg.de/53329/KW29-2026.pdf",
+      "menuUrl": "https://www.mph.tuebingen.mpg.de/speiseplan",
       "logo": "data/images/logos/max-planck-haus-logo.jpg",
       "openingHours": {
         "days": [
@@ -253,6 +253,57 @@
       "fullLabel": "Monday, July 13",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "unknown",
+          "title": "Wassermelonen-Feta-Salat",
+          "description": "marinierte Wassermelone mit Fetawürfel , Sonnenblumenkerne , Minze ,Salatgurke , Zwiebel , Tomate Drillingskartoffeln",
+          "price": "Int 5.50 / Ext 7.50",
+          "allergens": [
+            "B"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "vegetarian",
+          "title": "Flammkuchen Elsässer Art",
+          "description": "mit Creme Fraiche ,geriebener Käse , Speckwürfel , Zwiebeln frischer Schnittlauch auch Vegetarisch erhältlich",
+          "price": "Int 6.50 / Ext 8.50",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Ofenfrischer Spießbraten vom",
+          "description": "Schwein an Kräuter-Rahmsoße dazu feine Butternudeln und Kaisergemüse",
+          "price": "Int 8.80 / Ext 10.80",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "vegan",
+          "title": "New York Style Hot-Dog",
+          "description": "Vegane Bockwurst im Broiche Laugen Bun , Weißkraut , Essiggurke Senf , Röstzwiebeln , Wedges",
+          "price": "Int 8.80 / Ext 10.80",
+          "allergens": [
+            "AW",
+            "G",
+            "J"
+          ]
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
@@ -265,8 +316,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Gebratene Hähnchenbrust",
-          "description": "in Erdnuss-Soße (g/i,f,e)",
+          "title": "Gebratene Hähnchenbrust in Erdnuss-Soße (g/i,f,e)",
+          "description": "",
           "price": "1.56€/100g",
           "allergens": []
         },
@@ -274,8 +325,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Quinoa- Erbsenfrikadelle",
-          "description": "mit selbstgemachtem Hummus (f, k, a1)",
+          "title": "Quinoa- Erbsenfrikadelle mit selbstgemachtem Hummus (f, k, a1)",
+          "description": "",
           "price": "1.43€/100g",
           "allergens": []
         },
@@ -357,11 +408,64 @@
       "fullLabel": "Tuesday, July 14",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "unknown",
+          "title": "Wassermelonen-Feta-Salat",
+          "description": "marinierte Wassermelone mit Fetawürfel , Sonnenblumenkerne , Minze ,Salatgurke , Zwiebel , Tomate Drillingskartoffeln",
+          "price": "Int 5.50 / Ext 7.50",
+          "allergens": [
+            "B"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "vegan",
+          "title": "Pizza Greek Style",
+          "description": "Ofenfrischer Pizzaboden belegt mit Fior die Latte ,Käse , Zucchini Paprika , Aubergine , milde Pfefferonen , marinierte Oliven und Fetakäse auch Vegan erhältlich",
+          "price": "Int 8.50 / Ext 10.50",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Ofenfrischer Spießbraten vom",
+          "description": "Schwein an Kräuter-Rahmsoße dazu feine Butternudeln und Kaisergemüse",
+          "price": "Int 8.80 / Ext 10.80",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "meat",
+          "title": "Spicy Korean Chili",
+          "description": "Putenschnitzel paniertes Putenschnitzel in einer Gochujang-Glasur dazu aromatiesiertem Wildreis, Limettenschaum und frittierte Glasnudeln",
+          "price": "Int 9.80 / Ext 11.80",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "H",
+            "I"
+          ]
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "vegan",
           "title": "BOWL Day",
-          "description": ": Vegane Poke Bowl mit knusprigem Tofu, Basmati- reis, Karotten, Edamame, Avovado, Gurken, Rotkraut mit Erdnussdressing (f, e)",
+          "description": ": Vegane Poke Bowl mit knusprigem Tofu, Basmati­reis, Karotten, Edamame, Avovado, Gurken, Rotkraut mit Erdnussdressing (f, e)",
           "price": "7.50€",
           "allergens": []
         },
@@ -369,8 +473,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Puten Oberkeulenbraten im",
-          "description": "eigenen Saft geschmort",
+          "title": "Puten Oberkeulenbraten im eigenen Saft geschmort",
+          "description": "",
           "price": "1.56€/100g",
           "allergens": [
             "i"
@@ -380,8 +484,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Gebratene Gnocchi mit",
-          "description": "verschiedenen Beten & veganem Joghurt-Dip",
+          "title": "Gebratene Gnocchi mit verschiedenen Beten & veganem Joghurt-Dip",
+          "description": "",
           "price": "1.38€/100g",
           "allergens": [
             "f",
@@ -466,6 +570,66 @@
       "fullLabel": "Wednesday, July 15",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "fish",
+          "title": "Sushi Bowl",
+          "description": "marinierter Sushireis mit graved Lachs , Avocado , Gurke mariniertes Ei , Kaiserschoten frittierte Glasnudeln und Wasabi Dip",
+          "price": "Int 7.50 / Ext 9.50",
+          "allergens": [
+            "AW",
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "unknown",
+          "title": "Paccheri allo Scarpariello",
+          "description": "in cremiger Tomatensoße mit Basilikum,Cherryomaten , geriebener Pecorino Käse dazu Cremolata",
+          "price": "Int 6.90 / Ext 8.90",
+          "allergens": [
+            "AW",
+            "B",
+            "F"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "unknown",
+          "title": "Allgäuer Käsespätzle",
+          "description": "an cremiger Käsesoße mit Bergkäse gratiniert dazu Röstzwiebeln und kleinem Blattsalat",
+          "price": "Int 7.50 / Ext 9.50",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "meat",
+          "title": "Pad Kra pao",
+          "description": "würzig gebratenes Rinderhackfleisch mit Thai-Basilikum, Chili, Knoblauch und grünen Bohnen dazu Jasminreis und Spiegelei",
+          "price": "Int 8.50 / Ext 10.50",
+          "allergens": [
+            "F",
+            "H",
+            "I",
+            "J"
+          ]
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
@@ -478,8 +642,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "fish",
-          "title": "Thailändisches rotes",
-          "description": "Fischcurry mit Kokosmilch & frischem",
+          "title": "Thailändisches rotes Fischcurry mit Kokosmilch & frischem Gemüse",
+          "description": "",
           "price": "1.56€/100g",
           "allergens": [
             "d",
@@ -490,8 +654,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Veganes Dinkel-Risotto mit",
-          "description": "getrockneten Tomaten, Blattspinat und veganem Käse",
+          "title": "Veganes Dinkel-Risotto mit getrockneten Tomaten, Blattspinat und veganem Käse",
+          "description": "",
           "price": "1.43€/100g",
           "allergens": [
             "a1",
@@ -576,6 +740,65 @@
       "fullLabel": "Thursday, July 16",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "fish",
+          "title": "Sushi Bowl",
+          "description": "marinierter Sushireis mit graved Lachs , Avocado , Gurke mariniertes Ei , Kaiserschoten frittierte Glasnudeln und Wasabi Dip",
+          "price": "Int 7.50 / Ext 9.50",
+          "allergens": [
+            "AW",
+            "B",
+            "D",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "vegetarian",
+          "title": "Vegetarische Samosa",
+          "description": "mit Gemüsefüllung auf Kichererbsen-Tomatenreis dazu süß-scharfes Mango Chutney",
+          "price": "Int 6.20 / Ext 8.20",
+          "allergens": [
+            "AW",
+            "I",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "unknown",
+          "title": "Allgäuer Käsespätzle",
+          "description": "an cremiger Käsesoße mit Bergkäse gratiniert dazu Röstzwiebeln und kleinem Blattsalat",
+          "price": "Int 7.50 / Ext 9.50",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "unknown",
+          "title": "Umami Burger",
+          "description": "Chashew Bun I Rinderpatty I Ketchup von der getrockneten Tomate I gegrillter Kräuterseitling Parmesanchip I Wildkräuter Salat I Side Winder Pommes",
+          "price": "Int 10.80 / Ext 12.80",
+          "allergens": [
+            "AW",
+            "B",
+            "KK"
+          ]
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "meat",
@@ -588,8 +811,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Hausgemachte Fitness-",
-          "description": "Maultaschen vom Rind mit Eiweiß, Reis und frischen Kräutern",
+          "title": "Hausgemachte Fitness-Maultaschen vom Rind mit Eiweiß, Reis und frischen Kräutern",
+          "description": "",
           "price": "1.56€/100g",
           "allergens": [
             "a1",
@@ -600,8 +823,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Portobellopilze mit",
-          "description": "Gemüse-Schafskäse- Füllung",
+          "title": "Portobellopilze mit Gemüse-Schafskäse- Füllung",
+          "description": "",
           "price": "1.49€/100g",
           "allergens": [
             "g",
@@ -695,6 +918,32 @@
       "fullLabel": "Friday, July 17",
       "items": [
         {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "vegetarian",
+          "title": "gebratenes Zanderfilet",
+          "description": "mit Mandelkruste an Zitronen-Rahmspinat dazu Drillinge",
+          "price": "Int 9.20 / Ext 11.20",
+          "allergens": [
+            "AW",
+            "D",
+            "G",
+            "KM"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "meat",
+          "title": "Roastbeef Sandwich",
+          "description": "mit getrockneten Tomaten ,Rucola ,gepickelte rote Zwiebeln , Rucolapesto Homestyle Pommes",
+          "price": "Int 10.30 / Ext 12.30",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
@@ -707,8 +956,8 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Tex Mex Wrap gefüllt mit",
-          "description": "Hähnchen, Kidney, Mais, Paprika, Sauerrahm",
+          "title": "Tex Mex Wrap gefüllt mit Hähnchen, Kidney, Mais, Paprika, Sauerrahm",
+          "description": "",
           "price": "1.56€/100g",
           "allergens": [
             "g",
@@ -720,8 +969,8 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Bunte Reispfanne mit",
-          "description": "frittierten Falafel Bällchen und Sojasauce",
+          "title": "Bunte Reispfanne mit frittierten Falafel Bällchen und Sojasauce",
+          "description": "",
           "price": "1.38€/100g",
           "allergens": [
             "f"
