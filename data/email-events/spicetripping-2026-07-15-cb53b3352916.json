@@ -1,0 +1,21 @@
+{
+  "id": "spicetripping-2026-07-15-cb53b3352916",
+  "source": "spicetripping",
+  "email": {
+    "messageId": "19f64e66bfff8397",
+    "messageIdHash": "cb53b3352916",
+    "subject": "[MvL6] Spicetripping foodtruck 2026 (15th July 2026)",
+    "from": "Alok Damodaran via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-07-14T10:18:33.000Z"
+  },
+  "service": {
+    "date": "2026-07-15",
+    "start": "11:15",
+    "end": "13:15",
+    "location": "behind AI institute Maria von Linden strasse 6"
+  },
+  "items": [],
+  "confidence": 0.8,
+  "needsReview": true,
+  "notes": "Please bring your own containers for the food if possible. If not, there will be a charge of 50 cents per container."
+}
