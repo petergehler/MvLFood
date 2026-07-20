@@ -3,7 +3,10 @@ name: Update menu data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "17 8 * * 1"
+      timezone: "Europe/Berlin"
+    - cron: "47 10 * * 1"
+      timezone: "Europe/Berlin"
 
 permissions:
   contents: write
