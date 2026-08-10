@@ -1,0 +1,21 @@
+{
+  "id": "gululu-2026-08-11-424deb877427",
+  "source": "gululu",
+  "email": {
+    "messageId": "19fead67a908a6c2",
+    "messageIdHash": "424deb877427",
+    "subject": "[MvL6] Gululu at MvL6🥢– Menu for Tuesday 11.Aug.2026",
+    "from": "GULULU lu via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-08-10T06:00:00.000Z"
+  },
+  "service": {
+    "date": "2026-08-11",
+    "start": "",
+    "end": "",
+    "location": "unknown"
+  },
+  "items": [],
+  "confidence": 0,
+  "needsReview": true,
+  "notes": "Menu for Tuesday, 11.Aug.2026 is attached."
+}
