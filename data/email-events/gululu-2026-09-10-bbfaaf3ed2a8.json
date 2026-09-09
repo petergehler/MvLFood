@@ -1,0 +1,21 @@
+{
+  "id": "gululu-2026-09-10-bbfaaf3ed2a8",
+  "source": "gululu",
+  "email": {
+    "messageId": "1a08568689cc4c4f",
+    "messageIdHash": "bbfaaf3ed2a8",
+    "subject": "[MvL6] Gululu at MvL6🥢– Menu for Thursday 10.Sept.2026",
+    "from": "GULULU lu via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-09-09T06:00:00.000Z"
+  },
+  "service": {
+    "date": "2026-09-10",
+    "start": "",
+    "end": "",
+    "location": "Maria-von-Linden-Str.6"
+  },
+  "items": [],
+  "confidence": 0.5,
+  "needsReview": true,
+  "notes": "Menu attached for Thursday 10.Sept.2026."
+}
