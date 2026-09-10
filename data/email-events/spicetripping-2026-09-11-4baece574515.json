@@ -1,0 +1,33 @@
+{
+  "id": "spicetripping-2026-09-11-4baece574515",
+  "source": "spicetripping",
+  "email": {
+    "messageId": "1a08b9c0c2b00baa",
+    "messageIdHash": "4baece574515",
+    "subject": "[MvL6] Spicetripping foodtruck 2026 ( 11th Sept Friday 2026) BIRIYANI MENU (Menu attached )",
+    "from": "Alok Damodaran via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-09-10T13:46:37.000Z"
+  },
+  "service": {
+    "date": "2026-09-11",
+    "start": "11:15",
+    "end": "13:15",
+    "location": "behind AI institute Maria von Linden strasse 6"
+  },
+  "items": [
+    {
+      "source": "spicetripping",
+      "category": "Biryani",
+      "diet": "unknown",
+      "title": "Biryani",
+      "description": "limited numbers only, first come first serve basis",
+      "price": "unknown",
+      "allergens": [
+        "unknown"
+      ]
+    }
+  ],
+  "confidence": 0.9,
+  "needsReview": false,
+  "notes": "Please bring your own containers for the food if possible. If not, a fee of 50 cents per container will be charged."
+}
