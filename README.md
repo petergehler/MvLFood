@@ -50,7 +50,7 @@ npm run parse:mph
 The feed is refreshed by `.github/workflows/update-menu.yml`:
 
 - It runs every Monday at 08:17 Europe/Berlin time, with a 10:47 backup run to reduce the chance of a missed GitHub scheduled event. It can also be started manually from GitHub Actions.
-- It runs `npm run update:menu`, then `npm run validate`.
+- It runs the classification tests, `npm run update:menu`, then `npm run validate:data`.
 - If `data/menu.json` changed, the workflow commits the new feed back to the repository.
 
 The updater currently owns the sources with stable public menu pages:
