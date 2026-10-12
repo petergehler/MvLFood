@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T15:39:28.550Z",
+  "updatedAt": "2026-10-12T18:14:43.336Z",
   "week": "2026-W42",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=37224",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=46038",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -594,7 +594,7 @@
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "vegan",
+          "diet": "vegetarian",
           "title": "Vegane Indische Bowl",
           "description": "knusprig frittierte Samosa l Zwiebel-Tomaten-Gurkensalat l grüner Salat l Raita (indischer Joghurt-Minz-Dip) l Naan-Brot",
           "price": "Int 6.70 / Ext 8.70",
@@ -763,7 +763,7 @@
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "vegan",
+          "diet": "vegetarian",
           "title": "Vegane Indische Bowl",
           "description": "knusprig frittierte Samosa l Zwiebel-Tomaten-Gurkensalat l grüner Salat l Raita (indischer Joghurt-Minz-Dip) l Naan-Brot",
           "price": "Int 6.70 / Ext 8.70",
