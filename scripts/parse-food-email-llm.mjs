@@ -1,3 +1,4 @@
+import { DIETS, DIET_INSTRUCTIONS } from "./classify-menu-diets.mjs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { basename, join } from "node:path";
@@ -97,7 +98,7 @@ async function parseWithOpenRouter(input) {
         {
           role: "system",
           content:
-            "You parse campus lunch vendor emails into strict JSON. Extract only information present in the email. Do not invent dishes, dates, prices, locations, allergens, or dietary labels. Use unknown when unsure.",
+            "You parse campus lunch vendor emails into strict JSON. Do not invent dishes, dates, prices, locations or allergens. " + DIET_INSTRUCTIONS,
         },
         {
           role: "user",
@@ -199,7 +200,7 @@ function eventSchema() {
           required: ["category", "diet", "title", "description", "price", "allergens"],
           properties: {
             category: { type: "string" },
-            diet: { type: "string", enum: ["vegan", "vegetarian", "meat", "fish", "unknown"] },
+            diet: { type: "string", enum: DIETS },
             title: { type: "string" },
             description: { type: "string" },
             price: { type: "string" },
@@ -215,7 +216,8 @@ function eventSchema() {
 }
 
 function validDiet(value) {
-  return ["vegan", "vegetarian", "meat", "fish", "unknown"].includes(value) ? value : "unknown";
+  if (!DIETS.includes(value)) throw new Error(`Invalid diet from email LLM: ${value}`);
+  return value;
 }
 
 function cleanString(value) {

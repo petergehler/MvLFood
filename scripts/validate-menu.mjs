@@ -22,13 +22,13 @@ for (const day of feed.days || []) {
     if (!sourceIds.has(item.source)) errors.push(`${day.date}: unknown source ${item.source}`);
     if (!item.title) errors.push(`${day.date}: item title is required`);
     if (!item.category) errors.push(`${day.date}: ${item.title} needs a category`);
-    if (!["vegan", "vegetarian", "meat", "fish", "unknown"].includes(item.diet)) {
+    if (!["vegan", "vegetarian", "meat", "fish"].includes(item.diet)) {
       errors.push(`${day.date}: ${item.title} has invalid diet ${item.diet}`);
     }
     if (item.diets) {
       if (!Array.isArray(item.diets)) {
         errors.push(`${day.date}: ${item.title} diets must be an array`);
-      } else if (!item.diets.every((diet) => ["vegan", "vegetarian", "meat", "fish", "unknown"].includes(diet))) {
+      } else if (!item.diets.every((diet) => ["vegan", "vegetarian", "meat", "fish"].includes(diet))) {
         errors.push(`${day.date}: ${item.title} has invalid diets`);
       }
     }

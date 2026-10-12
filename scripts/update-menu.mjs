@@ -1,3 +1,4 @@
+import { classifyMenuDiets } from "./classify-menu-diets.mjs";
 import { execFile } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -33,10 +34,10 @@ let updatedFeed = buildFeed({
   weekStart,
 });
 
-if (process.env.OPENAI_API_KEY && process.env.MENU_LLM_NORMALIZE !== "0") {
-  updatedFeed = await normalizeGeneratedItemsWithLlm(updatedFeed);
+if (process.env.MENU_LLM_NORMALIZE !== "0") {
+  updatedFeed = await classifyMenuDiets(updatedFeed);
 } else {
-  console.log("Skipping LLM normalization; set OPENAI_API_KEY to enable it.");
+  console.log("Skipping diet classification for local parser debugging.");
 }
 
 if (comparableFeed(updatedFeed) === comparableFeed(currentFeed)) {
@@ -340,134 +341,6 @@ function comparableFeed(feed) {
   }
 
   return JSON.stringify(comparable);
-}
-
-async function normalizeGeneratedItemsWithLlm(feed) {
-  const normalizedFeed = structuredClone(feed);
-  const candidates = [];
-
-  for (const [dayIndex, day] of normalizedFeed.days.entries()) {
-    for (const [itemIndex, item] of day.items.entries()) {
-      if (!["hungry-elk", "mph"].includes(item.source)) continue;
-      candidates.push({
-        id: `${dayIndex}:${itemIndex}`,
-        date: day.date,
-        source: item.source,
-        category: item.category,
-        title: item.title,
-        description: item.description,
-        diet: item.diet,
-      });
-    }
-  }
-
-  if (!candidates.length) return normalizedFeed;
-
-  const normalizedItems = await openAiJson({
-    instructions:
-      "Normalize German cafeteria menu items for a small lunch app. Return concise, natural English. Preserve food meaning. Do not invent ingredients. Classify diet as exactly one of vegan, vegetarian, meat, fish, or unknown. Keep unknown when uncertain.",
-    input: [
-      {
-        role: "user",
-        content: [
-          {
-            type: "input_text",
-            text: JSON.stringify({
-              task:
-                "Return JSON with an items array. Each item must keep the same id and include only id, title, description, and diet. Translate title and description to English. Keep dish names recognizable; do not include price, allergens, date, source, or category.",
-              items: candidates,
-            }),
-          },
-        ],
-      },
-    ],
-  });
-
-  if (!Array.isArray(normalizedItems.items)) {
-    throw new Error("LLM normalization response did not include an items array");
-  }
-
-  const byId = new Map(normalizedItems.items.map((item) => [item.id, item]));
-  for (const candidate of candidates) {
-    const normalized = byId.get(candidate.id);
-    if (!normalized) throw new Error(`LLM normalization missed item ${candidate.id}`);
-    if (!["vegan", "vegetarian", "meat", "fish", "unknown"].includes(normalized.diet)) {
-      throw new Error(`LLM normalization returned invalid diet for ${candidate.id}: ${normalized.diet}`);
-    }
-
-    const [dayIndex, itemIndex] = candidate.id.split(":").map(Number);
-    const item = normalizedFeed.days[dayIndex].items[itemIndex];
-    item.title = cleanLlmText(normalized.title);
-    item.description = cleanLlmText(normalized.description);
-    item.diet = normalized.diet;
-  }
-
-  console.log(`Normalized ${candidates.length} generated items with ${process.env.OPENAI_MODEL || "gpt-5-mini"}.`);
-  return normalizedFeed;
-}
-
-async function openAiJson({ instructions, input }) {
-  const response = await fetch("https://api.openai.com/v1/responses", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: process.env.OPENAI_MODEL || "gpt-5-mini",
-      instructions,
-      input,
-      text: {
-        format: {
-          type: "json_schema",
-          name: "normalized_menu_items",
-          strict: true,
-          schema: {
-            type: "object",
-            additionalProperties: false,
-            required: ["items"],
-            properties: {
-              items: {
-                type: "array",
-                items: {
-                  type: "object",
-                  additionalProperties: false,
-                  required: ["id", "title", "description", "diet"],
-                  properties: {
-                    id: { type: "string" },
-                    title: { type: "string" },
-                    description: { type: "string" },
-                    diet: { type: "string", enum: ["vegan", "vegetarian", "meat", "fish", "unknown"] },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`OpenAI normalization failed: ${response.status} ${await response.text()}`);
-  }
-
-  const result = await response.json();
-  const outputText =
-    result.output_text ||
-    result.output
-      ?.flatMap((item) => item.content || [])
-      .find((content) => content.type === "output_text" && content.text)
-      ?.text;
-
-  if (!outputText) throw new Error("OpenAI normalization response did not include output text");
-  return JSON.parse(outputText);
-}
-
-function cleanLlmText(value) {
-  return String(value || "")
-    .replace(/\s+/g, " ")
-    .trim();
 }
 
 function addPreservedManualItems(currentFeed, daysByDate) {

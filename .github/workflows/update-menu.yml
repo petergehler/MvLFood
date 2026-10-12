@@ -20,9 +20,12 @@ jobs:
         with:
           node-version: "22"
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: node --test scripts/classify-menu-diets.test.mjs
       - run: npm run update:menu
         env:
-          MENU_LLM_NORMALIZE: "0"
+          MENU_LLM_NORMALIZE: "1"
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
       - run: npm run validate:data
       - name: Commit menu update
         run: |
