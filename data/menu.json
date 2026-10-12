@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T09:35:30.792Z",
+  "updatedAt": "2026-10-12T15:39:28.550Z",
   "week": "2026-W42",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=66347",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=37224",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -273,7 +273,7 @@
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
           "title": "Tagliatelle",
-          "description": "Waldpilzen l Weißwein-Rahmsoße l Gemüsestreifen l frische Kräuter l Parmesan",
+          "description": "Waldpilze l Weißwein-Rahmsoße l Gemüsestreifen l frische Kräuter l Parmesan",
           "price": "Int 6.70 / Ext 8.70",
           "allergens": [
             "AW",
@@ -304,7 +304,7 @@
           "diet": "meat",
           "title": "Glasierter Schweinebauch",
           "description": "Soja Lack l bunter Glasnudelsalat l Sweet-Chili-Dip",
-          "price": "Int 8.20 / Ext 10.20",
+          "price": "Int 7.50 / Ext 9.50",
           "allergens": [
             "AW",
             "G",
@@ -455,9 +455,9 @@
           "source": "hungry-elk",
           "category": "Region",
           "diet": "meat",
-          "title": "Deftiger Rindergulasch",
-          "description": "Paprika l Rotweinjus l Spätzle",
-          "price": "Int 8.90 / Ext 10.90",
+          "title": "Gebratene Maultaschen",
+          "description": "Gemüsewürfel l Ei l Kartoffel-Gurken-Salat",
+          "price": "Int 8.20 / Ext 10.20",
           "allergens": [
             "AW",
             "B",
@@ -470,9 +470,9 @@
           "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
-          "title": "Gebratene Maultaschen",
-          "description": "Gemüsewürfel l Ei l Kartoffel-Gurken-Salat",
-          "price": "Int 8.20 / Ext 10.20",
+          "title": "Gefüllter Wrap",
+          "description": "Rinderhackfleisch l Bohnen l Mais l Paprika l Salsa l buntes Salatbouqet",
+          "price": "Int 7.90 / Ext 9.90",
           "allergens": [
             "AW",
             "B",
@@ -623,7 +623,7 @@
           "category": "Region",
           "diet": "meat",
           "title": "Ofenfrischer Hackbraten",
-          "description": "Zwiebelsoße l Rahmwirsing l Petersilienkartoffel",
+          "description": "Zwiebel-Paprika-Soße l Rahmwirsing l Petersilienkartoffel",
           "price": "Int 8.50 / Ext 10.70",
           "allergens": [
             "AW",
@@ -794,7 +794,7 @@
           "category": "Region",
           "diet": "meat",
           "title": "Ofenfrischer Hackbraten",
-          "description": "Zwiebelsoße l Karottengemüse l Petersilienkartoffel",
+          "description": "Zwiebel-Paprika-Soße l Rahmwirsing l Petersilienkartoffel",
           "price": "Int 8.70 / Ext 10.70",
           "allergens": [
             "AW",
