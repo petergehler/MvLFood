@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T09:12:03.402Z",
+  "updatedAt": "2026-10-12T09:35:30.792Z",
   "week": "2026-W42",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=83473",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=66347",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -255,7 +255,7 @@
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Französische Bowl",
           "description": "Blattsalat l flambierter Ziegenkäse l Maccairekartoffel l Zwiebel l Artischocken l Walnüsse l Dijon-Senf-Soße",
           "price": "Int 7.20 / Ext 9.20",
@@ -271,7 +271,7 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Tagliatelle",
           "description": "Waldpilzen l Weißwein-Rahmsoße l Gemüsestreifen l frische Kräuter l Parmesan",
           "price": "Int 6.70 / Ext 8.70",
@@ -286,7 +286,7 @@
         {
           "source": "hungry-elk",
           "category": "Region",
-          "diet": "unknown",
+          "diet": "meat",
           "title": "Deftiger Rindergulasch",
           "description": "Paprika l Rotweinjus l Spätzle",
           "price": "Int 8.90 / Ext 10.90",
@@ -316,7 +316,7 @@
         {
           "source": "mph",
           "category": "Quick & Easy",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Tagesessen",
           "description": "",
           "price": "",
@@ -325,7 +325,7 @@
         {
           "source": "mph",
           "category": "Main",
-          "diet": "unknown",
+          "diet": "meat",
           "title": "Currywurst mit fruchtiger Currysoße",
           "description": "",
           "price": "1.49€/100g",
@@ -337,7 +337,7 @@
         {
           "source": "mph",
           "category": "Vegan/Veggie",
-          "diet": "vegetarian",
+          "diet": "vegan",
           "title": "Curry mit roten Linsen, Kürbis und Süßkartoffeln",
           "description": "",
           "price": "1.43€/100g",
@@ -346,7 +346,7 @@
         {
           "source": "yellow-donkey",
           "category": "Pita",
-          "diet": "unknown",
+          "diet": "meat",
           "diets": [
             "meat",
             "fish",
@@ -423,7 +423,7 @@
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Französische Bowl",
           "description": "Blattsalat l flambierter Ziegenkäse l Maccairekartoffel l Zwiebel l Artischocken l Walnüsse l Dijon-Senf-Soße",
           "price": "Int 7.20 / Ext 9.20",
@@ -439,7 +439,7 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "unknown",
+          "diet": "vegan",
           "title": "Asiatisches Blumenkohlcurry",
           "description": "Kokos-Curry-Soße l Karottenstreifen l Blumenkohl l Erbsen l Basmati Reis l Sprossen l geröstete Nüsse",
           "price": "Int 6.70 / Ext 8.70",
@@ -454,7 +454,7 @@
         {
           "source": "hungry-elk",
           "category": "Region",
-          "diet": "unknown",
+          "diet": "meat",
           "title": "Deftiger Rindergulasch",
           "description": "Paprika l Rotweinjus l Spätzle",
           "price": "Int 8.90 / Ext 10.90",
@@ -506,7 +506,7 @@
         {
           "source": "mph",
           "category": "Vegan/Veggie",
-          "diet": "vegetarian",
+          "diet": "vegan",
           "title": "Feuriges Chili sin Carne mit Grünkernschrot, Kidneybohnen, Paprika und Mais",
           "description": "",
           "price": "1.38€/100g",
@@ -517,7 +517,7 @@
         {
           "source": "yellow-donkey",
           "category": "Pita",
-          "diet": "unknown",
+          "diet": "meat",
           "diets": [
             "meat",
             "fish",
@@ -651,7 +651,7 @@
         {
           "source": "mph",
           "category": "Quick & Easy",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Tagesessen",
           "description": "",
           "price": "",
@@ -686,7 +686,7 @@
         {
           "source": "yellow-donkey",
           "category": "Pita",
-          "diet": "unknown",
+          "diet": "meat",
           "diets": [
             "meat",
             "fish",
@@ -778,7 +778,7 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "unknown",
+          "diet": "vegan",
           "title": "Chili sin Carne",
           "description": "Bohnen l Paprika l Mais l Kräuterreis",
           "price": "Int 6.70 / Ext 8.70",
@@ -807,7 +807,7 @@
         {
           "source": "hungry-elk",
           "category": "Street Food",
-          "diet": "unknown",
+          "diet": "meat",
           "title": "Saftiger Chickenburger",
           "description": "Lollo Rosso l Tomate l Gurke l Jalapenos würziger Käsedip l gebackene Kartoffelscheiben",
           "price": "Int 10.20 / Ext 12.20",
@@ -821,7 +821,7 @@
         {
           "source": "mph",
           "category": "Quick & Easy",
-          "diet": "unknown",
+          "diet": "meat",
           "title": "Streetfood Day",
           "description": ": Crispy Chicken Burger im Sesambun mit Zucchini Chutney, Ruccola und wilden Kartoffeln",
           "price": "8.50€",
@@ -834,7 +834,7 @@
         {
           "source": "mph",
           "category": "Main",
-          "diet": "unknown",
+          "diet": "meat",
           "title": "Pollo Fino",
           "description": "in Limettensoße gegart frisch aus dem Ofen",
           "price": "1.56€/100g",
@@ -854,7 +854,7 @@
         {
           "source": "yellow-donkey",
           "category": "Pita",
-          "diet": "unknown",
+          "diet": "meat",
           "diets": [
             "meat",
             "fish",
@@ -940,7 +940,7 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Cremiges Risotto",
           "description": "Lauch l Tomatenwürfel l frische Kräuter l Ofenkürbis l Parmesan",
           "price": "Int 6.50 / Ext 8.50",
@@ -952,7 +952,7 @@
         {
           "source": "hungry-elk",
           "category": "Region",
-          "diet": "unknown",
+          "diet": "fish",
           "title": "gebratenes Zanderfilet auf der",
           "description": "Haut gebraten Dill-Senf-Soße l Butterkartoffel l Erbsenpüree",
           "price": "Int 10.20 / Ext 12.20",
@@ -967,7 +967,7 @@
         {
           "source": "mph",
           "category": "Quick & Easy",
-          "diet": "unknown",
+          "diet": "vegetarian",
           "title": "Tagesessen",
           "description": "",
           "price": "",
@@ -1000,7 +1000,7 @@
         {
           "source": "yellow-donkey",
           "category": "Pita",
-          "diet": "unknown",
+          "diet": "meat",
           "diets": [
             "meat",
             "fish",
@@ -1116,7 +1116,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegetarian",
+          "diet": "vegan",
           "title": "Chickpea Pancakes (gf)",
           "description": "Chickpea pancakes with lemon-herb hummus, grilled asparagus, fresh strawberries, microgreens and toasted almond flakes.",
           "price": "",
@@ -1158,7 +1158,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegetarian",
+          "diet": "vegan",
           "title": "Cardamom Porridge",
           "description": "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
           "price": "",
@@ -1216,7 +1216,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegetarian",
+          "diet": "vegan",
           "title": "Chickpea Pancakes (gf)",
           "description": "Chickpea pancakes with lemon-herb hummus, grilled asparagus, fresh strawberries, microgreens and toasted almond flakes.",
           "price": "",
@@ -1258,7 +1258,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegetarian",
+          "diet": "vegan",
           "title": "Cardamom Porridge",
           "description": "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
           "price": "",
