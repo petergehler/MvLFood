@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-05T14:51:35.881Z",
-  "week": "2026-W41",
+  "updatedAt": "2026-10-12T09:12:03.402Z",
+  "week": "2026-W42",
   "sources": {
     "hungry-elk": {
       "name": "The Hungry Elk",
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=33859",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=83473",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -248,17 +248,33 @@
   ],
   "days": [
     {
-      "date": "2026-10-05",
+      "date": "2026-10-12",
       "label": "Mon",
-      "fullLabel": "Monday, October 5",
+      "fullLabel": "Monday, October 12",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "meat",
-          "title": "Schwäbische Bowl",
-          "description": "Maultaschen l Kartoffelsalat l Tomatenecken l Gurkenscheiben l Röstzwiebeln",
-          "price": "Int 6.90 / Ext 8.90",
+          "diet": "unknown",
+          "title": "Französische Bowl",
+          "description": "Blattsalat l flambierter Ziegenkäse l Maccairekartoffel l Zwiebel l Artischocken l Walnüsse l Dijon-Senf-Soße",
+          "price": "Int 7.20 / Ext 9.20",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J",
+            "KW"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "unknown",
+          "title": "Tagliatelle",
+          "description": "Waldpilzen l Weißwein-Rahmsoße l Gemüsestreifen l frische Kräuter l Parmesan",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
             "AW",
             "B",
@@ -269,24 +285,11 @@
         },
         {
           "source": "hungry-elk",
-          "category": "Pizza & Pasta",
-          "diet": "vegan",
-          "title": "Herzhafte Linsenbolognese",
-          "description": "fruchtige Tomatensoße l Gemüsewürfel l Spaghetti l Parmesan-auch vegan erhältlich ohne Parmesan-",
-          "price": "Int 6.50 / Ext 8.50",
-          "allergens": [
-            "AW",
-            "B",
-            "J"
-          ]
-        },
-        {
-          "source": "hungry-elk",
           "category": "Region",
-          "diet": "meat",
-          "title": "Saftiges Putengeschnetzeltes",
-          "description": "Rahmsoße l Champignons l Karottenwürfel l Lauch l Kräuterknöpfle",
-          "price": "Int 8.70 / Ext 10.70",
+          "diet": "unknown",
+          "title": "Deftiger Rindergulasch",
+          "description": "Paprika l Rotweinjus l Spätzle",
+          "price": "Int 8.90 / Ext 10.90",
           "allergens": [
             "AW",
             "B",
@@ -299,13 +302,14 @@
           "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
-          "title": "Bunte Gyros-Reis-Pfanne",
-          "description": "Schweinegyros l Reis l Paprika l Mais l Bohnen l Rote Zwiebel l Fladenbrot l Tzatziki",
+          "title": "Glasierter Schweinebauch",
+          "description": "Soja Lack l bunter Glasnudelsalat l Sweet-Chili-Dip",
           "price": "Int 8.20 / Ext 10.20",
           "allergens": [
             "AW",
-            "B",
+            "G",
             "H",
+            "I",
             "J"
           ]
         },
@@ -321,22 +325,191 @@
         {
           "source": "mph",
           "category": "Main",
-          "diet": "meat",
-          "title": "Schweinegeschnetzelte Züricher Art in feiner Champignonrahmsoße",
+          "diet": "unknown",
+          "title": "Currywurst mit fruchtiger Currysoße",
           "description": "",
           "price": "1.49€/100g",
           "allergens": [
-            "g",
-            "i"
+            "3",
+            "9"
           ]
         },
         {
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Hausgemachte Kürbis Arancini mit Erbsen",
+          "title": "Curry mit roten Linsen, Kürbis und Süßkartoffeln",
           "description": "",
           "price": "1.43€/100g",
+          "allergens": []
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Pita",
+          "diet": "unknown",
+          "diets": [
+            "meat",
+            "fish",
+            "vegetarian"
+          ],
+          "title": "Pita Gyros/Veggie/Halloumi/...",
+          "description": "Pita sandwiches with gyros, souvlaki, bifteki, calamari, veggie, halloumi or meatless souvlaki.",
+          "price": "6.50-7.90",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "d"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "meat",
+          "title": "Lunch Box Meat",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "vegetarian",
+          "title": "Lunch Box Veggie",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "B"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Lunch Box",
+          "diet": "fish",
+          "title": "Lunch Box Fish",
+          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
+          "price": "9.90 / Deluxe 11.90",
+          "allergens": [
+            "AW",
+            "F",
+            "d"
+          ]
+        },
+        {
+          "source": "yellow-donkey",
+          "category": "Salad",
+          "diet": "vegetarian",
+          "title": "Choriatiki",
+          "description": "Greek farmer salad.",
+          "price": "10.90",
+          "allergens": [
+            "B"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "label": "Tue",
+      "fullLabel": "Tuesday, October 13",
+      "items": [
+        {
+          "source": "hungry-elk",
+          "category": "Salatbowl",
+          "diet": "unknown",
+          "title": "Französische Bowl",
+          "description": "Blattsalat l flambierter Ziegenkäse l Maccairekartoffel l Zwiebel l Artischocken l Walnüsse l Dijon-Senf-Soße",
+          "price": "Int 7.20 / Ext 9.20",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J",
+            "KW"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Pizza & Pasta",
+          "diet": "unknown",
+          "title": "Asiatisches Blumenkohlcurry",
+          "description": "Kokos-Curry-Soße l Karottenstreifen l Blumenkohl l Erbsen l Basmati Reis l Sprossen l geröstete Nüsse",
+          "price": "Int 6.70 / Ext 8.70",
+          "allergens": [
+            "H",
+            "I",
+            "J",
+            "KK",
+            "KM"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Region",
+          "diet": "unknown",
+          "title": "Deftiger Rindergulasch",
+          "description": "Paprika l Rotweinjus l Spätzle",
+          "price": "Int 8.90 / Ext 10.90",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "meat",
+          "title": "Gebratene Maultaschen",
+          "description": "Gemüsewürfel l Ei l Kartoffel-Gurken-Salat",
+          "price": "Int 8.20 / Ext 10.20",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Quick & Easy",
+          "diet": "vegan",
+          "title": "Vegane Herbst Bowl",
+          "description": ": Quinoa, gebackene Kürbisspalten, Feldsalat, Rote Beete, Aprikose, Granatapfelkerne",
+          "price": "7.50€",
+          "allergens": []
+        },
+        {
+          "source": "mph",
+          "category": "Main",
+          "diet": "meat",
+          "title": "Hausgemachtes paniertes Putenschnitzel mit Champignon-Rahmsoße",
+          "description": "",
+          "price": "1.56€/100g",
+          "allergens": [
+            "a1",
+            "c",
+            "g"
+          ]
+        },
+        {
+          "source": "mph",
+          "category": "Vegan/Veggie",
+          "diet": "vegetarian",
+          "title": "Feuriges Chili sin Carne mit Grünkernschrot, Kidneybohnen, Paprika und Mais",
+          "description": "",
+          "price": "1.38€/100g",
           "allergens": [
             "a1"
           ]
@@ -414,45 +587,44 @@
       ]
     },
     {
-      "date": "2026-10-06",
-      "label": "Tue",
-      "fullLabel": "Tuesday, October 6",
+      "date": "2026-10-14",
+      "label": "Wed",
+      "fullLabel": "Wednesday, October 14",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "meat",
-          "title": "Schwäbische Bowl",
-          "description": "Maultaschen l Kartoffelsalat l Tomatenecken l Gurkenscheiben l Röstzwiebeln",
-          "price": "Int 6.90 / Ext 8.90",
+          "diet": "vegan",
+          "title": "Vegane Indische Bowl",
+          "description": "knusprig frittierte Samosa l Zwiebel-Tomaten-Gurkensalat l grüner Salat l Raita (indischer Joghurt-Minz-Dip) l Naan-Brot",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
+            "AG",
             "AW",
-            "B",
-            "F",
             "G",
+            "I",
             "J"
           ]
         },
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "meat",
-          "title": "Pizza Hawai",
-          "description": "Tomatensoße l Schinken l Ananas l Currycreme",
-          "price": "Int 8.20 / Ext 10.20",
+          "diet": "vegetarian",
+          "title": "Pizza vegetarisch",
+          "description": "Fetakäse l Brokkoli l Rote Paprika l Rote Zwiebel",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
             "AW",
-            "B",
-            "J"
+            "B"
           ]
         },
         {
           "source": "hungry-elk",
           "category": "Region",
           "diet": "meat",
-          "title": "Saftiges Putengeschnetzeltes",
-          "description": "Rahmsoße l Champignons l Karottenwürfel l Lauch l Kräuterknöpfle",
-          "price": "Int 8.70 / Ext 10.70",
+          "title": "Ofenfrischer Hackbraten",
+          "description": "Zwiebelsoße l Rahmwirsing l Petersilienkartoffel",
+          "price": "Int 8.50 / Ext 10.70",
           "allergens": [
             "AW",
             "B",
@@ -464,14 +636,15 @@
         {
           "source": "hungry-elk",
           "category": "Street Food",
-          "diet": "unknown",
-          "title": "Allgäuer Käsespätzle",
-          "description": "Bergkäse l zweierlei Zwiebel l Sahne l frische Kräuter",
-          "price": "Int 6.70 / Ext 8.70",
+          "diet": "meat",
+          "title": "Piccata Milanese",
+          "description": "Hähnchenbrust in der Ei-Parmesan-Hülle l tomatisierte Gemüsenudeln l Parmesanchip",
+          "price": "Int 8.90 / Ext 10.90",
           "allergens": [
             "AW",
             "B",
             "F",
+            "G",
             "J"
           ]
         },
@@ -479,7 +652,7 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Arabische Bowl muss leider entfallen",
+          "title": "Tagesessen",
           "description": "",
           "price": "",
           "allergens": []
@@ -488,10 +661,12 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Puten Oberkeulenbraten im eigenen Saft geschmort",
+          "title": "Geschmorte Rinder­roulade Hausfrauen Art in Rotweinsoße",
           "description": "",
           "price": "1.56€/100g",
           "allergens": [
+            "20",
+            "g",
             "i"
           ]
         },
@@ -499,13 +674,13 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Bami Goreng",
-          "description": ": Gebratene Mie Nudeln mit frischem buntem Gemüse und Omelett Streifen",
-          "price": "1.38€/100g",
+          "title": "Hausgemachter panierter Blumenkohl mit Pesto-Schmand",
+          "description": "",
+          "price": "1.43€/100g",
           "allergens": [
-            "g",
             "a1",
-            "i"
+            "c",
+            "g"
           ]
         },
         {
@@ -581,49 +756,32 @@
       ]
     },
     {
-      "date": "2026-10-07",
-      "label": "Wed",
-      "fullLabel": "Wednesday, October 7",
+      "date": "2026-10-15",
+      "label": "Thu",
+      "fullLabel": "Thursday, October 15",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
           "diet": "vegan",
-          "title": "Greek Power Bowl",
-          "description": "griechischer Reissalat l Tomaten l Gurken l Paprika l milde Peperoni l veganer Kräuterjoghurt l Baguette-wahlweise mit Fetakäse-",
-          "price": "Int 6.20 / Ext 8.20",
+          "title": "Vegane Indische Bowl",
+          "description": "knusprig frittierte Samosa l Zwiebel-Tomaten-Gurkensalat l grüner Salat l Raita (indischer Joghurt-Minz-Dip) l Naan-Brot",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
+            "AG",
             "AW",
-            "B",
-            "F",
             "G",
-            "H",
+            "I",
             "J"
           ]
         },
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "meat",
-          "title": "Bunte Mie Nudel Pfanne",
-          "description": "gebackene Ente l Wok Gemüse l Kokos-Curry-Soße l Sprossen l geröstete Nüsse",
-          "price": "Int 8.70 / Ext 10.70",
-          "allergens": [
-            "AW",
-            "H",
-            "I",
-            "J",
-            "KK",
-            "KM"
-          ]
-        },
-        {
-          "source": "hungry-elk",
-          "category": "Region",
           "diet": "unknown",
-          "title": "Herbstlicher Klassiker",
-          "description": "gebratene Schupfnudeln l Sauerkraut l Kräuterschmand",
-          "price": "Int 6.50 / Ext 8.50",
+          "title": "Chili sin Carne",
+          "description": "Bohnen l Paprika l Mais l Kräuterreis",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
             "AW",
             "B",
@@ -633,10 +791,25 @@
         },
         {
           "source": "hungry-elk",
-          "category": "Street Food",
+          "category": "Region",
           "diet": "meat",
-          "title": "Pulled Pork Burger",
-          "description": "gezupfter Schweinenacken würzig mariniert l Lollo Rosso l Cole Slaw l Curly fries",
+          "title": "Ofenfrischer Hackbraten",
+          "description": "Zwiebelsoße l Karottengemüse l Petersilienkartoffel",
+          "price": "Int 8.70 / Ext 10.70",
+          "allergens": [
+            "AW",
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
+          "category": "Street Food",
+          "diet": "unknown",
+          "title": "Saftiger Chickenburger",
+          "description": "Lollo Rosso l Tomate l Gurke l Jalapenos würziger Käsedip l gebackene Kartoffelscheiben",
           "price": "Int 10.20 / Ext 12.20",
           "allergens": [
             "AW",
@@ -649,205 +822,33 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "unknown",
-          "title": "Tagesessen",
-          "description": "",
-          "price": "",
-          "allergens": []
-        },
-        {
-          "source": "mph",
-          "category": "Main",
-          "diet": "meat",
-          "title": "Grünes Thai Curry mit Wok Gemüse und Rindfleisch Streifen",
-          "description": "",
-          "price": "1.56€/100g",
-          "allergens": [
-            "f",
-            "i"
-          ]
-        },
-        {
-          "source": "mph",
-          "category": "Vegan/Veggie",
-          "diet": "vegetarian",
-          "title": "Paprikaschote gefüllt mit Gemüse und Bulgur an Tomatensoße",
-          "description": "",
-          "price": "1.43€/100g",
-          "allergens": []
-        },
-        {
-          "source": "yellow-donkey",
-          "category": "Pita",
-          "diet": "unknown",
-          "diets": [
-            "meat",
-            "fish",
-            "vegetarian"
-          ],
-          "title": "Pita Gyros/Veggie/Halloumi/...",
-          "description": "Pita sandwiches with gyros, souvlaki, bifteki, calamari, veggie, halloumi or meatless souvlaki.",
-          "price": "6.50-7.90",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "G",
-            "d"
-          ]
-        },
-        {
-          "source": "yellow-donkey",
-          "category": "Lunch Box",
-          "diet": "meat",
-          "title": "Lunch Box Meat",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with souvlaki chicken, souvlaki pork, gyros or bifteki.",
-          "price": "9.90 / Deluxe 11.90",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "G"
-          ]
-        },
-        {
-          "source": "yellow-donkey",
-          "category": "Lunch Box",
-          "diet": "vegetarian",
-          "title": "Lunch Box Veggie",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with halloumi or grilled veggies.",
-          "price": "9.90 / Deluxe 11.90",
-          "allergens": [
-            "AW",
-            "B"
-          ]
-        },
-        {
-          "source": "yellow-donkey",
-          "category": "Lunch Box",
-          "diet": "fish",
-          "title": "Lunch Box Fish",
-          "description": "Choose a base of rice, couscous, salad, veggies or pita bread with calamari.",
-          "price": "9.90 / Deluxe 11.90",
-          "allergens": [
-            "AW",
-            "F",
-            "d"
-          ]
-        },
-        {
-          "source": "yellow-donkey",
-          "category": "Salad",
-          "diet": "vegetarian",
-          "title": "Choriatiki",
-          "description": "Greek farmer salad.",
-          "price": "10.90",
-          "allergens": [
-            "B"
-          ]
-        }
-      ]
-    },
-    {
-      "date": "2026-10-08",
-      "label": "Thu",
-      "fullLabel": "Thursday, October 8",
-      "items": [
-        {
-          "source": "hungry-elk",
-          "category": "Salatbowl",
-          "diet": "vegan",
-          "title": "Greek Power Bowl",
-          "description": "griechischer Reissalat l Tomaten l Gurken l Paprika l milde Peperoni l veganer Kräuterjoghurt l Baguette-wahlweise mit Fetakäse-",
-          "price": "Int 6.20 / Ext 8.20",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "G",
-            "H",
-            "J"
-          ]
-        },
-        {
-          "source": "hungry-elk",
-          "category": "Pizza & Pasta",
-          "diet": "meat",
-          "title": "Fruchtige Pasta",
-          "description": "Rinderhackfleisch l Paprika l Zucchini l Mais l Farfalle l Parmesan",
-          "price": "Int 8.90 / Ext 10.90",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "J"
-          ]
-        },
-        {
-          "source": "hungry-elk",
-          "category": "Region",
-          "diet": "meat",
-          "title": "Paniertes Schweineschnitzel",
-          "description": "Ofenkartoffel l Kohlrabi Gemüse l Kräuter-Senf-Mayonnaise",
-          "price": "Int 8.90 / Ext 10.90",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "G",
-            "J"
-          ]
-        },
-        {
-          "source": "hungry-elk",
-          "category": "Street Food",
-          "diet": "unknown",
-          "title": "Herbstlicher Klassiker",
-          "description": "gebratene Schupfnudeln l Sauerkraut l Kräuterschmand",
-          "price": "Int 6.50 / Ext 8.50",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "J"
-          ]
-        },
-        {
-          "source": "mph",
-          "category": "Quick & Easy",
-          "diet": "meat",
           "title": "Streetfood Day",
-          "description": ": Bacon Egg Burger mit Sesam Bun, Rinder Patty, Spiegelei, Bacon, Salat, Curley frites",
+          "description": ": Crispy Chicken Burger im Sesambun mit Zucchini Chutney, Ruccola und wilden Kartoffeln",
           "price": "8.50€",
           "allergens": [
-            "k",
             "a1",
+            "k",
             "c"
           ]
         },
         {
           "source": "mph",
           "category": "Main",
-          "diet": "meat",
-          "title": "Ungarisches Putengulasch",
-          "description": "",
+          "diet": "unknown",
+          "title": "Pollo Fino",
+          "description": "in Limettensoße gegart frisch aus dem Ofen",
           "price": "1.56€/100g",
-          "allergens": [
-            "20",
-            "i",
-            "j"
-          ]
+          "allergens": []
         },
         {
           "source": "mph",
           "category": "Vegan/Veggie",
-          "diet": "vegetarian",
-          "title": "Ofenfrischer Kürbisstrudel mit Kresse Rahmsoße",
+          "diet": "vegan",
+          "title": "Vegane Maultaschen in Tomatensoße mit veganem Mozzarella überbacken",
           "description": "",
           "price": "1.43€/100g",
           "allergens": [
-            "a1",
-            "g",
-            "c"
+            "a1"
           ]
         },
         {
@@ -932,35 +933,32 @@
       ]
     },
     {
-      "date": "2026-10-09",
+      "date": "2026-10-16",
       "label": "Fri",
-      "fullLabel": "Friday, October 9",
+      "fullLabel": "Friday, October 16",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "vegetarian",
-          "title": "Gebratene Gnocchi",
-          "description": "Tomaten-Ricotta-Soße l Kirschtomaten Blattspinat l Sonnenblumenkerne",
-          "price": "Int 6.70 / Ext 8.70",
+          "diet": "unknown",
+          "title": "Cremiges Risotto",
+          "description": "Lauch l Tomatenwürfel l frische Kräuter l Ofenkürbis l Parmesan",
+          "price": "Int 6.50 / Ext 8.50",
           "allergens": [
-            "AW",
             "B",
-            "F",
             "J"
           ]
         },
         {
           "source": "hungry-elk",
           "category": "Region",
-          "diet": "fish",
-          "title": "Goldbraune Lachslasagne",
-          "description": "Dill-Sahne-Soße l Gemüsestreifen l kleiner Beilagensalat",
-          "price": "Int 8.90 / Ext 10.90",
+          "diet": "unknown",
+          "title": "gebratenes Zanderfilet auf der",
+          "description": "Haut gebraten Dill-Senf-Soße l Butterkartoffel l Erbsenpüree",
+          "price": "Int 10.20 / Ext 12.20",
           "allergens": [
             "AW",
             "B",
-            "D",
             "F",
             "G",
             "J"
@@ -978,13 +976,13 @@
         {
           "source": "mph",
           "category": "Main",
-          "diet": "unknown",
-          "title": "Gebratenes Buntbarschfilet an Weißweinsoße",
-          "description": "",
+          "diet": "fish",
+          "title": "Lachsfilet",
+          "description": "im Spitzpaprika an Kräutersoße",
           "price": "1.56€/100g",
           "allergens": [
-            "a1",
             "d",
+            "20",
             "g"
           ]
         },
@@ -992,12 +990,11 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Alu Goobi",
-          "description": ": Indisches Kartoffel-Blumenkohl-Curry",
+          "title": "Kartoffel Auflauf mit frischem Kürbis und Kürbiskernen & Kräuter Schmand",
+          "description": "",
           "price": "1.38€/100g",
           "allergens": [
-            "k",
-            "f"
+            "g"
           ]
         },
         {
@@ -1082,9 +1079,9 @@
       ]
     },
     {
-      "date": "2026-10-10",
+      "date": "2026-10-17",
       "label": "Sat",
-      "fullLabel": "Saturday, October 10",
+      "fullLabel": "Saturday, October 17",
       "items": [
         {
           "source": "apoteka",
@@ -1182,9 +1179,9 @@
       ]
     },
     {
-      "date": "2026-10-11",
+      "date": "2026-10-18",
       "label": "Sun",
-      "fullLabel": "Sunday, October 11",
+      "fullLabel": "Sunday, October 18",
       "items": [
         {
           "source": "apoteka",
