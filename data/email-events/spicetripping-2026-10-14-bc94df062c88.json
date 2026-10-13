@@ -1,0 +1,21 @@
+{
+  "id": "spicetripping-2026-10-14-bc94df062c88",
+  "source": "spicetripping",
+  "email": {
+    "messageId": "1a1347adafef82c5",
+    "messageIdHash": "bc94df062c88",
+    "subject": "[MvL6] Spicetripping foodtruck 2026( 14th Oct 2026)",
+    "from": "Alok Damodaran via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-10-13T08:04:17.000Z"
+  },
+  "service": {
+    "date": "2026-10-14",
+    "start": "11:15",
+    "end": "13:15",
+    "location": "behind AI institute Maria von Linden strasse 6"
+  },
+  "items": [],
+  "confidence": 0.9,
+  "needsReview": true,
+  "notes": "Menu details not provided in the email."
+}
