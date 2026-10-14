@@ -1,0 +1,21 @@
+{
+  "id": "gululu-2026-10-15-acd46fb450ff",
+  "source": "gululu",
+  "email": {
+    "messageId": "1a13a985c42821ee",
+    "messageIdHash": "acd46fb450ff",
+    "subject": "[MvL6] Gululu at MvL6🥢– Menu for Thursday 15.Oct.2026",
+    "from": "GULULU lu via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-10-14T12:51:00.000Z"
+  },
+  "service": {
+    "date": "2026-10-15",
+    "start": "",
+    "end": "",
+    "location": "AI Research Building (Maria-von-Linden-Str.6)"
+  },
+  "items": [],
+  "confidence": 0.9,
+  "needsReview": true,
+  "notes": "No menu items provided in the email."
+}
