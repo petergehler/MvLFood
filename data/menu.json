@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T13:30:05.958Z",
+  "updatedAt": "2026-10-19T15:53:34.538Z",
   "week": "2026-W43",
   "sources": {
     "hungry-elk": {
@@ -7,7 +7,7 @@
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=45688",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=8305",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -1136,7 +1136,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegan",
+          "diet": "vegetarian",
           "title": "Crispy Miso-Lemon Polenta",
           "description": "Crispy miso-lemon polenta with roasted pointed cabbage, pickled radishes, pomegranate and chili oil.",
           "price": "",
@@ -1157,7 +1157,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegan",
+          "diet": "vegetarian",
           "title": "Cardamom Porridge",
           "description": "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
           "price": "",
@@ -1236,7 +1236,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegan",
+          "diet": "vegetarian",
           "title": "Crispy Miso-Lemon Polenta",
           "description": "Crispy miso-lemon polenta with roasted pointed cabbage, pickled radishes, pomegranate and chili oil.",
           "price": "",
@@ -1257,7 +1257,7 @@
         {
           "source": "apoteka",
           "category": "Brunch",
-          "diet": "vegan",
+          "diet": "vegetarian",
           "title": "Cardamom Porridge",
           "description": "Cardamom porridge with rhubarb-strawberry compote and crunchy gluten-free granola.",
           "price": "",
