@@ -1,0 +1,21 @@
+{
+  "id": "gululu-2026-10-20-f793a09bb8ae",
+  "source": "gululu",
+  "email": {
+    "messageId": "1a1586f2572de557",
+    "messageIdHash": "f793a09bb8ae",
+    "subject": "[MvL6] Gululu Food Truck – Closed Today, Back on Thursday",
+    "from": "GULULU lu via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-10-20T06:19:26.000Z"
+  },
+  "service": {
+    "date": "2026-10-20",
+    "start": "",
+    "end": "",
+    "location": ""
+  },
+  "items": [],
+  "confidence": 0,
+  "needsReview": true,
+  "notes": "Food truck service canceled for today, no menu items available."
+}
