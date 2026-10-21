@@ -1,0 +1,64 @@
+{
+  "id": "gululu-2026-10-22-70ba86e7875d",
+  "source": "gululu",
+  "email": {
+    "messageId": "1a15d661c4c66371",
+    "messageIdHash": "70ba86e7875d",
+    "subject": "[MvL6] Gululu at MvL6🥢– Menu for Thursday 22.Oct.2026",
+    "from": "GULULU lu via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-10-21T06:00:00.000Z"
+  },
+  "service": {
+    "date": "2026-10-22",
+    "start": "",
+    "end": "",
+    "location": ""
+  },
+  "items": [
+    {
+      "source": "gululu",
+      "category": "Street Food",
+      "diet": "vegetarian",
+      "title": "Jianbing Guozi",
+      "description": "A thin, savoury crêpe freshly made on a hot griddle, prepared with egg, a crispy cracker and fresh vegetables, all wrapped in a warm, freshly cooked crêpe. You can choose chicken or soy strips for extra flavour and texture.",
+      "price": "",
+      "allergens": [
+        "egg"
+      ]
+    },
+    {
+      "source": "gululu",
+      "category": "Street Food",
+      "diet": "meat",
+      "title": "Jianbing Guozi with Chicken",
+      "description": "A thin, savoury crêpe freshly made on a hot griddle, prepared with egg, a crispy cracker and fresh vegetables, all wrapped in a warm, freshly cooked crêpe. Includes chicken for extra flavour and texture.",
+      "price": "",
+      "allergens": [
+        "egg"
+      ]
+    },
+    {
+      "source": "gululu",
+      "category": "Street Food",
+      "diet": "vegan",
+      "title": "Jianbing Guozi with Soy Strips",
+      "description": "A thin, savoury crêpe freshly made on a hot griddle, prepared with a crispy cracker and fresh vegetables, all wrapped in a warm, freshly cooked crêpe. Includes soy strips for extra flavour and texture.",
+      "price": "",
+      "allergens": [
+        "soy"
+      ]
+    },
+    {
+      "source": "gululu",
+      "category": "Street Food",
+      "diet": "vegetarian",
+      "title": "Baozi",
+      "description": "Chinese steamed buns, typically filled with a variety of ingredients, often vegetarian.",
+      "price": "",
+      "allergens": []
+    }
+  ],
+  "confidence": 0.9,
+  "needsReview": true,
+  "notes": ""
+}
