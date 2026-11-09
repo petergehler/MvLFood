@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-02T17:09:25.987Z",
-  "week": "2026-W45",
+  "updatedAt": "2026-11-09T17:36:43.254Z",
+  "week": "2026-W46",
   "sources": {
     "hungry-elk": {
       "name": "The Hungry Elk",
       "shortName": "HE",
       "kind": "restaurant",
       "url": "https://stollsteimer.de/restaurants/the-hungry-elk/",
-      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=26965",
+      "menuUrl": "https://stollsteimer.de/easy-pdf-restaurant-menu/menu-files/menu-thehungryelk.pdf?cb=83921",
       "logo": "data/images/logos/hungry-elk-logo.png",
       "openingHours": {
         "days": [
@@ -248,17 +248,17 @@
   ],
   "days": [
     {
-      "date": "2026-11-02",
+      "date": "2026-11-09",
       "label": "Mon",
-      "fullLabel": "Monday, November 2",
+      "fullLabel": "Monday, November 9",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "vegetarian",
-          "title": "Italy Bowl",
-          "description": "hausgemachter Nudelsalat l mediterranes Gemüse l Mozzarellabällchen l Croutons l Rucola",
-          "price": "Int 6.70 / Ext 8.70",
+          "diet": "meat",
+          "title": "Schwäbische Bowl",
+          "description": "Maultaschen l Kartoffelsalat l Tomatenecken l Gurkenscheiben l Röstzwiebel",
+          "price": "Int 7.20 / Ext 9.20",
           "allergens": [
             "AW",
             "B",
@@ -270,14 +270,12 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "vegetarian",
-          "title": "Herbstliche Pasta",
-          "description": "Bandnudeln l Wirsing l Kichererbsen l Kirschtomaten l Lauch-Sahne-Soße l geröstete Kürbiskerne",
+          "diet": "vegan",
+          "title": "Orientalischer Linseneintopf",
+          "description": "Rote Linsen l Kartoffelwürfel l Erbsen l Lauch l Karotten l Naan Brot",
           "price": "Int 6.70 / Ext 8.70",
           "allergens": [
-            "AW",
-            "B",
-            "F",
+            "I",
             "J"
           ]
         },
@@ -285,13 +283,11 @@
           "source": "hungry-elk",
           "category": "Region",
           "diet": "meat",
-          "title": "Schwäbischer Klassiker",
-          "description": "1 Paar Saiten l Linsen l Gemüsewürfel l Spätzle",
-          "price": "Int 8.50 / Ext 10.50",
+          "title": "Curry Wurst Spezial",
+          "description": "hausgemachte Ketchup-Curry-Soße l Röstzwiebel l Krautsalat l French fries",
+          "price": "Int 8.70 / Ext 10.70",
           "allergens": [
-            "AW",
             "B",
-            "F",
             "G",
             "J"
           ]
@@ -300,16 +296,16 @@
           "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
-          "title": "Knusprige Entenbrust",
-          "description": "Erdnuss-Soße l gelber Sesamreis l mariniertes Wok Gemüse",
+          "title": "Saftiges Putengeschnetzeltes",
+          "description": "Rahmsoße l Champignons l Karottenwürfel l Lauch l Wellenbandnudeln",
           "price": "Int 8.70 / Ext 10.70",
           "allergens": [
-            "H",
+            "AW",
+            "B",
+            "F",
+            "G",
             "I",
-            "J",
-            "KK",
-            "KM",
-            "L"
+            "J"
           ]
         },
         {
@@ -325,24 +321,25 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Rinderfrikadelle in feuriger Paprikasoße",
+          "title": "Knusprige Ente mit Teriyaki Soße",
           "description": "",
           "price": "1.56€/100g",
           "allergens": [
-            "i"
+            "a1",
+            "f"
           ]
         },
         {
           "source": "mph",
           "category": "Vegan/Veggie",
-          "diet": "vegan",
-          "title": "Hausgemachte Gemüsequiche mit Pesto-Dip",
+          "diet": "vegetarian",
+          "title": "Herzhafte Linsenlasagne mit Wurzelgemüse und Käse überbacken",
           "description": "",
           "price": "1.38€/100g",
           "allergens": [
-            "a1",
-            "c",
-            "g"
+            "20",
+            "g",
+            "a1"
           ]
         },
         {
@@ -418,17 +415,17 @@
       ]
     },
     {
-      "date": "2026-11-03",
+      "date": "2026-11-10",
       "label": "Tue",
-      "fullLabel": "Tuesday, November 3",
+      "fullLabel": "Tuesday, November 10",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
-          "diet": "vegetarian",
-          "title": "Italy Bowl",
-          "description": "hausgemachter Nudelsalat l mediterranes Gemüse l Mozzarellabällchen l Croutons l Rucola",
-          "price": "Int 6.70 / Ext 8.70",
+          "diet": "meat",
+          "title": "Schwäbische Bowl",
+          "description": "Maultaschen l Kartoffelsalat l Tomatenecken l Gurkenscheiben l Röstzwiebel",
+          "price": "Int 7.20 / Ext 9.20",
           "allergens": [
             "AW",
             "B",
@@ -440,10 +437,10 @@
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
-          "diet": "meat",
-          "title": "Ofenfrische Pizza",
-          "description": "Tomatensugo l Schinken l Champignons l Rote Zwiebel",
-          "price": "Int 8.20 / Ext 10.20",
+          "diet": "vegetarian",
+          "title": "Französischer Flammkuchen",
+          "description": "Creme Fraiche l Ziegenkäse l marinierte Kartoffelwürfel l Frühlingszwiebel l Honig l Walnüsse",
+          "price": "Int 7.20 / Ext 9.20",
           "allergens": [
             "AW",
             "B",
@@ -454,13 +451,11 @@
           "source": "hungry-elk",
           "category": "Region",
           "diet": "meat",
-          "title": "Schwäbischer Klassiker",
-          "description": "1 Paar Saiten l Linsen l Gemüsewürfel l Spätzle",
-          "price": "Int 8.50 / Ext 10.50",
+          "title": "Curry Wurst Spezial",
+          "description": "hausgemachte Ketchup-Curry-Soße l Röstzwiebel l Krautsalat l French fries",
+          "price": "Int 8.70 / Ext 10.70",
           "allergens": [
-            "AW",
             "B",
-            "F",
             "G",
             "J"
           ]
@@ -468,12 +463,14 @@
         {
           "source": "hungry-elk",
           "category": "Street Food",
-          "diet": "vegan",
-          "title": "Veganer gefüllter Wrap",
-          "description": "Bulgur l Weißkraut l Karottenstreifen l Frühlingszwiebel l Falafelbällchen l Salsa l kleines Salatbouqet",
-          "price": "Int 6.70 / Ext 8.70",
+          "diet": "meat",
+          "title": "Geschmorter Hirschgulasch",
+          "description": "Preiselbeer-Rahm-Soße l Rotkraut l Spätzle l Semmelbröselschmelze",
+          "price": "Int 9.50 / Ext 11.50",
           "allergens": [
             "AW",
+            "B",
+            "F",
             "G",
             "J"
           ]
@@ -482,23 +479,23 @@
           "source": "mph",
           "category": "Quick & Easy",
           "diet": "vegan",
-          "title": "Quinoa Thai Bowl",
-          "description": ": Quinoa, Karotten, Rote Paprika, Edamame, Gurken, Brokkoli, Koriander, Frühlingzwiebel & frittierter Tofu an Limetten-Sojadressing",
+          "title": "Vegane Poke Bowl",
+          "description": ": mit frittiertem Tofu, Basmatireis, Karotten, Edamame, Avocado, Gurken, Rotkraut Erdnussdressing",
           "price": "7.50€",
           "allergens": [
             "f",
-            "k"
+            "e"
           ]
         },
         {
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Putengeschnetzeltes „Züricher Art“ in feiner Champignonrahmsoße",
+          "title": "Geschmortes Hirschgulasch in Wacholdersoße mit Preiselbeeren",
           "description": "",
           "price": "1.56€/100g",
           "allergens": [
-            "g",
+            "20",
             "i"
           ]
         },
@@ -506,12 +503,13 @@
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Portobellopilze mit Gemüse- Fetakäse- Füllung",
+          "title": "Käse-Spinat Tortellini in feiner Sahnesoße mit Mozzarella überbacken",
           "description": "",
-          "price": "1.49€/100g",
+          "price": "1.43€/100g",
           "allergens": [
+            "a1",
             "g",
-            "i"
+            "c"
           ]
         },
         {
@@ -587,17 +585,17 @@
       ]
     },
     {
-      "date": "2026-11-04",
+      "date": "2026-11-11",
       "label": "Wed",
-      "fullLabel": "Wednesday, November 4",
+      "fullLabel": "Wednesday, November 11",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
           "diet": "vegetarian",
-          "title": "Protein-Bowl",
-          "description": "Reisnudeln l grüne Bohnen l Mais l Kichererbsen l Oliven l grüne Peperoni l Feta l Körnerbaguette",
-          "price": "Int 6.70 / Ext 8.70",
+          "title": "Herbstliche Bowl",
+          "description": "Quinoa l Rote Beete l marinierte Kürbisspalten l gebackener Mini Camembert l Granatapfelkerne l Honig-Senf-Dressing",
+          "price": "Int 6.90 / Ext 8.90",
           "allergens": [
             "AW",
             "B",
@@ -610,23 +608,9 @@
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
-          "title": "Spaghetti Aglio e olio",
-          "description": "frische Kräuter l Tomatenwürfel l Rucola l Parmesan",
-          "price": "Int 6.50 / Ext 8.50",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "J"
-          ]
-        },
-        {
-          "source": "hungry-elk",
-          "category": "Region",
-          "diet": "meat",
-          "title": "Gebratenes Schweinesteak",
-          "description": "gratiniert mit Zwiebel&Speck l Schupfnudeln l Buttergemüse",
-          "price": "Int 8.50 / Ext 10.50",
+          "title": "Allgäuer Käsespätzle",
+          "description": "Bergkäse l Zwiebelschmelze l Sahne l kleines Salatbouqet",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
             "AW",
             "B",
@@ -637,10 +621,24 @@
         },
         {
           "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Saftiger Kassler aus dem Ofen",
+          "description": "Bratensoße l Sauerkraut l Kartoffelstampf",
+          "price": "Int 8.70 / Ext 10.70",
+          "allergens": [
+            "B",
+            "F",
+            "G",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
-          "title": "Saftiger Crispy Chicken Burger",
-          "description": "Lollo Rosso l Tomate l Gurke l Röstzwiebel l Cheddar l Kräuter-Senf-Mayonnaise l gebackene Kartoffelscheiben",
+          "title": "Pulled Chicken Burger",
+          "description": "gezupftes Hähnchen in rauchiger Barbecue Marinade l Lollo Rosso Cole Slaw l Essiggurken l Röstzwiebel l Curly Fries",
           "price": "Int 10.20 / Ext 12.20",
           "allergens": [
             "AW",
@@ -662,26 +660,26 @@
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Schweinelende am Stück gebraten in feiner Cognacrahmsoße mit grünem Amazonas-Pfeffer",
+          "title": "Gebratenes Putensteak in Käse -Ei Hülle mit feinem Tomatensugo",
           "description": "",
           "price": "1.56€/100g",
           "allergens": [
-            "i",
             "g",
-            "20"
+            "c",
+            "a1"
           ]
         },
         {
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Cremiges Kürbisrisotto mit frischem Salbei & karamellisierten Walnüssen",
+          "title": "Asiatische Frühlingsrolle mit Süßsauer Soße",
           "description": "",
-          "price": "1.38€/100g",
+          "price": "1.43€/100g",
           "allergens": [
-            "g",
-            "20",
-            "h3"
+            "f",
+            "a1",
+            "2"
           ]
         },
         {
@@ -757,17 +755,17 @@
       ]
     },
     {
-      "date": "2026-11-05",
+      "date": "2026-11-12",
       "label": "Thu",
-      "fullLabel": "Thursday, November 5",
+      "fullLabel": "Thursday, November 12",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Salatbowl",
           "diet": "vegetarian",
-          "title": "Protein-Bowl",
-          "description": "Reisnudeln l grüne Bohnen l Mais l Kichererbsen l Oliven l grüne Peperoni l Feta l Körnerbaguette",
-          "price": "Int 6.70 / Ext 8.70",
+          "title": "Herbstliche Bowl",
+          "description": "Quinoa l Rote Beete l marinierte Kürbisspalten l gebackener Mini Camembert l Granatapfelkerne l Honig-Senf-Dressing",
+          "price": "Int 6.90 / Ext 8.90",
           "allergens": [
             "AW",
             "B",
@@ -780,23 +778,9 @@
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
-          "title": "Spaghetti Aglio e olio",
-          "description": "frische Kräuter l Tomatenwürfel l Rucola l Parmesan",
-          "price": "Int 6.50 / Ext 8.50",
-          "allergens": [
-            "AW",
-            "B",
-            "F",
-            "J"
-          ]
-        },
-        {
-          "source": "hungry-elk",
-          "category": "Region",
-          "diet": "meat",
-          "title": "Geschmorter Rinderbaten",
-          "description": "Rotweinjus l zweierlei Knödel l Rotkraut",
-          "price": "Int 9.50 / Ext 11.50",
+          "title": "Allgäuer Käsespätzle",
+          "description": "Bergkäse l Zwiebelschmelze l Sahne l kleines Salatbouqet",
+          "price": "Int 6.70 / Ext 8.70",
           "allergens": [
             "AW",
             "B",
@@ -807,49 +791,67 @@
         },
         {
           "source": "hungry-elk",
+          "category": "Region",
+          "diet": "meat",
+          "title": "Chili con Carne",
+          "description": "Rinderhackfleisch l Bohnen l Paprika l Mais l Reis l Kräuterschmand",
+          "price": "Int 8.50 / Ext 10.50",
+          "allergens": [
+            "B",
+            "J"
+          ]
+        },
+        {
+          "source": "hungry-elk",
           "category": "Street Food",
           "diet": "meat",
-          "title": "Paniertes",
-          "description": "Hähnchenbrustschnitzel in Kokos-Sesam-Panade Currysoße l Mie Nudeln l Wok Gemüse l Sojasprossen l geröstete Nüsse",
+          "title": "Paniertes Schweineschnitzel",
+          "description": "Paprika-Rahm-Soße l l Kräuterkartoffel",
           "price": "Int 8.90 / Ext 10.90",
           "allergens": [
             "AW",
-            "H",
-            "I",
-            "J",
-            "KK",
-            "KM"
+            "B",
+            "F",
+            "G",
+            "J"
           ]
         },
         {
           "source": "mph",
           "category": "Quick & Easy",
-          "diet": "vegetarian",
-          "title": "Tagesessen",
-          "description": "",
-          "price": "",
-          "allergens": []
+          "diet": "meat",
+          "title": "Streetfood Day",
+          "description": ": Pulled Pork Burger mit Cole Slaw, Salat & Wedges n",
+          "price": "8.50€",
+          "allergens": [
+            "Schwein",
+            "a1",
+            "g"
+          ]
         },
         {
           "source": "mph",
           "category": "Main",
           "diet": "meat",
-          "title": "Geschmortes Holzfällersteak vom Schwein in Zwiebel-Specksoße",
+          "title": "Rheinischer Sauerbraten vom Rind mit Rosinen in Süß-saurer Soße",
           "description": "",
           "price": "1.56€/100g",
           "allergens": [
-            "5",
-            "i"
+            "20",
+            "a1"
           ]
         },
         {
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegan",
-          "title": "Tomatisierte rote Linsen Bolognese mit Mango und Chili verfeinert",
+          "title": "Rucola-Risotto mit Rote Bete und Karamellisierten Walnüssen",
           "description": "",
           "price": "1.38€/100g",
-          "allergens": []
+          "allergens": [
+            "h3",
+            "20"
+          ]
         },
         {
           "source": "yellow-donkey",
@@ -933,31 +935,32 @@
       ]
     },
     {
-      "date": "2026-11-06",
+      "date": "2026-11-13",
       "label": "Fri",
-      "fullLabel": "Friday, November 6",
+      "fullLabel": "Friday, November 13",
       "items": [
         {
           "source": "hungry-elk",
           "category": "Pizza & Pasta",
           "diet": "vegetarian",
-          "title": "Cremige Pasta",
-          "description": "Gorgonzola-Sahne-Soße l Brokkoli l Erbsen l Kirschtomaten",
-          "price": "Int 6.70 / Ext 8.70",
+          "title": "Spinat-Käse-Knödel",
+          "description": "Tomaten-Sahne-Soße l Champignons-Lauch-Gemüse l Parmesan",
+          "price": "Int 6.50 / Ext 8.50",
           "allergens": [
             "AW",
             "B",
             "F",
             "G",
-            "J"
+            "J",
+            "L"
           ]
         },
         {
           "source": "hungry-elk",
           "category": "Region",
           "diet": "fish",
-          "title": "Pangasiusfilet unter der",
-          "description": "Kräuterkruste Rosmarinkartoffel l tomatisiertes Paprika-Zucchini-Lauch-Gemüse",
+          "title": "Paniertes Schollenfilet",
+          "description": "Dillkartoffel l Remoulade l kleiner Beilagensalat",
           "price": "Int 8.90 / Ext 10.90",
           "allergens": [
             "AW",
@@ -981,27 +984,26 @@
           "source": "mph",
           "category": "Main",
           "diet": "fish",
-          "title": "„Rabas Empanadas“ Tintenfischstreifen im Backteig mit Aioli",
+          "title": "Gebratenes Seeteufel Filet an Zitronen- Kräuterrahmsoße",
           "description": "",
           "price": "1.56€/100g",
           "allergens": [
-            "a1",
+            "d",
+            "20",
             "g",
-            "c",
-            "d"
+            "i"
           ]
         },
         {
           "source": "mph",
           "category": "Vegan/Veggie",
           "diet": "vegetarian",
-          "title": "Cremige Kässpätzle mit herzhaftem Bergkäse und geschmälzten Zwiebeln",
+          "title": "Röstitaler mit frischem Gemüse & Sauce Hollandaise überbacken",
           "description": "",
-          "price": "1.38€/100g",
+          "price": "1.43€/100g",
           "allergens": [
-            "a1",
-            "c",
-            "g"
+            "g",
+            "c"
           ]
         },
         {
@@ -1086,9 +1088,9 @@
       ]
     },
     {
-      "date": "2026-11-07",
+      "date": "2026-11-14",
       "label": "Sat",
-      "fullLabel": "Saturday, November 7",
+      "fullLabel": "Saturday, November 14",
       "items": [
         {
           "source": "apoteka",
@@ -1186,9 +1188,9 @@
       ]
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-15",
       "label": "Sun",
-      "fullLabel": "Sunday, November 8",
+      "fullLabel": "Sunday, November 15",
       "items": [
         {
           "source": "apoteka",
