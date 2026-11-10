@@ -1,0 +1,33 @@
+{
+  "id": "spicetripping-2026-11-11-0e9298d9bd52",
+  "source": "spicetripping",
+  "email": {
+    "messageId": "1a1c4eea5eb9f90a",
+    "messageIdHash": "0e9298d9bd52",
+    "subject": "[MvL6] Spicetripping foodtruck 2026( 11th Nov 2026)(by popular demand , Pumpkin sambar once again)",
+    "from": "Alok Damodaran via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-11-10T07:17:05.000Z"
+  },
+  "service": {
+    "date": "2026-11-11",
+    "start": "11:15",
+    "end": "13:15",
+    "location": "behind AI institute Maria von Linden strasse 6"
+  },
+  "items": [
+    {
+      "source": "spicetripping",
+      "category": "Main Course",
+      "diet": "vegan",
+      "title": "Pumpkin Sambar",
+      "description": "A traditional South Indian dish made with pumpkin, lentils, and spices, served with rice.",
+      "price": "Not specified",
+      "allergens": [
+        "None"
+      ]
+    }
+  ],
+  "confidence": 0.9,
+  "needsReview": false,
+  "notes": "Pumpkin Sambar is a vegan dish."
+}
