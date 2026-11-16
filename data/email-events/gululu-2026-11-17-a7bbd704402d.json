@@ -1,0 +1,21 @@
+{
+  "id": "gululu-2026-11-17-a7bbd704402d",
+  "source": "gululu",
+  "email": {
+    "messageId": "1a1e3a3d976b7be6",
+    "messageIdHash": "a7bbd704402d",
+    "subject": "[MvL6] Gululu at MvL6🥢– Menu for Tuesday 17.Nov.2026",
+    "from": "GULULU lu via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-11-16T07:00:00.000Z"
+  },
+  "service": {
+    "date": "2026-11-17",
+    "start": "",
+    "end": "",
+    "location": ""
+  },
+  "items": [],
+  "confidence": 0.9,
+  "needsReview": true,
+  "notes": "Menu details not provided in the email body."
+}
