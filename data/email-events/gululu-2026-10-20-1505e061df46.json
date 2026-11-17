@@ -1,0 +1,21 @@
+{
+  "id": "gululu-2026-10-20-1505e061df46",
+  "source": "gululu",
+  "email": {
+    "messageId": "1a1e9aef4d6af609",
+    "messageIdHash": "1505e061df46",
+    "subject": "Fwd: [MvL6] Gululu Food Truck – Closed Today, Back on Thursday",
+    "from": "Peter Gehler <peter.gehler@uni-tuebingen.de>",
+    "receivedAt": "2026-11-17T13:25:18.000Z"
+  },
+  "service": {
+    "date": "2026-10-20",
+    "start": "",
+    "end": "",
+    "location": ""
+  },
+  "items": [],
+  "confidence": 0,
+  "needsReview": true,
+  "notes": "The email indicates that the food truck is closed and does not provide any menu items."
+}
