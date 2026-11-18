@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: "22"
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
-      - run: node --test scripts/classify-menu-diets.test.mjs
+      - run: node --test scripts/*.test.mjs
       - run: npm run update:menu
         env:
           MENU_LLM_NORMALIZE: "1"

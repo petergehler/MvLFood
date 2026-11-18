@@ -59,8 +59,11 @@ export function parseMphSpeiseplanPdfText(text) {
 }
 
 function parseWeekStart(html) {
-  const normalized = decodeEntities(html).replace(/\s+/g, " ");
-  const match = normalized.match(/<h2>\s*<strong>\s*(\d{2})\.(\d{2})\.(\d{2,4})?\s*[-–]\s*(\d{2})\.(\d{2})\.(\d{2,4})\s*<\/strong>\s*<\/h2>/i);
+  const headings = [...html.matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/gi)];
+  const match = headings
+    .map(([, heading]) => decodeEntities(heading.replace(/<[^>]+>/g, "")).replace(/\s+/g, " ").trim())
+    .map((text) => text.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2,4})?\s*[-–—]\s*(\d{1,2})\.(\d{1,2})\.(\d{2,4})$/))
+    .find(Boolean);
   if (!match) throw new Error("Could not find MPH week date range");
 
   const [, startDay, startMonth, startYear, , , endYear] = match;
@@ -274,6 +277,8 @@ function normalizeText(value = "") {
 
 function decodeEntities(value) {
   return value
+    .replace(/&#(x[0-9a-f]+|[0-9]+);/gi, (_, code) => String.fromCodePoint(code[0].toLowerCase() === "x" ? parseInt(code.slice(1), 16) : Number(code)))
+    .replace(/&(?:ndash|mdash);/g, "–")
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&euro;/g, "€")

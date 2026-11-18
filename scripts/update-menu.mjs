@@ -4,7 +4,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { promisify } from "node:util";
-import { parseMphSpeiseplan, parseMphSpeiseplanPdfText } from "./parse-mph-speiseplan.mjs";
+import { resolveMphSource } from "./mph-source.mjs";
 
 const execFileAsync = promisify(execFile);
 const root = new URL("..", import.meta.url);
@@ -17,7 +17,7 @@ const mphSource = await fetchMphSource();
 
 const sourceDays = {
   "hungry-elk": parseHungryElkTsv(hungryText),
-  mph: mphSource.kind === "pdf" ? parseMphSpeiseplanPdfText(mphSource.text) : parseMphSpeiseplan(mphSource.text),
+  mph: mphSource.days,
 };
 const weekStart = latestSourceWeekStart(sourceDays);
 const hungryDays = daysInWeek(sourceDays["hungry-elk"], weekStart);
@@ -70,38 +70,10 @@ async function fetchText(url) {
 async function fetchMphSource() {
   const pageUrl = process.env.MPH_CURRENT_HTML_URL || "https://www.mph.tuebingen.mpg.de/speiseplan";
   const html = await fetchText(pageUrl);
-  const upcomingPdf = findMphUpcomingPdf(html, pageUrl);
-
-  if (!upcomingPdf) {
-    return { kind: "html", text: html, url: pageUrl };
-  }
-
-  const htmlDays = parseMphSpeiseplan(html);
-  if (process.env.MPH_USE_UPCOMING_PDF !== "1" && !isStaleMenu(htmlDays)) {
-    return { kind: "html", text: html, url: pageUrl };
-  }
-
-  return {
-    kind: "pdf",
-    text: await pdfText(upcomingPdf, ["-tsv"]),
-    url: upcomingPdf,
-  };
-}
-
-function isStaleMenu(days) {
-  const latestDate = days.map((day) => day.date).filter(Boolean).sort().at(-1);
-  return Boolean(latestDate && latestDate < isoDate(new Date()));
-}
-
-function findMphUpcomingPdf(html, baseUrl) {
-  const links = [...html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
-  const match = links.find(([, href, label]) => /kommenden\s+woche/i.test(stripHtml(label)) && /\.pdf(?:$|\?)/i.test(href));
-  if (!match) return "";
-  return new URL(match[1], baseUrl).href;
-}
-
-function stripHtml(value) {
-  return value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  return resolveMphSource(html, pageUrl, {
+    pdfText: (url) => pdfText(url, ["-tsv"]),
+    forceUpcoming: process.env.MPH_USE_UPCOMING_PDF === "1",
+  });
 }
 
 async function pdfText(url, args = ["-layout"]) {
