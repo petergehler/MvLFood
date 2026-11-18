@@ -1,0 +1,57 @@
+{
+  "id": "spicetripping-2026-10-16-f5fcc850c598",
+  "source": "spicetripping",
+  "email": {
+    "messageId": "1a1e9af186944cbe",
+    "messageIdHash": "f5fcc850c598",
+    "subject": "Fwd: [MvL6] Spicetripping foodtruck 2026 ( 16th Oct Friday 2026) BIRIYANI MENU (Menu attached )",
+    "from": "Peter Gehler <peter.gehler@uni-tuebingen.de>",
+    "receivedAt": "2026-11-17T13:25:28.000Z"
+  },
+  "service": {
+    "date": "2026-10-16",
+    "start": "11:15",
+    "end": "13:15",
+    "location": "behind AI institute Maria von Linden strasse 6"
+  },
+  "items": [
+    {
+      "source": "spicetripping",
+      "category": "Main Course",
+      "diet": "meat",
+      "title": "Chicken Biryani",
+      "description": "A fragrant rice dish cooked with marinated chicken, spices, and herbs.",
+      "price": "€8.00",
+      "allergens": [
+        "gluten",
+        "nuts"
+      ]
+    },
+    {
+      "source": "spicetripping",
+      "category": "Main Course",
+      "diet": "vegetarian",
+      "title": "Vegetable Biryani",
+      "description": "A flavorful rice dish made with mixed vegetables and aromatic spices.",
+      "price": "€7.00",
+      "allergens": [
+        "gluten"
+      ]
+    },
+    {
+      "source": "spicetripping",
+      "category": "Main Course",
+      "diet": "meat",
+      "title": "Lamb Biryani",
+      "description": "A rich rice dish featuring tender lamb cooked with spices and saffron.",
+      "price": "€9.00",
+      "allergens": [
+        "gluten",
+        "nuts"
+      ]
+    }
+  ],
+  "confidence": 0.95,
+  "needsReview": false,
+  "notes": "Limited quantities available, first come first serve."
+}
