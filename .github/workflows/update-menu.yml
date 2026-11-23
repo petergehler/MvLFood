@@ -3,10 +3,14 @@ name: Update menu data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 8 * * 1"
+    # Several opportunities to recover delayed/dropped schedule events.
+    # Fresh scheduled runs exit before downloads or LLM calls.
+    - cron: "17 7-13 * * 1-5"
       timezone: "Europe/Berlin"
-    - cron: "47 10 * * 1"
-      timezone: "Europe/Berlin"
+
+concurrency:
+  group: update-menu-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -14,19 +18,30 @@ permissions:
 jobs:
   update-menu:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Refresh checked-out branch
+        run: git pull --ff-only
+      - name: Check current menu
+        id: freshness
+        run: node scripts/menu-freshness.mjs
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+        if: github.event_name != 'schedule' || steps.freshness.outputs.fresh != 'true'
       - run: node --test scripts/*.test.mjs
       - run: npm run update:menu
+        if: github.event_name != 'schedule' || steps.freshness.outputs.fresh != 'true'
         env:
           MENU_LLM_NORMALIZE: "1"
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
       - run: npm run validate:data
+      - name: Require current menu after scheduled update
+        if: github.event_name == 'schedule'
+        run: node scripts/menu-freshness.mjs --require-current
       - name: Commit menu update
         run: |
           if git diff --quiet -- data/menu.json; then

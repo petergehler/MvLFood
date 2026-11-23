@@ -80,3 +80,9 @@ npm run validate
 - Which food trucks should be included, and where is their most reliable schedule/menu source?
 - Should allergy filtering hide unknown items, or keep them visible with an `ask` badge?
 - Which additional food-truck feeds have reliable public sources that can be parsed automatically?
+
+### Schedule recovery
+
+GitHub schedule events are best-effort. The updater gets hourly recovery opportunities at :17 from 07:17 through 13:17 Europe/Berlin on weekdays. Scheduled runs check that today has Hungry Elk and MPH entries with valid diets and skip fetching and LLM calls once fresh. Manual dispatch still forces a refresh. Updates are serialized per branch, refresh their checkout, and scheduled updates fail explicitly if the result does not cover today.
+
+An independent local Codex heartbeat checks the live website every 30 minutes at :05 and :35, weekdays 08:05–14:35 Europe/Berlin. It follows active updates, dispatches recovery when stale, and verifies Pages publication. It limits recovery attempts and reports deterministic failures. The Codex desktop and authenticated GitHub access must be available for this monitor to run.
