@@ -1,0 +1,34 @@
+{
+  "id": "spicetripping-2026-11-27-60df1c90d53a",
+  "source": "spicetripping",
+  "email": {
+    "messageId": "1a2177c6e96cb27b",
+    "messageIdHash": "60df1c90d53a",
+    "subject": "[MvL6] Spicetripping foodtruck 2026 ( 27th November Friday 2026) BIRIYANI MENU (Menu attached )",
+    "from": "Alok Damodaran via MvL6 <mvl6@listserv.uni-tuebingen.de>",
+    "receivedAt": "2026-11-26T10:19:46.000Z"
+  },
+  "service": {
+    "date": "2026-11-27",
+    "start": "11:15",
+    "end": "13:15",
+    "location": "behind AI institute Maria von Linden strasse 6"
+  },
+  "items": [
+    {
+      "source": "spicetripping",
+      "category": "Main Course",
+      "diet": "meat",
+      "title": "Biryani",
+      "description": "A flavorful rice dish cooked with spices and marinated meat, served with raita.",
+      "price": "Not specified",
+      "allergens": [
+        "gluten",
+        "dairy"
+      ]
+    }
+  ],
+  "confidence": 0.9,
+  "needsReview": false,
+  "notes": "Limited numbers only, first come first serve basis."
+}
